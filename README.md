@@ -2,9 +2,9 @@
 
 Round 2 of [The Sequential Matching Problem](https://github.com/RomeoJulietLove/The-Sequential-Matching-Problem). All profiles and outcomes are synthetic.
 
-Current release configuration: **V1_greedy**. Official greedy clarification and soft-agreement greedy matching, wrapped in RAVEN independent hard-eligibility, budget, duplicate and availability validation. Learned probabilities, portfolio search and future terms are not used by the selected policy. Exact settings are in `results/recovery/release_selection.json`.
+Current release configuration: **V1_greedy**. Official greedy clarification and soft-agreement greedy matching, wrapped in RAVEN independent hard-eligibility, budget, duplicate and availability validation. Learned probabilities, portfolio search and future terms are not used by the selected policy. Advanced RAVEN modules are evaluated research alternatives, not decision components of the deployed V1_greedy policy. Exact settings are in `results/recovery/release_selection.json`.
 
-**NO-GO for submission:** Docker is unavailable locally, CI has not executed, and no source or issue has been published. The local implementation and experiments are tested; container eligibility is not established.
+**Docker and source-publication checks passed:** [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) successfully built and evaluated the policy container at public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. The official submission issue has not been created; it requires separate authorization. This documentation revision also awaits authorization to push.
 
 The repeated official benchmark scores 0.3889 MSMI/100 (14 qualifying pairs / 3600 arrivals). Greedy scores 0.3889; this is not a claim of superiority. Selection used fresh validation; untouched post-freeze results and uncertainty are in the report.
 
@@ -40,12 +40,14 @@ Use a new output path when repeating runs. The official evaluator always passes 
 ```sh
 python -m pip install -r requirements-dev.txt
 python -m experiments.recovery_report
-python -m scripts.verify_recovery
+git apply docs/RELEASE_DOCUMENTATION.patch
 ```
+
+The preserved report generator emits pre-CI release prose; the documentation-only patch above restores the verified CI/publication update without altering generated tables or figures. See [CI evidence and regeneration checks](docs/CI_VALIDATION.md). Run the historical recovery verifier only in a disposable audit copy because it rewrites pre-CI gate snapshots.
 
 The original model uses 18 training seeds, six calibration seeds and two original policy-selection seeds. Recovery uses three new screening seeds, five new confirmation seeds and three untouched reporting seeds. Inference random seed is 17 where an experimental random policy is used. Selection and configuration details are fully recorded; no private organizer worlds were accessed.
 
-CI builds the actual Dockerfile and retains command logs, exit codes, local/container comparisons and image inspection as artifacts. A workflow file is not evidence of a successful container run. Authorization is still required to push and later submit the official issue.
+[Successful CI run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) built the actual Dockerfile, completed official container evaluation, verified exact local/container equivalence, checked image size and uploaded diagnostic artifacts. The tested scope is one development episode, seed 101. [CI_VALIDATION.md](docs/CI_VALIDATION.md) records commands, limitations and log hashes. Source publication of the tested commit is verified; this documentation-only revision and official issue submission each require authorization.
 
 ## Attribution and team
 

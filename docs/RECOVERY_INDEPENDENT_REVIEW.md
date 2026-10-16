@@ -1,7 +1,9 @@
 # Structured automated recovery review
 
-This is a coding-agent self-review, not an independent human review. Current
-machine-readable gate status is `results/recovery/quality_gates.json`.
+This is a coding-agent self-review, not an independent human review. The
+machine-readable `results/recovery/quality_gates.json` is the preserved pre-CI
+snapshot. Current documented status is in `SUBMISSION_CHECKLIST.md` and
+`CI_VALIDATION.md`; experimental evidence files are unchanged.
 
 | Review | Severity | Evidence and issue | Action | Remaining risk |
 | --- | --- | --- | --- | --- |
@@ -12,10 +14,10 @@ machine-readable gate status is `results/recovery/quality_gates.json`.
 | C: labels | High | Feedback may have no occurrence date; selective introduction labels | Fixed diagnostic delay extraction to count missing dates separately; recomputed all calibration strata and historical paired effects | Calibration covers selected pairs, not all opportunities; Wilson bins ignore world dependence |
 | D: generalization | High | One-pair old score gap is weak evidence | Matched six-family screening/confirmation and post-freeze fresh populations; original files preserved | Private worlds and real relationship outcomes remain untested |
 | D: selection failure on untouched sample | High | Selected guarded greedy obtained 3 MSMI versus protected RAVEN's 16 over 18 episodes each | Report the negative result prominently; preserve predeclared freeze and all candidate evidence | The conservative selection rule did not identify the strongest policy on this sample; no claim of improved generalization |
-| E: engineering | High | Existing evidence must survive recovery unchanged | Local recovery tag; versioned result paths; original action/outcome replay; final source and staged-byte hashes | Linux runtime still requires actual CI/container run |
+| E: engineering | High | Existing evidence must survive recovery unchanged | Local recovery tag; versioned result paths; original action/outcome replay; final source and staged-byte hashes | Linux CI now passed at the published tested commit; one container episode does not guarantee private validity |
 | E: RAM measurement | High | Historical sampler omitted the child interpreter spawned by the Windows venv launcher | Verified launcher/child process tree; corrected sampling to sum recursive descendant RSS and reran final probes | Sampling can miss peaks and double-count shared pages; old launcher-only RAM claims are underestimates |
-| E: container | Blocking | Actual Docker build cannot launch; official image evaluator exits 2 | CI now logs build, tests, evaluation and exact action comparison; uploads logs and results; minimum read permission | No Docker/CI success yet; enforced CPU/RAM, offline filesystem and image size unverified |
-| F: publication | Blocking | Origin has no published refs; no official issue | Prepare local immutable commit, exact push command and issue draft with explicit pending status | Push and issue need explicit authorization; no public URL may be called verified yet |
+| E: container | Resolved for tested scope | CI run 38919907335 built the actual Dockerfile and completed official image evaluation, exit 0 | Downloaded and hash-verified logs; exact subprocess/container equivalence; 117.925 MiB image; network/resource restrictions applied | One development episode only; no separate peak-memory telemetry or private-world guarantee |
+| F: publication | Pending authorization | Tested commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb` is public; SHA-pinned report/results match Git bytes | Prepare documentation-only revision and current-template issue draft | New documentation commit awaits authorized push; official issue requires separate approval |
 
 The inference changes are deliberately narrow: two experimental backend switches
 and routing the existing official baseline branch through the sanitizer. The

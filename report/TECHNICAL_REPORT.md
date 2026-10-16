@@ -1,12 +1,12 @@
 # Recovery release evidence
 
-Team Jarvis — RAVEN-Match. **NO-GO for submission:** Docker execution and public immutable publication remain blocked. This is an executed local recovery, not a claim of private performance.
+Team Jarvis — RAVEN-Match. **Docker and source-publication checks passed:** [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) successfully built and evaluated the policy container at public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. The official submission issue has not been created; it requires separate authorization. This documentation revision also awaits authorization to push. This is an executed local recovery, not a claim of private performance.
 
 **Important negative result:** the untouched post-freeze sample favored protected RAVEN over the selected conservative policy: 16 versus 3 qualifying outcomes over 18 episodes each. The selection rule did not identify the stronger policy on this sample. The choice remains frozen to avoid selecting on the held-out results; no claim of improved generalization or statistically optimal policy selection is made.
 
 ## Selected release algorithm
 
-Selected configuration: **V1_greedy**. Official greedy clarification and soft-agreement greedy matching, wrapped in RAVEN independent hard-eligibility, budget, duplicate and availability validation. Learned probabilities, portfolio search and future terms are not used by the selected policy. Exact settings are in `results/recovery/release_selection.json`.
+Selected configuration: **V1_greedy**. Official greedy clarification and soft-agreement greedy matching, wrapped in RAVEN independent hard-eligibility, budget, duplicate and availability validation. Learned probabilities, portfolio search and future terms are not used by the selected policy. Advanced RAVEN modules are evaluated research alternatives, not decision components of the deployed V1_greedy policy. Exact settings are in `results/recovery/release_selection.json`.
 
 Selection used newly declared public validation seeds only: screening [22001, 22002, 22003]; confirmation [22101, 22102, 22103, 22104, 22105]. The predeclared rule requires a custom finalist's paired interval against greedy to exclude zero; otherwise select guarded greedy. V6 aliases V0 and V7 aliases V1 and were not counted as separate algorithms. These intervals use only five seed clusters, are descriptive, and are not multiplicity-adjusted. No superiority guarantee follows.
 
@@ -176,7 +176,7 @@ Final unit tests and official data verification passed; see `results/execution/r
 
 There are 54 final subprocess resource probes, including six constructed cases near the 1 MiB request limit. Maximum observed invocation: 2.6728 seconds; sampled RSS: 54.629 MiB; request: 1047909 bytes; response: 25065 bytes. These Windows measurements are sampled, may miss peaks, and do not verify enforced container CPU/RAM limits. Stress episodes and adversarial dense/unresolved/declined observations use legal-action checks. Each resource invocation rejects unexpected stderr rather than allowing an exception fallback to hide a failure.
 
-Docker build failed to launch because the executable is absent, and official container evaluation exited 2. CI uses Ubuntu, the actual Dockerfile, the official evaluator, exact local/container action comparison and uploaded exit-code/log artifacts. CI has not been run. Public source and issue publication have not been authorized. No website work was started.
+The earlier local Docker attempts failed because Docker was absent; those failure records remain unchanged. They are superseded for the current policy by [successful CI run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) on public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. The actual Docker build and official container evaluator both exited 0. The development episode with seed 101 was valid (0 invalid episodes out of 1), and its actions and outcomes exactly matched subprocess evaluation. The Linux amd64 image measured 123,653,457 bytes (117.925 MiB), below the 2 GiB limit. The official evaluator applied network-disabled execution, 2 CPUs, 1 GiB RAM, a read-only filesystem and the 10-second per-invocation timeout; no resource-limit failure occurred. This is one container episode, not a six-scenario container benchmark or a private-validity guarantee. Separate peak-RAM telemetry was not collected in CI. Full commands, log hashes, image identity and evidence links are in `docs/CI_VALIDATION.md`. No website work or official issue submission was performed.
 
 Recovery found and corrected a memory-measurement defect: Windows virtual-environment Python uses a launcher and child interpreter, while the historical sampler measured only the launcher PID. The original RSS claims can therefore underestimate total memory. All current release resource measurements sum the launcher and recursive descendants, which may double-count shared pages. The preliminary launcher-only near-limit file is retained as `max_payload.json`; the corrected file is `max_payload_process_tree.json`. Inference code was not changed by this measurement correction.
 
@@ -184,14 +184,14 @@ Recovery found and corrected a memory-measurement defect: Windows virtual-enviro
 
 Use Python 3.14 with `requirements-dev.txt` for research, or the pinned Python 3.12.7 Docker image for inference. Inference has no pip dependencies, network, GPU or persistent filesystem state. Official MIT source and synthetic-data notices, vendored BSD matching notices and all model provenance remain included. OpenAI Codex assisted implementation and automated review; no human independent review is claimed.
 
-Run `python -m scripts.verify_recovery`, `python -m experiments.recovery_report`, and the commands in `docs/RECOVERY_REPRODUCIBILITY.md`. New run scripts refuse to overwrite search evidence. To repeat the full search, use a clean checkout with a different result root. The protected original candidate is tagged `recovery/pre-competitive-recovery` at `a918583473afbb0bc70abe76f1266c39331bf97b`.
+Use the report-generation instructions in `docs/CI_VALIDATION.md` and the evaluation commands in `docs/RECOVERY_REPRODUCIBILITY.md`. The preserved generators describe pre-CI status; apply the documented release prose patch after regeneration. The historical verifier writes pre-CI gate snapshots and should only be rerun in a disposable audit copy. New run scripts refuse to overwrite search evidence. To repeat the full search, use a clean checkout with a different result root. The protected original candidate is tagged `recovery/pre-competitive-recovery` at `a918583473afbb0bc70abe76f1266c39331bf97b`.
 
 
 ---
 
 # Historical RAVEN research study (protected pre-recovery candidate)
 
-All references to the selected or frozen soft policy in the following historical sections describe the protected original candidate, not the current release configuration above. Original results and figures are preserved unchanged.
+All references to the selected or frozen soft policy in the following historical sections describe the protected original candidate, not the current release configuration above. Original results and figures are preserved unchanged. Docker/publication blockers mentioned in the historical text below describe the original pre-CI review, not current status; they are superseded by the successful CI and publication evidence above.
 
 # RAVEN-Match — Recoverability-Aware Vertex Elicitation and Sequential Allocation
 

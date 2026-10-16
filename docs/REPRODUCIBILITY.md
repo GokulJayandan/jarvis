@@ -67,10 +67,12 @@ python evaluate.py --image sequential-policy:submission --seeds 101 --output res
 Final evaluation uses `RAVEN_STRICT=1` to expose programming errors that might
 otherwise trigger a legal empty fallback. The evaluator and validators are unchanged.
 
-**Container status: BLOCKED.** Docker is missing; build launch failed. Official
-container evaluation exited 2 and records an invalid episode for that environmental
-error. WSL installation attempt exited 1. No successful image build, offline run,
-image digest or enforced resource result is claimed. A working Docker host is needed.
+**Historical local container attempt:** Docker was missing; build launch failed.
+The original container evaluation exited 2 and WSL installation exited 1. These
+retained failures are superseded for the deployed release by successful Linux
+CI run 38919907335: actual build, official offline evaluation, exact action/outcome
+comparison and image-size checks passed. See [CI_VALIDATION.md](CI_VALIDATION.md)
+for the tested commit, logs and one-episode scope.
 
 ## Research reproduction
 

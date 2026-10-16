@@ -64,13 +64,16 @@ container runner returned exit code 2. See `recovery_docker_build.*`,
 CI now builds the actual Dockerfile on Ubuntu, runs the official evaluator,
 compares action hashes and outcomes with the subprocess run, checks image size,
 and uploads command logs, exit codes and results even on failure. It has only
-`contents: read` permission and requires no secrets. CI has not run locally and
-must not be counted as container evidence. Publication requires authorization.
+`contents: read` permission and requires no secrets. The earlier local failure
+is historical: [CI run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) subsequently passed the real build,
+container evaluation, action comparison and image-size checks. The tested commit
+`98c5440dba6a2780f2ffd766c4f576fd796c4abb` is public. See `CI_VALIDATION.md`;
+this documentation revision and official issue still await their authorizations.
 
 Public PyPI metadata was checked for every pinned development dependency:
 `results/recovery/ci_dependency_check.json` records Python 3.14 compatibility and
-published Linux/universal wheels. This is a static readiness check, not an
-executed Linux installation or successful CI run.
+published Linux/universal wheels. That file remains a static readiness check. Actual Linux dependency installation
+and container execution are now evidenced separately by the successful CI run.
 
 ## Current official rules
 

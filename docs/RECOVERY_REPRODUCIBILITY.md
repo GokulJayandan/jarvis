@@ -67,17 +67,22 @@ and verifies the report. The largest-input probe sums launcher and descendant
 RSS; historical launcher-only memory results are retained but superseded for
 current resource claims.
 
-For report-only regeneration, run `python -m experiments.recovery_report`. This
-updates recovery figures and prepends the release evidence to the preserved
-historical technical report. Do not run historical policy-selection/training
+For report-only regeneration, run `python -m experiments.recovery_report` followed
+by `git apply docs/RELEASE_DOCUMENTATION.patch`. The unmodified generator
+reconstructs measured tables/figures and the historical report; the prose-only
+patch restores the post-CI documentation. Use a disposable copy for verification
+and compare generated tables/figures byte-for-byte. See `CI_VALIDATION.md`.
+The historical `scripts.verify_recovery` rewrites old gate-status files; do not
+use its pre-CI Docker/publication verdict as current evidence. Do not run historical policy-selection/training
 scripts as a release step: those intentionally overwrite the old default assets.
 Original calibration/pruning figures remain valid for their historical studies.
 
 CI runs `.github/workflows/verify.yml` with read-only repository permission and
 no secrets. It builds the actual Dockerfile, evaluates both subprocess and
 container modes on seed 101, compares every action hash/outcome, checks image
-size and uploads `container-verification`. Actual CI success is required; a
-workflow file is not evidence of successful container execution. After an
-authorized push, download and inspect artifacts, commit successful container
-evidence and reconciled gate changes, then publish that final immutable revision
-with separate explicit issue-submission authorization.
+size and uploads `container-verification`. Actual CI run [38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) passed on `98c5440dba6a2780f2ffd766c4f576fd796c4abb`.
+The build, evaluator, equality comparison, image-size assertion and artifact
+upload all succeeded. Its logs and results were downloaded and verified;
+`CI_VALIDATION.md` records evidence and scope. The tested commit is public.
+This documentation-only revision requires push authorization; issue submission
+requires separate authorization. The research/evaluation results are unchanged.

@@ -2,7 +2,9 @@
 
 This is the protected original candidate's review. The current recovery review
 is [RECOVERY_INDEPENDENT_REVIEW.md](RECOVERY_INDEPENDENT_REVIEW.md), with gates in
-[SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md).
+[SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md). The historical Docker and
+publication blockers below are superseded for the deployed release by successful
+CI run 38919907335 and public source verification; see [CI_VALIDATION.md](CI_VALIDATION.md).
 
 This is structured automated self-review by the coding agent, not a human or
 independently staffed audit. Evidence is linked; private validity is not guaranteed.

@@ -1,6 +1,6 @@
 # Recovery submission checklist
 
-**NO-GO:** Docker verification and public authorized submission remain blocked.
+**Docker and tested-source publication passed.** The documentation-only revision awaits authorized push and public-link verification; the official submission issue requires separate approval. The unchanged `results/recovery/quality_gates.json` is a historical pre-CI snapshot, superseded for release status by this checklist and [CI_VALIDATION.md](CI_VALIDATION.md).
 
 | Gate | Requirement | Status | Evidence |
 | --- | --- | --- | --- |
@@ -17,10 +17,10 @@
 | 11 | Calibration recomputation | PASS | evidence_audit.json: recomputed Brier |
 | 12 | Waiting and coverage | PASS | report_tables.json |
 | 13 | Controlled ablations | PASS | screen and confirm JSON |
-| 14 | Offline Docker build/evaluation | BLOCKED | Docker missing: build launch failure; evaluator exit 2 |
-| 15 | Enforced container resource limits | BLOCKED | Windows sampled probes only |
+| 14 | Offline Docker build/evaluation | PASS | CI 38919907335: actual build and official seed-101 container evaluation exit 0 |
+| 15 | Enforced container resource limits | PASS (tested scope) | One official network-disabled episode under CPU/RAM/time limits; image 117.925 MiB; no separate peak-RAM telemetry |
 | 16 | Report and results reconciled | PASS | report_tables.json and generated technical report |
 | 17 | Licences and model provenance | PASS | docs/LICENSES.md and unchanged model bytes |
 | 18 | Local release source prepared | PASS | release_checks_complete.json; uncommitted state checked separately |
-| 19 | Immutable public commit available | BLOCKED | Public repository still has no published refs |
-| 20 | Authorized official submission | BLOCKED | Requires Docker success and explicit publication/issue authorization |
+| 19 | Immutable public commit available | PASS (tested source) | Public `98c5440dba6a2780f2ffd766c4f576fd796c4abb` and verified report/results; documentation revision publication pending |
+| 20 | Authorized official submission | BLOCKED | Requires authorized documentation push, final public-link verification and separate issue approval |
