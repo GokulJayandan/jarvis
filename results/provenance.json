@@ -34,13 +34,13 @@
     {
       "path": ".github/workflows/verify.yml",
       "upstream_sha256": "9af8d7d51512c3c2ea1be01b1b54e39a330aa3650333ca8921c473232ecac1ab",
-      "local_sha256": "9af8d7d51512c3c2ea1be01b1b54e39a330aa3650333ca8921c473232ecac1ab",
-      "unchanged": true
+      "local_sha256": "700eaf6d3a3379882e70dd956a684e8a2055ed74acb240bdd284e3e7609b8868",
+      "unchanged": false
     },
     {
       "path": ".gitignore",
       "upstream_sha256": "ae8e2f8529b20a19ed5e86fcbd70eae98cb1aaca07298766279267a67b829481",
-      "local_sha256": "02117f9a62b2a0b3f365beac5b69246d8fd5ad472b9a38304d54a1c74ebf1529",
+      "local_sha256": "b993fde39194359618c0aeb644ce6668208b385d8c5c376f1e7726fd1f823537",
       "unchanged": false
     },
     {

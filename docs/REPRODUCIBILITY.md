@@ -100,3 +100,8 @@ It excludes datasets, experiments, results, .git and credentials. Validate using
 the official offline read-only flags before publication. See the submission
 checklist and independent automated review. Publication and the official issue
 require explicit authorization.
+The prepared GitHub Actions workflow installs the pinned research dependencies,
+runs tests, builds the image, executes the official offline Docker episode, checks
+image size, and compares action hashes/outcomes against local execution. It has
+not run: publication is not authorized. After an authorized push, its uploaded
+artifact can supply Docker evidence without installing Docker on this Windows PC.
