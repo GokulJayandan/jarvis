@@ -1,5 +1,15 @@
 # Predeclared experiment protocol
 
+Recovery extension: `configs/recovery.json` registers disjoint seeds 22001–22003
+for screening, 22101–22105 for confirmation and 22201–22203 for untouched
+post-freeze reporting. Eleven distinct configurations are screened; V6 and V7
+are explicit aliases, not extra experiments. The best two custom screening
+policies plus protected RAVEN and greedy advance to confirmation. A custom
+finalist is selected only if its paired descriptive 95% interval against greedy
+excludes zero; otherwise guarded greedy is selected. This is a conservative
+decision rule, not a multiple-testing-corrected statistical claim. No original
+test seed enters recovery selection. All original studies below are preserved.
+
 `configs/seeds.json` is the seed registry. Six manifest training pools plus twelve
 fresh training seeds are used across all six public families. Features are saved
 before actions and labels only after 60 decision + 40 follow-up days. Six validation

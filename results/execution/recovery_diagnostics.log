@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Gokul\jarvis\experiments\recovery_diagnostics.py", line 66, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\Gokul\jarvis\experiments\recovery_diagnostics.py", line 61, in main
+    feedback_delays=[e['observed_day']-e['occurred_day'] for e in state['feedback']],metrics=sim.metrics()))
+                     ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'int' and 'NoneType'

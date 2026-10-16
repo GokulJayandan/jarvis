@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\Gokul\\jarvis\\.venv\\Scripts\\python.exe",
+    "scripts/compare_runs.py",
+    "results/recovery/greedy.json",
+    "results/recovery/final.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T14:14:13.526008+00:00",
+  "exit_code": 0,
+  "seconds": 0.06771470000967383,
+  "log_sha256": "c273840dc7f3824e94b5e34ee43530af9de83d7214506f9424c034c67d3f8d9a"
+}

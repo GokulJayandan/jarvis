@@ -5,7 +5,9 @@ from pathlib import Path
 import subprocess
 
 root=Path(__file__).resolve().parents[1]
-expected=json.loads((root/'results/frozen_source.json').read_text())['files'].copy()
+frozen=root/'results/recovery/frozen_source.json'
+if not frozen.exists():frozen=root/'results/frozen_source.json'
+expected=json.loads(frozen.read_text())['files'].copy()
 inference_count=len(expected)
 for path in (root/'results/execution').glob('*.json'):
     record=json.loads(path.read_text());log=path.with_suffix('.log')

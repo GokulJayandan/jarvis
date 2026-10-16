@@ -1,0 +1,58 @@
+{
+  "greedy": {
+    "episodes": 18,
+    "valid": 18,
+    "mutual_second_meeting_intention": 14,
+    "dates": 155,
+    "arrived_members": 3600,
+    "assignments": 1437,
+    "mutual_acceptances": 198,
+    "served_members": 1338,
+    "unserved_members": 2262,
+    "missing_feedback": 819,
+    "ask_cost": 3720,
+    "msmi_per_100": 0.3888888888888889
+  },
+  "no_asks": {
+    "episodes": 18,
+    "valid": 18,
+    "mutual_second_meeting_intention": 5,
+    "dates": 48,
+    "arrived_members": 3600,
+    "assignments": 438,
+    "mutual_acceptances": 63,
+    "served_members": 514,
+    "unserved_members": 3086,
+    "missing_feedback": 240,
+    "ask_cost": 0,
+    "msmi_per_100": 0.1388888888888889
+  },
+  "random": {
+    "episodes": 18,
+    "valid": 18,
+    "mutual_second_meeting_intention": 10,
+    "dates": 158,
+    "arrived_members": 3600,
+    "assignments": 1449,
+    "mutual_acceptances": 192,
+    "served_members": 1356,
+    "unserved_members": 2244,
+    "missing_feedback": 754,
+    "ask_cost": 3720,
+    "msmi_per_100": 0.2777777777777778
+  },
+  "final": {
+    "episodes": 18,
+    "valid": 18,
+    "mutual_second_meeting_intention": 13,
+    "dates": 148,
+    "arrived_members": 3600,
+    "assignments": 1444,
+    "mutual_acceptances": 204,
+    "served_members": 1351,
+    "unserved_members": 2249,
+    "missing_feedback": 737,
+    "ask_cost": 10368,
+    "msmi_per_100": 0.3611111111111111
+  }
+}

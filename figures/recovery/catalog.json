@@ -1,0 +1,34 @@
+[
+  {
+    "file": "figures/recovery/01_baselines.png",
+    "source": "results/recovery/{greedy,no_asks,random,final}.json"
+  },
+  {
+    "file": "figures/recovery/02_scenarios.png",
+    "source": "results/recovery/*.json"
+  },
+  {
+    "file": "figures/recovery/03_meetings.png",
+    "source": "results/recovery/*.json"
+  },
+  {
+    "file": "figures/recovery/04_coverage.png",
+    "source": "results/recovery/{greedy,final}.json"
+  },
+  {
+    "file": "figures/recovery/05_waiting.png",
+    "source": "results/recovery/{greedy,final}.json"
+  },
+  {
+    "file": "figures/recovery/06_future.png",
+    "source": "results/recovery/screen/{V0_frozen,A_future}.json"
+  },
+  {
+    "file": "figures/recovery/11_clarification.png",
+    "source": "results/recovery/*.json"
+  },
+  {
+    "file": "figures/recovery/12_runtime.png",
+    "source": "results/recovery/{greedy,final}.json"
+  }
+]

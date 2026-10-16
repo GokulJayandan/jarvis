@@ -10,6 +10,9 @@ from experiments.common import paired_ci
 def read(path):return json.loads((ROOT/path).read_text())
 
 def main():
+    if (ROOT/'results/recovery/release_checks_complete.json').exists():
+        from scripts.verify_recovery import main as recovery
+        return recovery()
     assert read('results/frozen_source.json')==fingerprint(),'Frozen inference source changed'
     for name in ('greedy','no_asks','random','final'):
         result=read('results/'+name+'.json')

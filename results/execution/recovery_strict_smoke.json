@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\Gokul\\jarvis\\.venv\\Scripts\\python.exe",
+    "evaluate.py",
+    "--seeds",
+    "101",
+    "--output",
+    "results/recovery/strict_smoke.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T14:17:24.692475+00:00",
+  "raven_strict": "1",
+  "exit_code": 0,
+  "seconds": 24.659812199883163,
+  "log_sha256": "e9bdd7e95db5e73d7a729e063023ea395bb610a0623938d5d57ff0838e88d598"
+}

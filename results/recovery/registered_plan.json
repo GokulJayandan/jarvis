@@ -1,0 +1,93 @@
+{
+  "protected_commit": "a918583473afbb0bc70abe76f1266c39331bf97b",
+  "screening_validation_seeds": [
+    22001,
+    22002,
+    22003
+  ],
+  "confirmation_validation_seeds": [
+    22101,
+    22102,
+    22103,
+    22104,
+    22105
+  ],
+  "untouched_reporting_seeds": [
+    22201,
+    22202,
+    22203
+  ],
+  "selection_rule": "Screen all variants on equal-weight six-family validation means. Confirm the best two custom variants plus frozen and official greedy. Select a custom finalist only if its paired 95% seed-cluster interval against greedy excludes zero; otherwise deploy guarded official greedy. Do not tune after confirmation. All seeds are newly declared public generator seeds, not private evaluation seeds.",
+  "variants": {
+    "V0_frozen": {
+      "soft_questions": true
+    },
+    "V1_greedy": {
+      "official_baseline": "greedy"
+    },
+    "V2_greedy_asks": {
+      "ask_backend": "official"
+    },
+    "V3_greedy_matches": {
+      "match_backend": "official",
+      "soft_questions": true
+    },
+    "V4_prior": {
+      "predictor": "prior"
+    },
+    "V5_present": {},
+    "V6_calibrated": {
+      "calibration": true,
+      "soft_questions": true
+    },
+    "V7_guarded_greedy": {
+      "official_baseline": "greedy"
+    },
+    "V8_endpoint": {
+      "planner": "endpoint"
+    },
+    "V9_reduced": {
+      "candidate_limit": 8,
+      "portfolio_limit": 162
+    },
+    "A_future": {
+      "soft_questions": true,
+      "future_weight": 0.5
+    },
+    "A_uncalibrated": {
+      "calibration": false,
+      "soft_questions": true
+    },
+    "A_greedy_weighted": {
+      "matcher": "greedy",
+      "soft_questions": true
+    }
+  },
+  "aliases_not_separate_experiments": {
+    "V6_calibrated": "V0_frozen",
+    "V7_guarded_greedy": "V1_greedy"
+  },
+  "source": {
+    "files": {
+      "policy.py": "04422221e56a4595c23dc1b747cc51f950fec59854cc1f5f16caf9eae8a37dc2",
+      "raven/__init__.py": "77ea470a5936067fed8682e938f0c6fb3f3a949822d0843cf7da276a220de8af",
+      "raven/assets/final_config.json": "09c65236a24e0361b722e2daf47482cac8d3f30f71959b5e5b52084626f430a7",
+      "raven/assets/model.json": "a4450b7e015816686dd5ea3a406ba201991e4b6c2ce984e178c9a49bb7031b33",
+      "raven/clarification.py": "31cba9d22b22797658419dcaa7d2210a4bcce38a0d45ac7c550d62772366136d",
+      "raven/config.py": "3daa301922e7f6e0fffe8852921e724e2dd75f037928da321d8c334807f6f803",
+      "raven/constraints.py": "491fa85e8d27a40b646066fd0fdaeb53d1178ce07f0d6b35268d9cd284213ebc",
+      "raven/disclosure.py": "43bf44608894ac58697f62d7bba2a607ecd5e58f17e1a1be6c29608fcb245d05",
+      "raven/future_value.py": "2585d554875ad33eca79f0191af71b07e0ca4bd84752e85d29f555170f8dec2c",
+      "raven/graphs.py": "56c0171d72fdb6307587fb11ddccb48d9cc32cac079e4f7edfc14facb2921cb7",
+      "raven/matching.py": "a6e08504b5fe83e95f896ac5a86622b170a5c4cdfba7db6c022403545974f363",
+      "raven/portfolio.py": "e039d8f2539025d776a9e2c72c5f72ccf45535c587a39b73a83c36b4cf35a806",
+      "raven/probabilities.py": "b15789f1c3b552d6fc630ce858369cce5db76809e2fa3e2f21f20166c7b375d6",
+      "raven/protocol.py": "94950256498ccb2d94f5922712d492a727bfa2cdc3345439a77fa5a0af9e2b7c",
+      "raven/pruning.py": "f701258afea74fc331f756d771aa77cadc46332660dfdda80b4006c70312b2d3",
+      "raven/validation.py": "0f07092a25dffb051764a75572e2977842d077d763535e495c754e23c39320e6",
+      "raven/vendor/__init__.py": "382bbe2bc78c7f7d25ff10e1d0a665de00fe7144c1212afc936bea6ee7015c74",
+      "raven/vendor/blossom.py": "e4ae389ab1e0dcd9311d1bbba04d3022dbba35f226d1ff41156f0c6b11e889ea"
+    },
+    "sha256": "ef40b5a98a3428a35099302b2e303f5bcd3fe1aba46a638b7756f09c0f8813ec"
+  }
+}

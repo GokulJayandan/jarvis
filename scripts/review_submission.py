@@ -17,6 +17,9 @@ def check_run(path,count=None):
     return 'PASS'
 
 def main():
+    if (ROOT/'results/recovery/release_checks_complete.json').exists():
+        from scripts.verify_recovery import main as recovery
+        return recovery()
     origin=subprocess.check_output(['git','remote','get-url','origin'],cwd=ROOT,text=True).strip()
     final=read('results/final.json');tests=read('results/execution/final_tests.json');provenance=read('results/provenance.json')
     resources=read('results/robustness/resources.json')

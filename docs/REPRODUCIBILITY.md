@@ -1,5 +1,10 @@
 # Reproducibility
 
+Recovery release commands and current evidence paths are in
+[RECOVERY_REPRODUCIBILITY.md](RECOVERY_REPRODUCIBILITY.md). The commands and
+measurements below describe the protected original research candidate. Current
+configuration and final measurements are in `results/recovery/`.
+
 Run from the existing Jarvis repository root. Original remote:
 https://github.com/GokulJayandan/jarvis.git, branch `main`. No upstream fork or push.
 

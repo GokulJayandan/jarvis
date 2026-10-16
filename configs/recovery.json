@@ -1,0 +1,23 @@
+{
+  "protected_commit": "a918583473afbb0bc70abe76f1266c39331bf97b",
+  "screening_validation_seeds": [22001, 22002, 22003],
+  "confirmation_validation_seeds": [22101, 22102, 22103, 22104, 22105],
+  "untouched_reporting_seeds": [22201, 22202, 22203],
+  "selection_rule": "Screen all variants on equal-weight six-family validation means. Confirm the best two custom variants plus frozen and official greedy. Select a custom finalist only if its paired 95% seed-cluster interval against greedy excludes zero; otherwise deploy guarded official greedy. Do not tune after confirmation. All seeds are newly declared public generator seeds, not private evaluation seeds.",
+  "variants": {
+    "V0_frozen": {"soft_questions": true},
+    "V1_greedy": {"official_baseline": "greedy"},
+    "V2_greedy_asks": {"ask_backend": "official"},
+    "V3_greedy_matches": {"match_backend": "official", "soft_questions": true},
+    "V4_prior": {"predictor": "prior"},
+    "V5_present": {},
+    "V6_calibrated": {"calibration": true, "soft_questions": true},
+    "V7_guarded_greedy": {"official_baseline": "greedy"},
+    "V8_endpoint": {"planner": "endpoint"},
+    "V9_reduced": {"candidate_limit": 8, "portfolio_limit": 162},
+    "A_future": {"soft_questions": true, "future_weight": 0.5},
+    "A_uncalibrated": {"calibration": false, "soft_questions": true},
+    "A_greedy_weighted": {"matcher": "greedy", "soft_questions": true}
+  },
+  "aliases_not_separate_experiments": {"V6_calibrated": "V0_frozen", "V7_guarded_greedy": "V1_greedy"}
+}

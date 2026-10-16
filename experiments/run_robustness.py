@@ -20,9 +20,16 @@ def invocation(request):
     raw=json.dumps(request).encode();start=time.perf_counter()
     out_file=tempfile.TemporaryFile();err_file=tempfile.TemporaryFile()
     p=subprocess.Popen([sys.executable,'raven_policy.py'],stdin=subprocess.PIPE,stdout=out_file,stderr=err_file)
-    p.stdin.write(raw);p.stdin.close();peak=0
+    p.stdin.write(raw);p.stdin.close();peak=0;max_processes=0
     while p.poll() is None:
-        try:peak=max(peak,psutil.Process(p.pid).memory_info().rss)
+        try:
+            parent=psutil.Process(p.pid)
+            family=[parent]+parent.children(recursive=True)
+            rss=0
+            for process in family:
+                try:rss+=process.memory_info().rss
+                except psutil.NoSuchProcess:pass
+            peak=max(peak,rss);max_processes=max(max_processes,len(family))
         except psutil.NoSuchProcess:pass
         if time.perf_counter()-start>9:
             p.kill();raise RuntimeError('Internal nine-second resource check exceeded')
@@ -31,7 +38,7 @@ def invocation(request):
     out_file.close();err_file.close();elapsed=time.perf_counter()-start
     if p.returncode or err:raise RuntimeError(err.decode())
     response=validate_response(json.loads(out),request['phase'])
-    return response,dict(seconds=elapsed,peak_sampled_rss_bytes=peak,request_bytes=len(raw),response_bytes=len(out),memory_bytes=len(json.dumps(response['memory']).encode()),phase=request['phase'],members=len(request['state']['members']))
+    return response,dict(seconds=elapsed,peak_sampled_rss_bytes=peak,rss_scope='sum of launcher and recursive descendant RSS; shared pages may be counted twice',max_processes=max_processes,request_bytes=len(raw),response_bytes=len(out),memory_bytes=len(json.dumps(response['memory']).encode()),phase=request['phase'],members=len(request['state']['members']))
 
 if __name__=='__main__':
     calls=[];sequential=[];profiles=[]
@@ -69,5 +76,6 @@ if __name__=='__main__':
         assert elapsed<8 and len(set(i for p in pairs for i in p))==2*len(pairs)
         profiles.append(dict(stage='dense_allocation_with_work_guard',members=n,edges=len(dense),seconds=elapsed,solver='greedy' if len(dense)>6000 else 'blossom'))
     write('results/robustness/resources.json',dict(calls=calls,sequential=sequential,profiles=profiles,source=fingerprint(),
+          profiles_scope='Research component microbenchmarks; guarded official greedy does not invoke the graph/predictor/portfolio components. Calls measure the actual selected policy.',
           environment={'python':sys.version,'cpu_count':os.cpu_count(),'ram':psutil.virtual_memory().total},
-          limitations='Windows subprocess RSS sampled every 5 ms, may miss peaks. These are not container-enforced CPU/RAM measurements.'))
+          limitations='Windows process-tree RSS sampled approximately every 5 ms, may miss peaks and may count shared pages twice. Launcher and descendant interpreter are included. These are not container-enforced CPU/RAM measurements.'))

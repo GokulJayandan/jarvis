@@ -16,6 +16,9 @@ def table(headers,rows):
 def fmt(x):return 'Not evaluated' if x is None else f'{x:.4f}'
 
 def main():
+    if (ROOT/'results/recovery/release_checks_complete.json').exists():
+        from experiments.recovery_report import main as recovery
+        return recovery()
     report=[]
     def section(title,body):report.append('## '+title+'\n\n'+body+'\n')
     report.append('# RAVEN-Match — Recoverability-Aware Vertex Elicitation and Sequential Allocation\n\n'

@@ -1,0 +1,1 @@
+Generated with `python -m experiments.recovery_report`. Sources and captions are embedded in catalog.json and each plot. These figures describe the recovery release. Historical pruning, calibration and disclosure figures 07–10 remain unchanged because their underlying data and model did not change. No chart implies statistical significance.

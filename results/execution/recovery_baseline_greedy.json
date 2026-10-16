@@ -1,0 +1,21 @@
+{
+  "command": [
+    "C:\\Users\\Gokul\\jarvis\\.venv\\Scripts\\python.exe",
+    "evaluate.py",
+    "--policy",
+    "official_policy.py",
+    "--baseline",
+    "greedy",
+    "--seeds",
+    "101,102,103",
+    "--variants",
+    "all",
+    "--output",
+    "results/recovery/greedy.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:58:23.419795+00:00",
+  "exit_code": 0,
+  "seconds": 459.4823350000661,
+  "log_sha256": "04ffd2ec1a327180ca35dace99235ab6ba0a02dcca6ac1c2e0cb4a5b7e9b853a"
+}

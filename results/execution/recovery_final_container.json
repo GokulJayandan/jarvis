@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".venv\\Scripts\\python.exe",
+    "evaluate.py",
+    "--image",
+    "sequential-policy:submission",
+    "--seeds",
+    "101",
+    "--output",
+    "results/recovery/container_final_check.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:59:17.151063+00:00",
+  "raven_strict": "0",
+  "exit_code": 2,
+  "seconds": 0.43661440000869334,
+  "log_sha256": "58387b3fee760fa526eb2bf5fb3f21e628a65e33ddf79c5461d71c3761a80372"
+}

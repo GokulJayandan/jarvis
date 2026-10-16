@@ -1,0 +1,16 @@
+{
+  "command": [
+    "docker",
+    "build",
+    "-t",
+    "sequential-policy:submission",
+    "."
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:59:16.950838+00:00",
+  "raven_strict": "0",
+  "exit_code": null,
+  "error": "[WinError 2] The system cannot find the file specified",
+  "seconds": 0.007927000056952238,
+  "log_sha256": "4bc7fbd7b416d804b23c797e930108d86c77ad2fa6e7577f495e589b9837bc9e"
+}

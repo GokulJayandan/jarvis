@@ -1,92 +1,54 @@
 # Team Jarvis — RAVEN-Match
 
-Recoverability-Aware Vertex Elicitation and Sequential Allocation, for Round 2 of
-[The Sequential Matching Problem](https://github.com/RomeoJulietLove/The-Sequential-Matching-Problem).
-All profiles and outcomes are synthetic, not real-world relationship validation.
+Round 2 of [The Sequential Matching Problem](https://github.com/RomeoJulietLove/The-Sequential-Matching-Problem). All profiles and outcomes are synthetic.
 
-The implementation combines strict reciprocal feasibility, separate confirmed and
-recoverable potential graphs, outcome prediction, complementary clarification
-portfolios and general-graph matching. Public validation selects the final policy;
-the simpler official baseline remains eligible for selection.
+Current release configuration: **V1_greedy**. Official greedy clarification and soft-agreement greedy matching, wrapped in RAVEN independent hard-eligibility, budget, duplicate and availability validation. Learned probabilities, portfolio search and future terms are not used by the selected policy. Exact settings are in `results/recovery/release_selection.json`.
 
-**Container verification is blocked because Docker is absent on this host.**
-Check the actual gates before calling this submission-ready. Nothing has been
-published to GitHub or submitted to the organizers by this build process.
+**NO-GO for submission:** Docker is unavailable locally, CI has not executed, and no source or issue has been published. The local implementation and experiments are tested; container eligibility is not established.
+
+The repeated official benchmark scores 0.3889 MSMI/100 (14 qualifying pairs / 3600 arrivals). Greedy scores 0.3889; this is not a claim of superiority. Selection used fresh validation; untouched post-freeze results and uncertainty are in the report.
+
+**Negative generalization result:** on the untouched three-seed sample, the selected policy obtained 3 qualifying outcomes versus protected RAVEN's 16 (18 episodes each). The conservative selection rule did not choose the stronger policy on that sample. The configuration was not changed after seeing held-out outcomes.
 
 ## Run
 
-Python 3.10+ for inference; local experiments use 3.14.6. No pip runtime dependencies.
+Inference uses standard-library Python, no pip runtime dependencies, GPU, network or persistent filesystem state. The Dockerfile pins Python 3.12.7. Local research uses Python 3.14.6 and `requirements-dev.txt`.
 
-```text
+```sh
 python policy.py < observation.json
 python -m unittest -v
 python verify_data.py
-python evaluate.py --seeds 101,102,103 --variants all --output results/final.json
-```
-
-The executable reads one JSON request and writes one JSON action. It is offline,
-CPU-only and uses current input, frozen assets and explicit memory (empty here).
-Diagnostics go to stderr. No private world or inferred hidden constraint authorizes
-a match. Official evaluator, simulator, tests, data and validators are unchanged.
-
-Reproduce the original baselines after installing our adapter:
-
-```text
-python evaluate.py --policy official_policy.py --baseline greedy --seeds 101,102,103 --variants all --output results/greedy.json
-python evaluate.py --policy official_policy.py --baseline no_asks --seeds 101,102,103 --variants all --output results/no_asks.json
-python evaluate.py --policy official_policy.py --baseline random --seeds 101,102,103 --variants all --output results/random.json
-```
-
-The official evaluator always passes `--baseline greedy` to a custom default policy.
-Use preserved `official_policy.py` for an unambiguous official greedy run.
-
-## Evidence
-
-* [Technical report](report/TECHNICAL_REPORT.md) and [machine-readable tables](results/report_tables.json).
-* [Raw results](results/) and [reproducibility commands](docs/REPRODUCIBILITY.md).
-* [Contract audit](docs/CONTRACT_AUDIT.md), [methods](docs/METHODS.md), [model card](docs/MODEL_CARD.md).
-* [Automated self-review](docs/INDEPENDENT_REVIEW.md) and [submission gates](docs/SUBMISSION_CHECKLIST.md).
-* [Experiment protocol](docs/EXPERIMENT_PROTOCOL.md) and [seed registry](configs/seeds.json).
-
-Training uses eighteen independent public seeds across six families. Six separate
-validation seeds calibrate models, and two select the configuration. Inference seed
-17 applies to the random-question ablation; optimizers use stable deterministic
-ordering. Held-out reporting seeds are not used for tuning.
-
-```text
-python -m pip install -r requirements-dev.txt
-python -m experiments.train
-python -m experiments.run_ablations
-python -m experiments.run_pruning
-python -m experiments.run_calibration
-python -m experiments.run_future_value
-python -m experiments.run_robustness
-python -m experiments.generate_figures
-python -m experiments.generate_report
-```
-
-## Container
-
-```text
+python evaluate.py --seeds 101,102,103 --variants all --output results/recovery/final.json
+python evaluate.py --policy official_policy.py --baseline greedy --seeds 101,102,103 --variants all --output results/recovery/greedy.json
+python evaluate.py --policy official_policy.py --baseline no_asks --seeds 101,102,103 --variants all --output results/recovery/no_asks.json
+python evaluate.py --policy official_policy.py --baseline random --seeds 101,102,103 --variants all --output results/recovery/random.json
 docker build -t sequential-policy:submission .
-python evaluate.py --image sequential-policy:submission --seeds 101 --output results/container_check.json
+python evaluate.py --image sequential-policy:submission --seeds 101 --output results/recovery/container_check.json
 ```
 
-These commands were attempted but could not pass without Docker installed. The
-failed container result is retained. Its presence is not proof of success. The
-Dockerfile packages all inference assets using the official Python 3.12.7 base;
-offline execution, image size and enforced limits still need verification.
+Use a new output path when repeating runs. The official evaluator always passes `--baseline greedy` to its default custom policy; `--policy official_policy.py` unambiguously selects the preserved official baselines. Official evaluator, simulator, data and hard-eligibility semantics are unchanged.
+
+## Evidence and reproduction
+
+- [Current technical report](report/TECHNICAL_REPORT.md), [recovery results](results/recovery/), [release evidence](docs/RECOVERY_RELEASE.md).
+- [Root-cause investigation](docs/PERFORMANCE_ROOT_CAUSE.md), [recovery audit](docs/RECOVERY_AUDIT.md), [submission gates](docs/SUBMISSION_CHECKLIST.md).
+- [Recovery commands](docs/RECOVERY_REPRODUCIBILITY.md), [original environment/provenance](docs/REPRODUCIBILITY.md), [declared recovery seeds](configs/recovery.json).
+- [Historical protected-candidate report](report/TECHNICAL_REPORT_PRE_RECOVERY.md), [original research results](results/), [model card](docs/MODEL_CARD.md).
+
+`results/final.json` and the original figures describe the protected pre-recovery soft policy. Current benchmark evidence is `results/recovery/final.json`; current figures are `figures/recovery/`. Original experiments are preserved, including negative findings. Model training and old selection scripts are historical research tools and must not be run as release-finalization steps.
+
+```sh
+python -m pip install -r requirements-dev.txt
+python -m experiments.recovery_report
+python -m scripts.verify_recovery
+```
+
+The original model uses 18 training seeds, six calibration seeds and two original policy-selection seeds. Recovery uses three new screening seeds, five new confirmation seeds and three untouched reporting seeds. Inference random seed is 17 where an experimental random policy is used. Selection and configuration details are fully recorded; no private organizer worlds were accessed.
+
+CI builds the actual Dockerfile and retains command logs, exit codes, local/container comparisons and image inspection as artifacts. A workflow file is not evidence of a successful container run. Authorization is still required to push and later submit the official issue.
 
 ## Attribution and team
 
-Upstream release 1.0.0, commit `a8e26b35118cfa8e886a02f93984923e43ab64f6`.
-Notices remain in [LICENSE](LICENSE) and [DATA_LICENSE.md](DATA_LICENSE.md).
-NetworkX blossom retains BSD-3-Clause notices. See [provenance](docs/UPSTREAM_PROVENANCE.md)
-and [licences](docs/LICENSES.md). New Team Jarvis work remains owned by its authors;
-participation does not itself grant a commercial licence. OpenAI Codex assisted
-implementation and automated review.
+Upstream release 1.0.0, commit `a8e26b35118cfa8e886a02f93984923e43ab64f6`. [MIT licence](LICENSE), [synthetic data conditions](DATA_LICENSE.md), [upstream provenance](docs/UPSTREAM_PROVENANCE.md), and [dependency notices](docs/LICENSES.md) are retained. The research matcher retains NetworkX BSD-3-Clause notices. No external pretrained models or real member data are used. OpenAI Codex assisted implementation and automated self-review.
 
-GokulJayandan R S · Keerthana Janakiraman · Mridula B · Boomika L.
-
-The optional website has not been started; mandatory evidence takes priority.
-Publication and official issue submission require explicit authorization.
+Team Jarvis: GokulJayandan R S, Keerthana Janakiraman, Mridula B, Boomika L. No website was built. The original candidate is protected by tag `recovery/pre-competitive-recovery` at `a918583473afbb0bc70abe76f1266c39331bf97b`.

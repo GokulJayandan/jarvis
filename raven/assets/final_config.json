@@ -5,7 +5,8 @@
   "predictor": "logistic",
   "calibration": true,
   "matcher": "exact",
-  "soft_questions": true,
+  "soft_questions": false,
   "waiting_weight": 0.0,
-  "portfolio_limit": 1000
+  "portfolio_limit": 1000,
+  "official_baseline": "greedy"
 }

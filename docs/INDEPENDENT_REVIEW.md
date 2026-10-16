@@ -1,5 +1,9 @@
 # Automated independent self-review
 
+This is the protected original candidate's review. The current recovery review
+is [RECOVERY_INDEPENDENT_REVIEW.md](RECOVERY_INDEPENDENT_REVIEW.md), with gates in
+[SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md).
+
 This is structured automated self-review by the coding agent, not a human or
 independently staffed audit. Evidence is linked; private validity is not guaranteed.
 

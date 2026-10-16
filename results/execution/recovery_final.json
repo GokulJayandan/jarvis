@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\Gokul\\jarvis\\.venv\\Scripts\\python.exe",
+    "evaluate.py",
+    "--seeds",
+    "101,102,103",
+    "--variants",
+    "all",
+    "--output",
+    "results/recovery/final.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T14:06:19.115205+00:00",
+  "exit_code": 0,
+  "seconds": 474.1774923999328,
+  "log_sha256": "f15da7c586d808c78dc1c740db73274a3382cb009c60ae6790d50c13316a4a72"
+}

@@ -1,0 +1,21 @@
+{
+  "names": [
+    "V0_frozen",
+    "V1_greedy",
+    "V4_prior",
+    "V5_present"
+  ],
+  "screen_scores": {
+    "V0_frozen": 0.3611111111111111,
+    "V1_greedy": 0.4166666666666667,
+    "V2_greedy_asks": 0.4444444444444444,
+    "V3_greedy_matches": 0.5555555555555556,
+    "V4_prior": 0.6944444444444444,
+    "V5_present": 0.6111111111111112,
+    "V8_endpoint": 0.6111111111111112,
+    "V9_reduced": 0.5833333333333334,
+    "A_future": 0.5277777777777778,
+    "A_uncalibrated": 0.3333333333333333,
+    "A_greedy_weighted": 0.25
+  }
+}

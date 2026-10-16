@@ -1,0 +1,7 @@
+{
+  "staged_files": 484,
+  "staged_bytes": 46381141,
+  "findings": [],
+  "limitations": "Pattern and filename screening, plus source/data provenance review; not a guarantee of detecting every possible secret. Findings omit matched values.",
+  "data_scope": "Only official public synthetic data and locally generated public-seed experiment artifacts. No organizer private worlds."
+}

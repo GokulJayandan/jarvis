@@ -1,0 +1,12 @@
+{
+  "command": [
+    ".venv\\Scripts\\python.exe",
+    "-m",
+    "experiments.recovery_diagnostics"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:42:30.942448+00:00",
+  "exit_code": 0,
+  "seconds": 215.78760730009526,
+  "log_sha256": "160d64e722bcf06aeed1e48835ff0f1a1e75cb1636a281ab49dc4753fd6eb68c"
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    ".venv\\Scripts\\python.exe",
+    "-m",
+    "scripts.recovery_pruning_replay"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:49:12.983029+00:00",
+  "exit_code": 0,
+  "seconds": 1.2121707000769675,
+  "log_sha256": "be223b07a7878ab47c87af0c617defb8db0a23288099dea4d0caabb356b8991d"
+}

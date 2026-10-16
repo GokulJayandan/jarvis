@@ -16,6 +16,7 @@ def run(label, command):
     started = time.perf_counter()
     record = {'command': command, 'cwd': str(ROOT), 'started_utc': datetime.datetime.now(datetime.timezone.utc).isoformat()}
     env = dict(os.environ, PYTHONUTF8='1', PYTHONIOENCODING='utf-8')
+    record['raven_strict']=env.get('RAVEN_STRICT','0')
     env['PATH'] = str(Path(sys.executable).parent) + os.pathsep + env['PATH']
     with (target / (label + '.log')).open('w', encoding='utf-8') as log:
         try:

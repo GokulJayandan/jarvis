@@ -1,0 +1,721 @@
+{
+  "selected": "V1_greedy",
+  "totals": {
+    "greedy": {
+      "episodes": 18,
+      "valid": 18,
+      "score": 0.3888888888888889,
+      "arrived_members": 3600,
+      "assignments": 1437,
+      "mutual_acceptances": 198,
+      "dates": 155,
+      "mutual_second_meeting_intention": 14,
+      "served_members": 1338,
+      "unserved_members": 2262,
+      "ask_cost": 3720,
+      "missing_feedback": 819,
+      "coverage": 0.37166666666666665,
+      "wait_mean": 6.447683109118087,
+      "wait_median": 4.0,
+      "seconds": 23.93301386604758
+    },
+    "no_asks": {
+      "episodes": 18,
+      "valid": 18,
+      "score": 0.1388888888888889,
+      "arrived_members": 3600,
+      "assignments": 438,
+      "mutual_acceptances": 63,
+      "dates": 48,
+      "mutual_second_meeting_intention": 5,
+      "served_members": 514,
+      "unserved_members": 3086,
+      "ask_cost": 0,
+      "missing_feedback": 240,
+      "coverage": 0.14277777777777778,
+      "wait_mean": 4.173151750972763,
+      "wait_median": 0.0,
+      "seconds": 25.30651644984674
+    },
+    "random": {
+      "episodes": 18,
+      "valid": 18,
+      "score": 0.2777777777777778,
+      "arrived_members": 3600,
+      "assignments": 1449,
+      "mutual_acceptances": 192,
+      "dates": 158,
+      "mutual_second_meeting_intention": 10,
+      "served_members": 1356,
+      "unserved_members": 2244,
+      "ask_cost": 3720,
+      "missing_feedback": 754,
+      "coverage": 0.37666666666666665,
+      "wait_mean": 6.536135693215339,
+      "wait_median": 5.0,
+      "seconds": 23.56498788345036
+    },
+    "final": {
+      "episodes": 18,
+      "valid": 18,
+      "score": 0.3888888888888889,
+      "arrived_members": 3600,
+      "assignments": 1437,
+      "mutual_acceptances": 198,
+      "dates": 155,
+      "mutual_second_meeting_intention": 14,
+      "served_members": 1338,
+      "unserved_members": 2262,
+      "ask_cost": 3720,
+      "missing_feedback": 819,
+      "coverage": 0.37166666666666665,
+      "wait_mean": 6.447683109118087,
+      "wait_median": 4.0,
+      "seconds": 24.768996694021755
+    }
+  },
+  "scenarios": [
+    [
+      "cold_start",
+      3,
+      600,
+      1,
+      0.16666666666666666,
+      23,
+      0.36,
+      244
+    ],
+    [
+      "delayed",
+      3,
+      600,
+      3,
+      0.5,
+      32,
+      0.43,
+      200
+    ],
+    [
+      "development",
+      3,
+      600,
+      3,
+      0.5,
+      30,
+      0.4316666666666667,
+      200
+    ],
+    [
+      "drift",
+      3,
+      600,
+      3,
+      0.5,
+      28,
+      0.4316666666666667,
+      200
+    ],
+    [
+      "shift",
+      3,
+      600,
+      3,
+      0.5,
+      30,
+      0.4316666666666667,
+      200
+    ],
+    [
+      "sparse",
+      3,
+      600,
+      1,
+      0.16666666666666666,
+      12,
+      0.145,
+      196
+    ]
+  ],
+  "screen": [
+    [
+      "A_future",
+      0.5277777777777778,
+      19,
+      0.34,
+      547.8333333333334
+    ],
+    [
+      "A_greedy_weighted",
+      0.25,
+      9,
+      0.3411111111111111,
+      543.6111111111111
+    ],
+    [
+      "A_uncalibrated",
+      0.3333333333333333,
+      12,
+      0.3402777777777778,
+      542.7222222222223
+    ],
+    [
+      "V0_frozen",
+      0.3611111111111111,
+      13,
+      0.3402777777777778,
+      542.7222222222223
+    ],
+    [
+      "V1_greedy",
+      0.41666666666666663,
+      15,
+      0.3377777777777778,
+      194
+    ],
+    [
+      "V2_greedy_asks",
+      0.4444444444444444,
+      16,
+      0.33888888888888885,
+      194
+    ],
+    [
+      "V3_greedy_matches",
+      0.5555555555555556,
+      20,
+      0.3388888888888889,
+      537.4444444444445
+    ],
+    [
+      "V4_prior",
+      0.6944444444444444,
+      25,
+      0.3416666666666667,
+      190.66666666666666
+    ],
+    [
+      "V5_present",
+      0.6111111111111112,
+      22,
+      0.34194444444444444,
+      190.33333333333334
+    ],
+    [
+      "V8_endpoint",
+      0.611111111111111,
+      22,
+      0.33944444444444444,
+      192.16666666666666
+    ],
+    [
+      "V9_reduced",
+      0.5833333333333334,
+      21,
+      0.34055555555555556,
+      190.33333333333334
+    ]
+  ],
+  "confirm": [
+    [
+      "V0_frozen",
+      0.43333333333333335,
+      26,
+      0.33316666666666667,
+      565.5666666666666
+    ],
+    [
+      "V1_greedy",
+      0.33333333333333337,
+      20,
+      0.3313333333333333,
+      203.4
+    ],
+    [
+      "V4_prior",
+      0.38333333333333336,
+      23,
+      0.3358333333333333,
+      197.3
+    ],
+    [
+      "V5_present",
+      0.43333333333333335,
+      26,
+      0.334,
+      197.2
+    ]
+  ],
+  "comparisons": {
+    "no_asks": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": -0.25,
+      "ci95": [
+        -0.3333333333333333,
+        -0.16666666666666666
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    },
+    "random": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": -0.1111111111111111,
+      "ci95": [
+        -0.25,
+        0.16666666666666666
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    },
+    "final": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    }
+  },
+  "screening_ablations": {
+    "A_future": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": 0.16666666666666666,
+      "ci95": [
+        0.0,
+        0.25
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    },
+    "A_greedy_weighted": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": -0.1111111111111111,
+      "ci95": [
+        -0.3333333333333333,
+        0.0
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    },
+    "A_uncalibrated": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": -0.027777777777777776,
+      "ci95": [
+        -0.08333333333333333,
+        0.0
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    },
+    "V1_greedy": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": 0.05555555555555555,
+      "ci95": [
+        -0.16666666666666666,
+        0.4166666666666667
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    },
+    "V2_greedy_asks": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": 0.08333333333333333,
+      "ci95": [
+        -0.4166666666666667,
+        0.3333333333333333
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    },
+    "V3_greedy_matches": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": 0.19444444444444445,
+      "ci95": [
+        -0.08333333333333333,
+        0.4166666666666667
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    },
+    "V4_prior": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": 0.3333333333333333,
+      "ci95": [
+        0.08333333333333333,
+        0.5833333333333334
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    },
+    "V5_present": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": 0.25,
+      "ci95": [
+        -0.08333333333333333,
+        0.4166666666666667
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    },
+    "V8_endpoint": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": 0.25,
+      "ci95": [
+        -0.08333333333333333,
+        0.6666666666666666
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    },
+    "V9_reduced": {
+      "n_episodes": 18,
+      "n_seed_clusters": 3,
+      "mean_difference": 0.2222222222222222,
+      "ci95": [
+        -0.08333333333333333,
+        0.4166666666666667
+      ],
+      "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+    }
+  },
+  "future_effects": {
+    "historical_soft": {
+      "msmi_per_100_arrived_members": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": 0.3333333333333333,
+        "ci95": [
+          0.0,
+          0.5
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      },
+      "dates": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": 1.5555555555555556,
+        "ci95": [
+          0.3333333333333333,
+          2.8333333333333335
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      },
+      "coverage": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": 0.0005555555555555561,
+        "ci95": [
+          0.0,
+          0.001666666666666668
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      },
+      "mean_wait_days": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": 0.10272196090513669,
+        "ci95": [
+          0.01677047129622104,
+          0.1781742329742125
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      },
+      "ask_cost": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": 5.944444444444445,
+        "ci95": [
+          -0.6666666666666666,
+          14.833333333333334
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      },
+      "inference_seconds": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": -2.3739327112497346,
+        "ci95": [
+          -2.727483699680306,
+          -1.8530419829767197
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      }
+    },
+    "recovery_screen": {
+      "msmi_per_100_arrived_members": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": 0.16666666666666666,
+        "ci95": [
+          0.0,
+          0.25
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      },
+      "dates": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": 1.1111111111111112,
+        "ci95": [
+          -0.16666666666666666,
+          1.8333333333333333
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      },
+      "coverage": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": -0.00027777777777777496,
+        "ci95": [
+          -0.001666666666666668,
+          0.0008333333333333434
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      },
+      "mean_wait_days": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": 0.21736495265315467,
+        "ci95": [
+          -0.11553773024361262,
+          0.4654424886697903
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      },
+      "ask_cost": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": 5.111111111111111,
+        "ci95": [
+          2.8333333333333335,
+          6.833333333333333
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      },
+      "inference_seconds": {
+        "n_episodes": 18,
+        "n_seed_clusters": 3,
+        "mean_difference": -2.988831616420713,
+        "ci95": [
+          -4.316596616602813,
+          -2.079330332848864
+        ],
+        "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+      }
+    }
+  },
+  "future_scenarios": [
+    [
+      "historical_soft",
+      "cold_start",
+      3,
+      0.5,
+      -0.33333333333333304,
+      0.0,
+      0.6137772616340609,
+      -1.0
+    ],
+    [
+      "historical_soft",
+      "delayed",
+      3,
+      0.0,
+      0.33333333333333215,
+      -0.0016666666666666496,
+      -0.41528635898073407,
+      12
+    ],
+    [
+      "historical_soft",
+      "development",
+      3,
+      0.5,
+      4.0,
+      0.0016666666666666496,
+      0.0632832326905799,
+      3.3333333333333712
+    ],
+    [
+      "historical_soft",
+      "drift",
+      3,
+      0.5,
+      3.666666666666666,
+      0.0016666666666666496,
+      0.0632832326905799,
+      3.3333333333333712
+    ],
+    [
+      "historical_soft",
+      "shift",
+      3,
+      0.5000000000000001,
+      1.333333333333334,
+      0.0016666666666666496,
+      0.21485806011043085,
+      9.666666666666629
+    ],
+    [
+      "historical_soft",
+      "sparse",
+      3,
+      0.0,
+      0.3333333333333335,
+      0.0,
+      0.07641633728590236,
+      8.333333333333371
+    ],
+    [
+      "recovery_screen",
+      "cold_start",
+      3,
+      0.0,
+      1.333333333333334,
+      -0.0016666666666666496,
+      0.3959797661843698,
+      -6.333333333333371
+    ],
+    [
+      "recovery_screen",
+      "delayed",
+      3,
+      0.16666666666666666,
+      1.666666666666666,
+      0.0016666666666666496,
+      0.2344759747660632,
+      1.0
+    ],
+    [
+      "recovery_screen",
+      "development",
+      3,
+      0.16666666666666663,
+      1.0,
+      0.0,
+      0.22399576046634895,
+      2.0
+    ],
+    [
+      "recovery_screen",
+      "drift",
+      3,
+      0.3333333333333333,
+      1.6666666666666679,
+      0.0,
+      0.22399576046634895,
+      2.0
+    ],
+    [
+      "recovery_screen",
+      "shift",
+      3,
+      0.16666666666666669,
+      1.333333333333334,
+      0.0,
+      0.39036565977742477,
+      6.0
+    ],
+    [
+      "recovery_screen",
+      "sparse",
+      3,
+      0.16666666666666666,
+      -0.33333333333333304,
+      -0.0016666666666666774,
+      -0.16462320574162703,
+      26.0
+    ]
+  ],
+  "resources": {
+    "calls": 54,
+    "max_seconds": 2.6728294999338686,
+    "max_rss_mib": 54.62890625,
+    "max_request_bytes": 1047909,
+    "max_response_bytes": 25065
+  },
+  "observation_diagnostics": [
+    [
+      "greedy",
+      6,
+      410,
+      0,
+      178,
+      0,
+      5.717378042590476,
+      6,
+      0,
+      277
+    ],
+    [
+      "frozen",
+      6,
+      399,
+      2169,
+      191,
+      0,
+      5.855406597107245,
+      6,
+      0,
+      270
+    ]
+  ],
+  "fresh": {
+    "V0_frozen": {
+      "episodes": 18,
+      "valid": 18,
+      "score": 0.4444444444444444,
+      "arrived_members": 3600,
+      "assignments": 1175,
+      "mutual_acceptances": 205,
+      "dates": 165,
+      "mutual_second_meeting_intention": 16,
+      "served_members": 1074,
+      "unserved_members": 2526,
+      "ask_cost": 9587,
+      "missing_feedback": 644,
+      "coverage": 0.29833333333333334,
+      "wait_mean": 5.685288640595903,
+      "wait_median": 3.0,
+      "seconds": 4.065108744725068
+    },
+    "V1_greedy": {
+      "episodes": 18,
+      "valid": 18,
+      "score": 0.08333333333333333,
+      "arrived_members": 3600,
+      "assignments": 1217,
+      "mutual_acceptances": 175,
+      "dates": 131,
+      "mutual_second_meeting_intention": 3,
+      "served_members": 1071,
+      "unserved_members": 2529,
+      "ask_cost": 3450,
+      "missing_feedback": 701,
+      "coverage": 0.2975,
+      "wait_mean": 6.096171802054155,
+      "wait_median": 4,
+      "seconds": 6.190439183640087
+    }
+  },
+  "fresh_selected_vs_greedy": {
+    "n_episodes": 18,
+    "n_seed_clusters": 3,
+    "mean_difference": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+  },
+  "fresh_protected_minus_selected": {
+    "n_episodes": 18,
+    "n_seed_clusters": 3,
+    "mean_difference": 0.3611111111111111,
+    "ci95": [
+      0.25,
+      0.5833333333333334
+    ],
+    "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+  }
+}

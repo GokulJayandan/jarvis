@@ -1,0 +1,11 @@
+{
+  "command": [
+    ".venv\\Scripts\\python.exe",
+    "verify_data.py"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:39:16.198698+00:00",
+  "exit_code": 0,
+  "seconds": 0.36259230016730726,
+  "log_sha256": "66a1f7be66a6007ed7ddcb6a40475ecb30c18e674915afe732b0ed44e4e854c0"
+}

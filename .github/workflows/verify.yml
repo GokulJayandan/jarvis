@@ -5,21 +5,21 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.14'
       - run: python -m pip install -r requirements-dev.txt
-      - run: python -m unittest -v
-      - run: python verify_data.py
-      - run: python evaluate.py --seeds 101 --output results/ci_smoke.json
+      - run: python scripts/run_logged.py ci_tests python -m unittest -v
+      - run: python scripts/run_logged.py ci_data python verify_data.py
+      - run: python scripts/run_logged.py ci_local python evaluate.py --seeds 101 --output results/ci_smoke.json
         env:
           RAVEN_STRICT: '1'
-      - run: docker build -t sequential-policy:submission .
-      - run: python evaluate.py --image sequential-policy:submission --seeds 101 --output results/container_check.json
-      - run: python scripts/compare_runs.py results/ci_smoke.json results/container_check.json
+      - run: python scripts/run_logged.py ci_build docker build -t sequential-policy:submission .
+      - run: python scripts/run_logged.py ci_container python evaluate.py --image sequential-policy:submission --seeds 101 --output results/container_check.json
+      - run: python scripts/run_logged.py ci_compare python scripts/compare_runs.py results/ci_smoke.json results/container_check.json
       - run: docker image inspect sequential-policy:submission > results/container_image.json
       - run: python -c "import json; assert json.load(open('results/container_image.json'))[0]['Size'] <= 2 * 1024**3"
       - uses: actions/upload-artifact@v4
@@ -30,3 +30,5 @@ jobs:
             results/ci_smoke.json
             results/container_check.json
             results/container_image.json
+            results/execution/ci_*.json
+            results/execution/ci_*.log

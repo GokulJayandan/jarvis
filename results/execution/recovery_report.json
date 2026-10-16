@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\Gokul\\jarvis\\.venv\\Scripts\\python.exe",
+    "-m",
+    "experiments.recovery_report"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T14:17:49.357539+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 9.023062699940056,
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

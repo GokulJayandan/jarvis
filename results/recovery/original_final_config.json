@@ -1,0 +1,11 @@
+{
+  "planner": "joint",
+  "candidate_limit": 12,
+  "future_weight": 0.0,
+  "predictor": "logistic",
+  "calibration": true,
+  "matcher": "exact",
+  "soft_questions": true,
+  "waiting_weight": 0.0,
+  "portfolio_limit": 1000
+}

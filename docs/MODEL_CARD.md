@@ -1,5 +1,10 @@
 # Model card — synthetic outcomes only
 
+Recovery note: this card describes the preserved research predictor. Whether the
+deployed policy uses it is specified in `results/recovery/release_selection.json`.
+The model itself is not refitted during recovery. Current inference checksums are
+in `results/recovery/frozen_source.json`; older provenance is historical.
+
 Purpose: rank currently legal synthetic introductions and score clarification
 opportunities. Never a real-member compatibility, clinical, or social predictor.
 

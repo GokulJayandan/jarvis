@@ -1,0 +1,131 @@
+{
+  "checked_utc": "2026-10-16T14:09:13.263848+00:00",
+  "scope": "Published package metadata only; not an executed Linux install or CI run",
+  "dependencies": [
+    {
+      "name": "contourpy",
+      "version": "1.4.0",
+      "requires_python": ">=3.12",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "contourpy-1.4.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "contourpy-1.4.0-cp314-cp314t-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+      ]
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "requires_python": ">=3.8",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "cycler-0.12.1-py3-none-any.whl"
+      ]
+    },
+    {
+      "name": "fonttools",
+      "version": "4.67.0",
+      "requires_python": ">=3.11",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "fonttools-4.67.0-cp314-cp314t-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "fonttools-4.67.0-py3-none-any.whl"
+      ]
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.1",
+      "requires_python": ">=3.10",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "kiwisolver-1.5.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "kiwisolver-1.5.1-cp314-cp314t-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+      ]
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.10.8",
+      "requires_python": ">=3.10",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "matplotlib-3.10.8-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "matplotlib-3.10.8-cp314-cp314t-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+      ]
+    },
+    {
+      "name": "networkx",
+      "version": "3.6.1",
+      "requires_python": "!=3.14.1,>=3.11",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "networkx-3.6.1-py3-none-any.whl"
+      ]
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "requires_python": ">=3.12",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "numpy-2.5.4-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "numpy-2.5.4-cp314-cp314t-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+      ]
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "requires_python": ">=3.9",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "packaging-26.3-py3-none-any.whl"
+      ]
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "requires_python": ">=3.10",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "pillow-12.3.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "pillow-12.3.0-cp314-cp314t-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+      ]
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "requires_python": ">=3.6",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "psutil-7.2.2-cp314-cp314t-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl",
+        "psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl"
+      ]
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "requires_python": ">=3.9",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "pyparsing-3.3.3-py3-none-any.whl"
+      ]
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "python_dateutil-2.9.0.post0-py2.py3-none-any.whl"
+      ]
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7",
+      "python314_allowed": true,
+      "linux_wheels": [
+        "six-1.17.0-py2.py3-none-any.whl"
+      ]
+    }
+  ]
+}

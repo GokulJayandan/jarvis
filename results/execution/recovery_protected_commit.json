@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv\\Scripts\\python.exe",
+    "-m",
+    "scripts.replay_protected_commit"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T14:15:57.976289+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 31.27360330009833,
+  "log_sha256": "1a80c919a68ca70dd4420a94575c9609dd045005f2ff943baf27592eef76b826"
+}

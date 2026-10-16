@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:39:01.128138+00:00",
+  "exit_code": 0,
+  "seconds": 14.848081800155342,
+  "log_sha256": "efe6e9d95f81df7822ee83099b3c9875f2343db5e6ecb2c7c847f665772e386c"
+}

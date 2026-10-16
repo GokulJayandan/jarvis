@@ -16,11 +16,18 @@ def main():
     container=json.loads((root/'results/container_check.json').read_text())
     if not container['summary']['eligible']:raise SystemExit('BLOCKED: successful offline Docker evaluation is required before preparing a submission-ready issue.')
     urllib.request.urlopen(source+'/commit/'+sha,timeout=30).read(1)
-    for path in ('report/TECHNICAL_REPORT.md','results/final.json'):
+    final_path='results/recovery/final.json' if (root/'results/recovery/final.json').exists() else 'results/final.json'
+    for path in ('report/TECHNICAL_REPORT.md',final_path):
         urllib.request.urlopen(source+'/blob/'+sha+'/'+path,timeout=30).read(1)
     template=json.loads(urllib.request.urlopen('https://api.github.com/repos/RomeoJulietLove/The-Sequential-Matching-Problem/contents/.github/ISSUE_TEMPLATE/final_submission.yml',timeout=30).read())
     if not template.get('sha'):raise SystemExit('Could not verify current official issue template')
-    final=json.loads((root/'results/final.json').read_text())
+    final=json.loads((root/final_path).read_text())
+    recovery_note=''
+    if final_path.startswith('results/recovery/'):
+        selected=json.loads((root/'results/recovery/selection.json').read_text())['selected']
+        fresh=json.loads((root/f'results/recovery/fresh/{selected}.json').read_text())
+        reference=json.loads((root/'results/recovery/fresh/V0_frozen.json').read_text())
+        recovery_note=f"Selected configuration: {selected}. Untouched reporting: {fresh['summary']['primary_score']} MSMI/100 versus protected RAVEN's {reference['summary']['primary_score']}. The conservative selection underperformed on this sample; the configuration was not retuned on these outcomes."
     text=f'''### Team name and size
 
 Jarvis — four participants. Project: RAVEN-Match.
@@ -59,6 +66,8 @@ All three official baselines and all six public families on matched seeds 101–
 Final primary score: {final['summary']['primary_score']} MSMI per 100 arrived members.
 Required future-value, pruning-regret and calibration studies are included; negative
 results and uncertainty are retained. Docker evaluation passed in the linked results.
+
+{recovery_note}
 
 Reproduction: {source}/blob/{sha}/docs/REPRODUCIBILITY.md
 '''

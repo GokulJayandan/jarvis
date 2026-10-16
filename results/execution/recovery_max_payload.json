@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv\\Scripts\\python.exe",
+    "-m",
+    "scripts.recovery_max_payload"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T14:00:58.822862+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 8.503287700004876,
+  "log_sha256": "751f0aa573410d8ece6a9d02f41de8841dc7249ed12e911f1a289f0be072b591"
+}

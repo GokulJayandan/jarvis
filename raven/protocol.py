@@ -17,12 +17,20 @@ def decide(request,name='final'):
     cfg=config(name)
     if 'official_baseline' in cfg:
         from official_policy import decide as baseline
-        return baseline(request,cfg['official_baseline'])
+        response=baseline(request,cfg['official_baseline'])
+        return sanitize(state,phase,response['asks' if phase=='ask' else 'pairs'])
     # Deterministic bounded work on unusually large, otherwise valid observations.
     # Omitted members remain unserved for this invocation; no unknown edge is used.
     if len(state.get('members',[]))>220:
         state=dict(state,members=sorted(state['members'],key=lambda m:m['member_id'])[:220])
-    action=questions(state,cfg) if phase=='ask' else allocate(build(state,cfg,False)[0],cfg['matcher'])
+    if phase=='ask' and cfg.get('ask_backend')=='official':
+        from kit import baseline_asks
+        action=baseline_asks(state)
+    elif phase=='match' and cfg.get('match_backend')=='official':
+        from kit import baseline_match
+        action=baseline_match(state)
+    else:
+        action=questions(state,cfg) if phase=='ask' else allocate(build(state,cfg,False)[0],cfg['matcher'])
     return sanitize(state,phase,action)
 
 def main(name='final'):

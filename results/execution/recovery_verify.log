@@ -1,0 +1,15 @@
+{"same_actions_and_outcomes": true, "episodes": 18}
+{"same_actions_and_outcomes": true, "episodes": 18}
+{"same_actions_and_outcomes": true, "episodes": 18}
+{"same_actions_and_outcomes": true, "episodes": 18}
+{"same_actions_and_outcomes": true, "episodes": 18}
+{
+  "local_evidence": "PASS",
+  "submission": "NO-GO",
+  "blocking_gates": [
+    14,
+    15,
+    19,
+    20
+  ]
+}

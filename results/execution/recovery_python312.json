@@ -1,0 +1,25 @@
+{
+  "command": [
+    "C:\\Users\\Gokul\\jarvis\\.tools\\python312\\python.exe",
+    "-m",
+    "unittest",
+    "test_kit",
+    "test_runner",
+    "test_release",
+    "tests.test_constraints",
+    "tests.test_portfolio",
+    "tests.test_protocol",
+    "tests.test_probabilities",
+    "tests.test_graphs",
+    "tests.test_temporal",
+    "tests.test_matching.Matching.test_random_bruteforce_and_odd_cycles",
+    "tests.test_recovery",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T14:17:16.723116+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 7.960780899971724,
+  "log_sha256": "0efd1d14e146795660b2f5424a50b62b36dd6ba1effb44158a1877ed9042fc20"
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "gate": 1,
+    "requirement": "Repository and recovery reference",
+    "status": "PASS",
+    "evidence": "git origin and recovery tag"
+  },
+  {
+    "gate": 2,
+    "requirement": "Official source and attribution",
+    "status": "PASS",
+    "evidence": "byte comparison with protected commit; provenance docs"
+  },
+  {
+    "gate": 3,
+    "requirement": "Starter plus custom tests",
+    "status": "PASS",
+    "evidence": "recovery_final_tests.log"
+  },
+  {
+    "gate": 4,
+    "requirement": "Official engine execution",
+    "status": "PASS",
+    "evidence": "results/recovery/final.json"
+  },
+  {
+    "gate": 5,
+    "requirement": "Legal JSON and hard eligibility",
+    "status": "PASS",
+    "evidence": "tests/test_recovery.py and full episodes"
+  },
+  {
+    "gate": 6,
+    "requirement": "Full episodes",
+    "status": "PASS",
+    "evidence": "18 selected subprocess episodes"
+  },
+  {
+    "gate": 7,
+    "requirement": "Three baselines",
+    "status": "PASS",
+    "evidence": "results/recovery/{greedy,no_asks,random}.json"
+  },
+  {
+    "gate": 8,
+    "requirement": "Six scenarios",
+    "status": "PASS",
+    "evidence": "six scenario means"
+  },
+  {
+    "gate": 9,
+    "requirement": "Future-value investigation",
+    "status": "PASS",
+    "evidence": "screen/A_future.json and original future study"
+  },
+  {
+    "gate": 10,
+    "requirement": "Pruning audit",
+    "status": "PASS",
+    "evidence": "evidence_audit.json: 540 exact counts"
+  },
+  {
+    "gate": 11,
+    "requirement": "Calibration recomputation",
+    "status": "PASS",
+    "evidence": "evidence_audit.json: recomputed Brier"
+  },
+  {
+    "gate": 12,
+    "requirement": "Waiting and coverage",
+    "status": "PASS",
+    "evidence": "report_tables.json"
+  },
+  {
+    "gate": 13,
+    "requirement": "Controlled ablations",
+    "status": "PASS",
+    "evidence": "screen and confirm JSON"
+  },
+  {
+    "gate": 14,
+    "requirement": "Offline Docker build/evaluation",
+    "status": "BLOCKED",
+    "evidence": "Docker missing: build launch failure; evaluator exit 2"
+  },
+  {
+    "gate": 15,
+    "requirement": "Enforced container resource limits",
+    "status": "BLOCKED",
+    "evidence": "Windows sampled probes only"
+  },
+  {
+    "gate": 16,
+    "requirement": "Report and results reconciled",
+    "status": "PASS",
+    "evidence": "report_tables.json and generated technical report"
+  },
+  {
+    "gate": 17,
+    "requirement": "Licences and model provenance",
+    "status": "PASS",
+    "evidence": "docs/LICENSES.md and unchanged model bytes"
+  },
+  {
+    "gate": 18,
+    "requirement": "Local release source prepared",
+    "status": "PASS",
+    "evidence": "release_checks_complete.json; uncommitted state checked separately"
+  },
+  {
+    "gate": 19,
+    "requirement": "Immutable public commit available",
+    "status": "BLOCKED",
+    "evidence": "Public repository still has no published refs"
+  },
+  {
+    "gate": 20,
+    "requirement": "Authorized official submission",
+    "status": "BLOCKED",
+    "evidence": "Requires Docker success and explicit publication/issue authorization"
+  }
+]

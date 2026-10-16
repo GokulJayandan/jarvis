@@ -1,0 +1,21 @@
+{
+  "command": [
+    "C:\\Users\\Gokul\\jarvis\\.venv\\Scripts\\python.exe",
+    "evaluate.py",
+    "--policy",
+    "official_policy.py",
+    "--baseline",
+    "no_asks",
+    "--seeds",
+    "101,102,103",
+    "--variants",
+    "all",
+    "--output",
+    "results/recovery/no_asks.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:58:23.420028+00:00",
+  "exit_code": 0,
+  "seconds": 475.69185810000636,
+  "log_sha256": "c833c6a268318527c0923d580bf254750c323d57374d247ef6c89cd39101acee"
+}

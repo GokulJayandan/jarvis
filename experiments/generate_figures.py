@@ -13,6 +13,9 @@ def read(path):
     return json.loads(p.read_text()) if p.exists() else None
 
 def main():
+    if (ROOT/'results/recovery/release_checks_complete.json').exists():
+        from experiments.recovery_report import main as recovery
+        return recovery()
     folder=ROOT/'figures';folder.mkdir(exist_ok=True)
     plt.rcParams.update({'figure.dpi':140,'font.size':9,'axes.spines.top':False,'axes.spines.right':False})
     catalog=[]

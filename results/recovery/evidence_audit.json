@@ -1,0 +1,751 @@
+{
+  "calibration_recomputed": [
+    {
+      "target": "directional",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.23352330935031054,
+      "log_loss": 0.6598470150146194,
+      "ece": 0.014399205814499494
+    },
+    {
+      "target": "directional",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.22903197262924674,
+      "log_loss": 0.6506045039918142,
+      "ece": 0.0012428706882327556
+    },
+    {
+      "target": "directional",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.20774799664301638,
+      "log_loss": 0.606805208842271,
+      "ece": 0.07536903876143741
+    },
+    {
+      "target": "directional",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.2552407815940921,
+      "log_loss": 0.7045383817650229,
+      "ece": 0.0900351207727379
+    },
+    {
+      "target": "directional",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.22428041824132575,
+      "log_loss": 0.6404571873473592,
+      "ece": 0.07846817430887884
+    },
+    {
+      "target": "directional",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.2021562901812365,
+      "log_loss": 0.5946402422480292,
+      "ece": 0.12195765158093183
+    },
+    {
+      "target": "directional",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.20664361332475287,
+      "log_loss": 0.6042392473309576,
+      "ece": 0.13082532946224204
+    },
+    {
+      "target": "directional",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.24708213919075162,
+      "log_loss": 0.6874416171394349,
+      "ece": 0.14241829524244243
+    },
+    {
+      "target": "directional",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.224380898467702,
+      "log_loss": 0.6406612668067778,
+      "ece": 0.07850746748100297
+    },
+    {
+      "target": "directional",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.20221203822504452,
+      "log_loss": 0.5947363073084773,
+      "ece": 0.12255277830718804
+    },
+    {
+      "target": "directional",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.2061609791085704,
+      "log_loss": 0.6031869863590957,
+      "ece": 0.13069489442903495
+    },
+    {
+      "target": "directional",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.2476502245902369,
+      "log_loss": 0.6886580193796834,
+      "ece": 0.14380501508328072
+    },
+    {
+      "target": "joint",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.12976620734119887,
+      "log_loss": 0.4284447826592877,
+      "ece": 0.009406006921051036
+    },
+    {
+      "target": "joint",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.12578724937456007,
+      "log_loss": 0.4184787728059617,
+      "ece": 0.0038219905276083983
+    },
+    {
+      "target": "joint",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.08600846976779611,
+      "log_loss": 0.31884572494816266,
+      "ece": 0.05200301674758803
+    },
+    {
+      "target": "joint",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.16511532945442217,
+      "log_loss": 0.5169829633187841,
+      "ece": 0.059014492114672884
+    },
+    {
+      "target": "joint",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.12576175074728094,
+      "log_loss": 0.41393549872088936,
+      "ece": 0.05008968850755978
+    },
+    {
+      "target": "joint",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.11271179135416992,
+      "log_loss": 0.3668499176563146,
+      "ece": 0.1079482922467002
+    },
+    {
+      "target": "joint",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.08603886208916707,
+      "log_loss": 0.31842774895993814,
+      "ece": 0.06662321310506687
+    },
+    {
+      "target": "joint",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.16178562075954017,
+      "log_loss": 0.507097869458973,
+      "ece": 0.10433829850419049
+    },
+    {
+      "target": "joint",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.12555049846497338,
+      "log_loss": 0.4133815414021696,
+      "ece": 0.0480321707314391
+    },
+    {
+      "target": "joint",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.11248920753102752,
+      "log_loss": 0.36689267880652304,
+      "ece": 0.10983738216281341
+    },
+    {
+      "target": "joint",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.08679181142956412,
+      "log_loss": 0.3213433310413349,
+      "ece": 0.06759614900081694
+    },
+    {
+      "target": "joint",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.1608367227448832,
+      "log_loss": 0.5036238579328426,
+      "ece": 0.10124077064882032
+    },
+    {
+      "target": "date",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.10065006176554983,
+      "log_loss": 0.3538570988407569,
+      "ece": 0.0003242966660541857
+    },
+    {
+      "target": "date",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.08467942653094397,
+      "log_loss": 0.31136268350838725,
+      "ece": 0.020321195137224496
+    },
+    {
+      "target": "date",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.0608799197928564,
+      "log_loss": 0.24803732987170804,
+      "ece": 0.05108719248581957
+    },
+    {
+      "target": "date",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.13792781628651396,
+      "log_loss": 0.4530451624338371,
+      "ece": 0.04851383728868137
+    },
+    {
+      "target": "date",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.09998121925920862,
+      "log_loss": 0.35008333845472983,
+      "ece": 0.04070336791610148
+    },
+    {
+      "target": "date",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.08377024436238695,
+      "log_loss": 0.301533014162515,
+      "ece": 0.08684058376565325
+    },
+    {
+      "target": "date",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.06034443147872421,
+      "log_loss": 0.2447519979063705,
+      "ece": 0.046859859857678626
+    },
+    {
+      "target": "date",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.13725648731370088,
+      "log_loss": 0.4514197905067133,
+      "ece": 0.08619904629493971
+    },
+    {
+      "target": "date",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.10002763053416451,
+      "log_loss": 0.3500859806399267,
+      "ece": 0.041355256681293154
+    },
+    {
+      "target": "date",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.08452805220255341,
+      "log_loss": 0.3039549267413982,
+      "ece": 0.09305492751338221
+    },
+    {
+      "target": "date",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.06119060444234267,
+      "log_loss": 0.24893036805925847,
+      "ece": 0.05208726351581544
+    },
+    {
+      "target": "date",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.13639058646519095,
+      "log_loss": 0.44719891894447467,
+      "ece": 0.08414867894242892
+    },
+    {
+      "target": "msmi",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.006240289943619471,
+      "log_loss": 0.03948131030341531,
+      "ece": 0.005417789551050408
+    },
+    {
+      "target": "msmi",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.00013613731300760108,
+      "log_loss": 0.011736392358409066,
+      "ece": 0.01166778955105041
+    },
+    {
+      "target": "msmi",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.008804756433403156,
+      "log_loss": 0.05113745926255994,
+      "ece": 0.0027920499060799936
+    },
+    {
+      "target": "msmi",
+      "model": "prior",
+      "calibrated": false,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.00681038164716181,
+      "log_loss": 0.04207252131878036,
+      "ece": 0.004834076566995737
+    },
+    {
+      "target": "msmi",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.006265449750947957,
+      "log_loss": 0.03965583679984503,
+      "ece": 0.01525976872298228
+    },
+    {
+      "target": "msmi",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.0002651656004237453,
+      "log_loss": 0.013686777018979824,
+      "ece": 0.01355192973633118
+    },
+    {
+      "target": "msmi",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.008799546596832571,
+      "log_loss": 0.05076640685818417,
+      "ece": 0.01684840995006463
+    },
+    {
+      "target": "msmi",
+      "model": "logistic",
+      "calibrated": false,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.006815625754676729,
+      "log_loss": 0.04192682828089218,
+      "ece": 0.015474776483604633
+    },
+    {
+      "target": "msmi",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "all",
+      "n": 960,
+      "brier": 0.006246414558367013,
+      "log_loss": 0.03905139440404907,
+      "ece": 0.014036770151758693
+    },
+    {
+      "target": "msmi",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "fully_observed_soft",
+      "n": 183,
+      "brier": 0.00019868411900260456,
+      "log_loss": 0.011822624018823967,
+      "ece": 0.011721815289576982
+    },
+    {
+      "target": "msmi",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "declined_soft",
+      "n": 338,
+      "brier": 0.00879745022313171,
+      "log_loss": 0.050680370459025105,
+      "ece": 0.015763105674730774
+    },
+    {
+      "target": "msmi",
+      "model": "logistic",
+      "calibrated": true,
+      "stratum": "not_asked_soft",
+      "n": 439,
+      "brier": 0.006803327122634028,
+      "log_loss": 0.04144836723756682,
+      "ece": 0.014299935414004317
+    }
+  ],
+  "pruning_enumeration_verified": 540,
+  "execution_logs_verified": [
+    {
+      "label": "adversarial",
+      "exit_code": 1
+    },
+    {
+      "label": "adversarial_final",
+      "exit_code": 0
+    },
+    {
+      "label": "adversarial_retry",
+      "exit_code": 0
+    },
+    {
+      "label": "baseline_greedy",
+      "exit_code": 0
+    },
+    {
+      "label": "baseline_no_asks",
+      "exit_code": 0
+    },
+    {
+      "label": "baseline_random",
+      "exit_code": 0
+    },
+    {
+      "label": "base_manifest",
+      "exit_code": 0
+    },
+    {
+      "label": "bundle_verification",
+      "exit_code": 0
+    },
+    {
+      "label": "calibration",
+      "exit_code": 0
+    },
+    {
+      "label": "calibration_bins_corrected",
+      "exit_code": 0
+    },
+    {
+      "label": "custom_tests",
+      "exit_code": 0
+    },
+    {
+      "label": "docker_build",
+      "exit_code": null
+    },
+    {
+      "label": "docker_evaluate",
+      "exit_code": 2
+    },
+    {
+      "label": "final_data",
+      "exit_code": 0
+    },
+    {
+      "label": "final_official",
+      "exit_code": 0
+    },
+    {
+      "label": "final_tests",
+      "exit_code": 0
+    },
+    {
+      "label": "fresh_final",
+      "exit_code": 0
+    },
+    {
+      "label": "future_selected",
+      "exit_code": 0
+    },
+    {
+      "label": "future_value",
+      "exit_code": 0
+    },
+    {
+      "label": "pruning",
+      "exit_code": 0
+    },
+    {
+      "label": "python312_compat",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_audit",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_audit_final",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_baseline_greedy",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_baseline_no_asks",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_baseline_random",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_compare_greedy",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_compare_no_asks",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_compare_random",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_container",
+      "exit_code": 2
+    },
+    {
+      "label": "recovery_data",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_diagnostics",
+      "exit_code": 1
+    },
+    {
+      "label": "recovery_diagnostics_retry",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_docker_build",
+      "exit_code": null
+    },
+    {
+      "label": "recovery_final",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_final_container",
+      "exit_code": 2
+    },
+    {
+      "label": "recovery_final_data",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_final_docker_build",
+      "exit_code": null
+    },
+    {
+      "label": "recovery_final_equals_greedy",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_final_tests",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_finish",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_fresh",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_max_payload",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_max_payload_process_tree",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_protected_commit",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_pruning_replay",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_python312",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_release_checks",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_report",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_report_reconciled",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_reproduce",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_reproduce_compare",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_search",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_stratified_audit",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_strict_smoke",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_tests",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_verify",
+      "exit_code": 0
+    },
+    {
+      "label": "recovery_verify_reconciled",
+      "exit_code": 0
+    },
+    {
+      "label": "robustness",
+      "exit_code": 0
+    },
+    {
+      "label": "starter_data",
+      "exit_code": 0
+    },
+    {
+      "label": "starter_smoke",
+      "exit_code": 0
+    },
+    {
+      "label": "starter_tests",
+      "exit_code": 0
+    },
+    {
+      "label": "training",
+      "exit_code": 0
+    },
+    {
+      "label": "validation",
+      "exit_code": 0
+    },
+    {
+      "label": "wsl_install_basic",
+      "exit_code": 1
+    },
+    {
+      "label": "wsl_setup",
+      "exit_code": 1
+    }
+  ]
+}
