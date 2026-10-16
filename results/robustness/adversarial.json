@@ -1,0 +1,106 @@
+{
+  "calls": [
+    {
+      "seconds": 0.18049119994975626,
+      "peak_sampled_rss_bytes": 19075072,
+      "request_bytes": 334417,
+      "response_bytes": 978,
+      "memory_bytes": 2,
+      "phase": "ask",
+      "members": 200,
+      "mode": "complete",
+      "actions": 12
+    },
+    {
+      "seconds": 1.6228046999312937,
+      "peak_sampled_rss_bytes": 24555520,
+      "request_bytes": 334419,
+      "response_bytes": 8025,
+      "memory_bytes": 2,
+      "phase": "match",
+      "members": 200,
+      "mode": "complete",
+      "actions": 100
+    },
+    {
+      "seconds": 4.184807300101966,
+      "peak_sampled_rss_bytes": 31965184,
+      "request_bytes": 333417,
+      "response_bytes": 324,
+      "memory_bytes": 2,
+      "phase": "ask",
+      "members": 200,
+      "mode": "unknown",
+      "actions": 4
+    },
+    {
+      "seconds": 0.30264200014062226,
+      "peak_sampled_rss_bytes": 19542016,
+      "request_bytes": 333419,
+      "response_bytes": 26,
+      "memory_bytes": 2,
+      "phase": "match",
+      "members": 200,
+      "mode": "unknown",
+      "actions": 0
+    },
+    {
+      "seconds": 0.21027979999780655,
+      "peak_sampled_rss_bytes": 18956288,
+      "request_bytes": 329817,
+      "response_bytes": 25,
+      "memory_bytes": 2,
+      "phase": "ask",
+      "members": 200,
+      "mode": "declined",
+      "actions": 0
+    },
+    {
+      "seconds": 0.3228912998456508,
+      "peak_sampled_rss_bytes": 19132416,
+      "request_bytes": 329819,
+      "response_bytes": 26,
+      "memory_bytes": 2,
+      "phase": "match",
+      "members": 200,
+      "mode": "declined",
+      "actions": 0
+    }
+  ],
+  "valid": true,
+  "configuration": {
+    "planner": "joint",
+    "candidate_limit": 12,
+    "future_weight": 0.0,
+    "predictor": "logistic",
+    "calibration": true,
+    "matcher": "exact",
+    "soft_questions": true,
+    "waiting_weight": 0.0,
+    "portfolio_limit": 1000
+  },
+  "source": {
+    "files": {
+      "policy.py": "04422221e56a4595c23dc1b747cc51f950fec59854cc1f5f16caf9eae8a37dc2",
+      "raven/__init__.py": "77ea470a5936067fed8682e938f0c6fb3f3a949822d0843cf7da276a220de8af",
+      "raven/assets/final_config.json": "09c65236a24e0361b722e2daf47482cac8d3f30f71959b5e5b52084626f430a7",
+      "raven/assets/model.json": "a4450b7e015816686dd5ea3a406ba201991e4b6c2ce984e178c9a49bb7031b33",
+      "raven/clarification.py": "31cba9d22b22797658419dcaa7d2210a4bcce38a0d45ac7c550d62772366136d",
+      "raven/config.py": "3daa301922e7f6e0fffe8852921e724e2dd75f037928da321d8c334807f6f803",
+      "raven/constraints.py": "491fa85e8d27a40b646066fd0fdaeb53d1178ce07f0d6b35268d9cd284213ebc",
+      "raven/disclosure.py": "43bf44608894ac58697f62d7bba2a607ecd5e58f17e1a1be6c29608fcb245d05",
+      "raven/future_value.py": "2585d554875ad33eca79f0191af71b07e0ca4bd84752e85d29f555170f8dec2c",
+      "raven/graphs.py": "56c0171d72fdb6307587fb11ddccb48d9cc32cac079e4f7edfc14facb2921cb7",
+      "raven/matching.py": "a6e08504b5fe83e95f896ac5a86622b170a5c4cdfba7db6c022403545974f363",
+      "raven/portfolio.py": "e039d8f2539025d776a9e2c72c5f72ccf45535c587a39b73a83c36b4cf35a806",
+      "raven/probabilities.py": "b15789f1c3b552d6fc630ce858369cce5db76809e2fa3e2f21f20166c7b375d6",
+      "raven/protocol.py": "60db89a5ff834cc33b7ef2e7761e423c97b4aeffaf2cd6b1800c3fbbdd07aacb",
+      "raven/pruning.py": "f701258afea74fc331f756d771aa77cadc46332660dfdda80b4006c70312b2d3",
+      "raven/validation.py": "0f07092a25dffb051764a75572e2977842d077d763535e495c754e23c39320e6",
+      "raven/vendor/__init__.py": "382bbe2bc78c7f7d25ff10e1d0a665de00fe7144c1212afc936bea6ee7015c74",
+      "raven/vendor/blossom.py": "e4ae389ab1e0dcd9311d1bbba04d3022dbba35f226d1ff41156f0c6b11e889ea"
+    },
+    "sha256": "8030ffad9f64fd1e803852a8f50764497556f5172706649d1a6a4a18adf8f67e"
+  },
+  "description": "Artificial valid public observations, not scored population outcomes. All 200 profiles form a dense potential or confirmed graph; official eligibility checks returned actions."
+}

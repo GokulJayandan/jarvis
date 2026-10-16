@@ -1,0 +1,6 @@
+{"seed": 101, "variant": "development", "valid": false, "msmi": null}
+{
+  "eligible": false,
+  "primary_score": null,
+  "reason": "At least one episode is invalid"
+}

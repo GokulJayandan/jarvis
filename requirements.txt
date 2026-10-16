@@ -1,0 +1,2 @@
+# Inference is Python standard library only, with a vendored BSD-3-Clause solver.
+# No pip install is required for inference. Experiment-only pins: requirements-dev.txt.

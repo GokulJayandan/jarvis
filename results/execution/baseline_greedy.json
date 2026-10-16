@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "evaluate.py",
+    "--baseline",
+    "greedy",
+    "--seeds",
+    "101,102,103",
+    "--variants",
+    "all",
+    "--output",
+    "results/greedy.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T12:25:35.597159+00:00",
+  "exit_code": 0,
+  "seconds": 409.5012624000665,
+  "log_sha256": "c71dc3f4b28d55e3228a32769b969ab5521212d2b33032e70e1bd65f6227fedf"
+}

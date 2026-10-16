@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python",
+    "evaluate.py",
+    "--seeds",
+    "101",
+    "--output",
+    "results/starter_smoke.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T12:25:17.095494+00:00",
+  "exit_code": 0,
+  "seconds": 18.500514700077474,
+  "log_sha256": "ed4a88a3154ab040fb6bfd9159091c6a3af5e89a8814eeb097cd5cc6d0890962"
+}

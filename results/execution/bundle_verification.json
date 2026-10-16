@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "scripts.verify_bundle"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:16:35.763608+00:00",
+  "exit_code": 0,
+  "seconds": 0.6235069001559168,
+  "log_sha256": "3036e1ee2800d786c4a9ba07119b3e19ade87ac94a67b10c1848defdfee69248"
+}

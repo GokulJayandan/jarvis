@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "evaluate.py",
+    "--seeds",
+    "101,102,103",
+    "--variants",
+    "all",
+    "--output",
+    "results/final.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:00:07.102837+00:00",
+  "exit_code": 0,
+  "seconds": 523.6908778999932,
+  "log_sha256": "0bb197163b100e0e56c36eb5b77831f467a959a1556d7659cbe90d086d0c2903"
+}

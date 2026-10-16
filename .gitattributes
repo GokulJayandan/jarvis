@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.pdf binary
+*.png binary
+*.zip binary
+results/** -text whitespace=cr-at-eol
+raven/assets/*.json -text whitespace=cr-at-eol
+docs/dependency_licenses/** -text -whitespace

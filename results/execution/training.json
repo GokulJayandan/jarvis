@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "experiments.train"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T12:30:54.775813+00:00",
+  "exit_code": 0,
+  "seconds": 1267.2947687001433,
+  "log_sha256": "68b5feedeaf7d4ec20430034fbf06cbcb996ef9a0d35d77efca82dc398b98628"
+}

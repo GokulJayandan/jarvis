@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T12:52:16.463727+00:00",
+  "exit_code": 0,
+  "seconds": 5.390884299995378,
+  "log_sha256": "2c9c28400d66cfa1bb583196ca183ab733540997b565e86ec3466baa3789926c"
+}

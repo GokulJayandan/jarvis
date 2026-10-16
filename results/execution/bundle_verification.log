@@ -1,0 +1,7 @@
+{
+  "bundle_verified": true,
+  "official_episodes": 72,
+  "validation_episodes": 156,
+  "figures": 12,
+  "scope": "Local scientific artifacts only. Docker and public submission remain separate gates."
+}

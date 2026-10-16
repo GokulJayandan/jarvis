@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python",
+    "verify_data.py"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:00:06.753088+00:00",
+  "exit_code": 0,
+  "seconds": 0.3481442001648247,
+  "log_sha256": "66a1f7be66a6007ed7ddcb6a40475ecb30c18e674915afe732b0ed44e4e854c0"
+}

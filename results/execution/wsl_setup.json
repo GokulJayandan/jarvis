@@ -1,0 +1,13 @@
+{
+  "command": [
+    "wsl",
+    "--install",
+    "--no-distribution",
+    "--no-launch"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T12:39:02.330211+00:00",
+  "exit_code": 1,
+  "seconds": 0.033440700033679605,
+  "log_sha256": "7acc2c63c270f4fb2df2f997d37a5ede4bdee96cf4c4e6e81a1021e69cb27ee8"
+}

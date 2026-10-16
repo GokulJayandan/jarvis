@@ -1,0 +1,12 @@
+{"collection_seed": 13001, "variant": "development", "rows": 104}
+{"collection_seed": 13001, "variant": "sparse", "rows": 116}
+{"collection_seed": 13001, "variant": "cold_start", "rows": 188}
+{"collection_seed": 13001, "variant": "delayed", "rows": 295}
+{"collection_seed": 13001, "variant": "shift", "rows": 399}
+{"collection_seed": 13001, "variant": "drift", "rows": 503}
+{"collection_seed": 13002, "variant": "development", "rows": 591}
+{"collection_seed": 13002, "variant": "sparse", "rows": 603}
+{"collection_seed": 13002, "variant": "cold_start", "rows": 695}
+{"collection_seed": 13002, "variant": "delayed", "rows": 784}
+{"collection_seed": 13002, "variant": "shift", "rows": 872}
+{"collection_seed": 13002, "variant": "drift", "rows": 960}

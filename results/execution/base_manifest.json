@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python",
+    "scripts\\pin_base_image.py"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:15:19.176868+00:00",
+  "exit_code": 0,
+  "seconds": 3.0046737999655306,
+  "log_sha256": "68ca538484160e628f789b43eb6ada2952edeffdd4b285b9d06ffa644ffde54b"
+}

@@ -1,0 +1,9 @@
+{
+  "version": "3.6.1",
+  "source": "https://github.com/networkx/networkx/blob/networkx-3.6.1/networkx/algorithms/matching.py",
+  "original_function_sha256": "41930910962d79c5da2da89788ead7819730daccb2858d72df3df7c55d893ee1",
+  "local_sha256": "e4ae389ab1e0dcd9311d1bbba04d3022dbba35f226d1ff41156f0c6b11e889ea",
+  "modifications": [
+    "Removed dispatch and graph-type decorators; unchanged algorithm and helper."
+  ]
+}

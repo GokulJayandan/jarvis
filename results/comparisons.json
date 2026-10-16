@@ -1,0 +1,32 @@
+{
+  "greedy": {
+    "n_episodes": 18,
+    "n_seed_clusters": 3,
+    "mean_difference": -0.027777777777777776,
+    "ci95": [
+      -0.16666666666666666,
+      0.08333333333333333
+    ],
+    "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+  },
+  "no_asks": {
+    "n_episodes": 18,
+    "n_seed_clusters": 3,
+    "mean_difference": 0.2222222222222222,
+    "ci95": [
+      0.08333333333333333,
+      0.4166666666666667
+    ],
+    "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+  },
+  "random": {
+    "n_episodes": 18,
+    "n_seed_clusters": 3,
+    "mean_difference": 0.08333333333333333,
+    "ci95": [
+      -0.08333333333333333,
+      0.25
+    ],
+    "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+  }
+}

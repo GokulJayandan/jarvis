@@ -1,0 +1,11 @@
+*
+!kit.py
+!policy.py
+!Dockerfile
+!official_policy.py
+!raven/
+!raven/**
+!LICENSE
+!DATA_LICENSE.md
+**/__pycache__/
+**/*.pyc

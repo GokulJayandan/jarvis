@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.upstream.zip
+results/**/*.tmp
+.cache/
+.tools/
+.submission/
+dist/
+.env
+.env.*

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "evaluate.py",
+    "--baseline",
+    "no_asks",
+    "--seeds",
+    "101,102,103",
+    "--variants",
+    "all",
+    "--output",
+    "results/no_asks.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T12:32:25.106352+00:00",
+  "exit_code": 0,
+  "seconds": 509.07936840015464,
+  "log_sha256": "b487f05c092a0e59a977e9a598a2745ed9a46f93b0e7b5249935cbe7b6806b70"
+}

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "evaluate.py",
+    "--baseline",
+    "random",
+    "--seeds",
+    "101,102,103",
+    "--variants",
+    "all",
+    "--output",
+    "results/random.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T12:40:54.190791+00:00",
+  "exit_code": 0,
+  "seconds": 466.5564055000432,
+  "log_sha256": "f47ba1897900cfc54cbc734b2c23c51e7ebc0715ecc9309af1cfbc14941577d7"
+}

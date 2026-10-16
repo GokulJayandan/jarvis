@@ -1,0 +1,11 @@
+{
+  "training": [20261000,20261001,20261002,20261003,20261004,20261005,11001,11002,11003,11004,11005,11006,11007,11008,11009,11010,11011,11012],
+  "validation": [20261006,20261007,12001,12002,12003,12004],
+  "final_reporting": [101,102,103],
+  "fresh_test": [13001,13002,13003,13004,13005],
+  "manifest_test": [20261008,20261009],
+  "pruning": [14001,14002,14003,14004],
+  "stress": [15001,15002,15003],
+  "inference_seed": 17,
+  "selection_rule": "Freeze using validation only; report all six equally weighted families. Final and fresh seeds are never used for training or configuration selection."
+}

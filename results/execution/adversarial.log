@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Gokul\jarvis\experiments\adversarial.py", line 39, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\Gokul\jarvis\experiments\adversarial.py", line 28, in main
+    response,r=invocation({'schema_version':'1.0.0','phase':phase,'state':s,'memory':{}})
+               ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gokul\jarvis\experiments\run_robustness.py", line 26, in invocation
+    p.kill();raise RuntimeError('Internal nine-second resource check exceeded')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Internal nine-second resource check exceeded

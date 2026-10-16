@@ -1,0 +1,12 @@
+{"config": "final", "variant": "development", "seed": 13004, "valid": true, "msmi": 2}
+{"config": "final", "variant": "development", "seed": 13005, "valid": true, "msmi": 1}
+{"config": "final", "variant": "sparse", "seed": 13004, "valid": true, "msmi": 1}
+{"config": "final", "variant": "sparse", "seed": 13005, "valid": true, "msmi": 0}
+{"config": "final", "variant": "cold_start", "seed": 13004, "valid": true, "msmi": 0}
+{"config": "final", "variant": "cold_start", "seed": 13005, "valid": true, "msmi": 0}
+{"config": "final", "variant": "delayed", "seed": 13004, "valid": true, "msmi": 2}
+{"config": "final", "variant": "delayed", "seed": 13005, "valid": true, "msmi": 0}
+{"config": "final", "variant": "shift", "seed": 13004, "valid": true, "msmi": 1}
+{"config": "final", "variant": "shift", "seed": 13005, "valid": true, "msmi": 0}
+{"config": "final", "variant": "drift", "seed": 13004, "valid": true, "msmi": 2}
+{"config": "final", "variant": "drift", "seed": 13005, "valid": true, "msmi": 0}

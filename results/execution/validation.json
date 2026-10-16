@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "experiments.run_ablations"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T12:52:38.356126+00:00",
+  "exit_code": 0,
+  "seconds": 435.7573082000017,
+  "log_sha256": "3d089ea89092ea8c505b39d76565364c2790133550dd529861e08cfb223a5fcb"
+}

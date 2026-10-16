@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "experiments.run_suite",
+    "--config",
+    "final",
+    "--seeds",
+    "13004,13005",
+    "--variants",
+    "all",
+    "--output",
+    "results/raven/fresh_test.json"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:04:44.882430+00:00",
+  "exit_code": 0,
+  "seconds": 110.6542811000254,
+  "log_sha256": "040f7c01fe9cb02a7a53ab9d7497f2b8bce42374002c5bac10a05b386cc81b3a"
+}

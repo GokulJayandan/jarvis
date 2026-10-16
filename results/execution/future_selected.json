@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "experiments.run_future_value"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T13:07:14.878089+00:00",
+  "exit_code": 0,
+  "seconds": 179.58220040006563,
+  "log_sha256": "3c13004cd4402505813c279251d16170e5c91d985bd540ff9e883022f1ca85c2"
+}

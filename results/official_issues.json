@@ -1,0 +1,19 @@
+{
+  "checked_date": "2026-10-16",
+  "source": "https://api.github.com/repos/RomeoJulietLove/The-Sequential-Matching-Problem/issues?state=all",
+  "issues": [
+    {
+      "number": 2,
+      "title": "Final submission \u2014 Enigmatic Cats",
+      "state": "open",
+      "updated_at": "2026-10-15T18:23:29Z"
+    },
+    {
+      "number": 1,
+      "title": "Round 1 schedule update: Google Form, 9 October deadline, results by 11 October",
+      "state": "open",
+      "updated_at": "2026-10-05T15:28:47Z"
+    }
+  ],
+  "rule_correction": "Issue 1 retains final deadline 18 October 2026 23:59 IST. Issue 2 is another team submission, not a rule change. Other-team submission body deliberately omitted."
+}

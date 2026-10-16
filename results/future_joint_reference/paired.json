@@ -1,0 +1,37 @@
+{
+  "seeds": [
+    13001,
+    13002,
+    13003
+  ],
+  "msmi": {
+    "n_episodes": 18,
+    "n_seed_clusters": 3,
+    "mean_difference": 0.2222222222222222,
+    "ci95": [
+      -0.08333333333333333,
+      0.4166666666666667
+    ],
+    "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+  },
+  "coverage": {
+    "n_episodes": 18,
+    "n_seed_clusters": 3,
+    "mean_difference": 0.0005555555555555561,
+    "ci95": [
+      -0.000833333333333334,
+      0.0025000000000000022
+    ],
+    "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+  },
+  "ask_cost": {
+    "n_episodes": 18,
+    "n_seed_clusters": 3,
+    "mean_difference": 3.6666666666666665,
+    "ci95": [
+      2.5,
+      5
+    ],
+    "method": "paired seed-cluster percentile bootstrap; six equally weighted families; descriptive with few clusters"
+  }
+}

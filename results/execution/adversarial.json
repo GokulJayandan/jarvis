@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "experiments.adversarial"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T12:55:28.951534+00:00",
+  "exit_code": 1,
+  "seconds": 10.022285900078714,
+  "log_sha256": "126e8b7961e4908610ab0f762ff04840f691bbff0881ece50318c08a53be94f5"
+}

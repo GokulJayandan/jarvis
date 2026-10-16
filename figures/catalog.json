@@ -1,0 +1,106 @@
+[
+  {
+    "file": "figures/01_baseline_comparison.png",
+    "caption": "Equal weighting of six families; three matched seeds per family. Low event counts limit inference.",
+    "sources": [
+      "results/greedy.json",
+      "results/no_asks.json",
+      "results/random.json",
+      "results/final.json"
+    ]
+  },
+  {
+    "file": "figures/02_scenarios.png",
+    "caption": "Public families and matched seeds; zero MSMI is an observed zero, not evidence of equivalence.",
+    "sources": [
+      "results/greedy.json",
+      "results/no_asks.json",
+      "results/random.json",
+      "results/final.json"
+    ]
+  },
+  {
+    "file": "figures/03_outcome_funnel.png",
+    "caption": "Each point is an official full episode; overlapping points are possible.",
+    "sources": [
+      "results/greedy.json",
+      "results/no_asks.json",
+      "results/random.json",
+      "results/final.json"
+    ]
+  },
+  {
+    "file": "figures/04_coverage.png",
+    "caption": "Includes unserved members in the denominator; not a fairness certification.",
+    "sources": [
+      "results/greedy.json",
+      "results/no_asks.json",
+      "results/random.json",
+      "results/final.json"
+    ]
+  },
+  {
+    "file": "figures/05_waiting.png",
+    "caption": "Conditional on being served. Unserved counts are reported separately in the report.",
+    "sources": [
+      "results/greedy.json",
+      "results/no_asks.json",
+      "results/random.json",
+      "results/final.json"
+    ]
+  },
+  {
+    "file": "figures/11_clarification.png",
+    "caption": "Hard bundle costs 3; soft question costs 1. Maximum 720 units per episode.",
+    "sources": [
+      "results/greedy.json",
+      "results/no_asks.json",
+      "results/random.json",
+      "results/final.json"
+    ]
+  },
+  {
+    "file": "figures/06_future_effect.png",
+    "caption": "Paired full episodes; intervals and seed-cluster limitations appear in the report.",
+    "sources": [
+      "results/future/present.json",
+      "results/future/future.json"
+    ]
+  },
+  {
+    "file": "figures/07_pruning_regret.png",
+    "caption": "Regret is against exact portfolio enumeration of the same surrogate, not actual MSMI.",
+    "sources": [
+      "results/pruning/regret.json"
+    ]
+  },
+  {
+    "file": "figures/08_pruning_runtime.png",
+    "caption": "Python wall-clock search only; oracle peak allocations and runtime are recorded in raw data.",
+    "sources": [
+      "results/pruning/regret.json"
+    ]
+  },
+  {
+    "file": "figures/09_reliability.png",
+    "caption": "Held-out baseline-selected pairs; equal-frequency bins. Pair dependence and selection bias remain.",
+    "sources": [
+      "results/calibration/metrics.json"
+    ]
+  },
+  {
+    "file": "figures/10_disclosure_calibration.png",
+    "caption": "Strata concern observed soft-field status at decision time; lower Brier is better.",
+    "sources": [
+      "results/calibration/metrics.json"
+    ]
+  },
+  {
+    "file": "figures/12_runtime.png",
+    "caption": "Includes startup, protocol IO and dense adversarial states. Not a container resource-enforcement result.",
+    "sources": [
+      "results/robustness/resources.json",
+      "results/robustness/adversarial.json"
+    ]
+  }
+]

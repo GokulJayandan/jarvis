@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "experiments.run_calibration"
+  ],
+  "cwd": "C:\\Users\\Gokul\\jarvis",
+  "started_utc": "2026-10-16T12:59:54.722123+00:00",
+  "exit_code": 0,
+  "seconds": 147.846772500081,
+  "log_sha256": "c0b935175b573175a66a7f202a470231eaf4d64f5e7774b86fa3b392a24ef1ac"
+}

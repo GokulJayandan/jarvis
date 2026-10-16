@@ -1,0 +1,9 @@
+FROM python:3.12.7-slim@sha256:60d9996b6a8a3689d36db740b49f4327be3be09a21122bd02fb8895abb38b50d
+WORKDIR /app
+COPY kit.py policy.py ./
+COPY official_policy.py ./
+COPY raven ./raven
+COPY LICENSE DATA_LICENSE.md ./
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+USER 65534:65534
+ENTRYPOINT ["python", "policy.py"]

@@ -1,0 +1,1322 @@
+[
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "declined",
+    "p": 0.0,
+    "y": 0
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "observed",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  },
+  {
+    "status": "not_asked",
+    "p": 1.0,
+    "y": 1
+  }
+]
