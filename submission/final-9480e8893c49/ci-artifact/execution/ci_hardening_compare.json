@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "scripts/compare_runs.py",
+    "results/hardening/ci_local/episodes.json",
+    "results/hardening/ci_container/episodes.json"
+  ],
+  "cwd": "/home/runner/work/jarvis/jarvis",
+  "started_utc": "2026-10-17T16:33:47.686561+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 0.01764458200000263,
+  "log_sha256": "c624192fa95f97c7834a48d85e4eb39244f9b0677624c09f627d640006a514cf"
+}

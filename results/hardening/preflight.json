@@ -513,8 +513,8 @@
     }
   ],
   "publication_scan": {
-    "staged_files": 529,
-    "staged_bytes": 48043550,
+    "staged_files": 576,
+    "staged_bytes": 53162421,
     "findings": [],
     "limitations": "Pattern and filename screening, plus source/data provenance review; not a guarantee of detecting every possible secret. Findings omit matched values.",
     "data_scope": "Only official public synthetic data and locally generated public-seed experiment artifacts. No organizer private worlds."

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "evaluate.py",
+    "--image",
+    "sequential-policy:submission",
+    "--seeds",
+    "101",
+    "--output",
+    "results/container_check.json"
+  ],
+  "cwd": "/home/runner/work/jarvis/jarvis",
+  "started_utc": "2026-10-17T16:27:38.085391+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 41.998172959,
+  "log_sha256": "5f7c5127509a53d589108caf3fae49c21c4ddb0b100f1be308e9f8e123ae9078"
+}

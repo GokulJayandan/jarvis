@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "evaluate.py",
+    "--seeds",
+    "101",
+    "--output",
+    "results/ci_smoke.json"
+  ],
+  "cwd": "/home/runner/work/jarvis/jarvis",
+  "started_utc": "2026-10-17T16:27:23.553034+00:00",
+  "raven_strict": "1",
+  "exit_code": 0,
+  "seconds": 9.685701005000006,
+  "log_sha256": "81e9c4cc1f0e96850112be0e0968950775d3d205aef14b24fe918d684943982a"
+}

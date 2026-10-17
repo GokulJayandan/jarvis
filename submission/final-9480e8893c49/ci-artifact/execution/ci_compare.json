@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "scripts/compare_runs.py",
+    "results/ci_smoke.json",
+    "results/container_check.json"
+  ],
+  "cwd": "/home/runner/work/jarvis/jarvis",
+  "started_utc": "2026-10-17T16:28:20.121065+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 0.015648990000002527,
+  "log_sha256": "bdc44b1142693fa1721ce1db3b38aebdedb86459cc59947641dd7cfb64664730"
+}

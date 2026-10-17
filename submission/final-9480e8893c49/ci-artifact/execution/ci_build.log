@@ -1,0 +1,62 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 352B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12.7-slim@sha256:60d9996b6a8a3689d36db740b49f4327be3be09a21122bd02fb8895abb38b50d
+#2 DONE 0.6s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 162B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 86.22kB done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.12.7-slim@sha256:60d9996b6a8a3689d36db740b49f4327be3be09a21122bd02fb8895abb38b50d
+#5 resolve docker.io/library/python:3.12.7-slim@sha256:60d9996b6a8a3689d36db740b49f4327be3be09a21122bd02fb8895abb38b50d done
+#5 sha256:5f86e0092844f78afa84a3b63059ea82e82fa93a28eedde55386370d924e8cf3 0B / 13.63MB 0.1s
+#5 sha256:60d9996b6a8a3689d36db740b49f4327be3be09a21122bd02fb8895abb38b50d 9.12kB / 9.12kB done
+#5 sha256:1c44018d7eb40488f29e7c6ad4991d3200507e14dca71b94fe61011815e98155 1.75kB / 1.75kB done
+#5 sha256:e35f80b558775b0903c34523ef3422645c10e06a66b151f228acf9cf8b862f66 5.17kB / 5.17kB done
+#5 sha256:bc0965b23a04fe7f2d9fb20f597008fcf89891de1c705ffc1c80483a1f098e4f 0B / 28.23MB 0.1s
+#5 sha256:5e739003c33414360cf2cec9452e1935b1bfcae79f279c33009bf4c0d5596f52 0B / 3.32MB 0.1s
+#5 sha256:5f86e0092844f78afa84a3b63059ea82e82fa93a28eedde55386370d924e8cf3 13.63MB / 13.63MB 0.3s
+#5 sha256:bc0965b23a04fe7f2d9fb20f597008fcf89891de1c705ffc1c80483a1f098e4f 28.23MB / 28.23MB 0.3s
+#5 sha256:5e739003c33414360cf2cec9452e1935b1bfcae79f279c33009bf4c0d5596f52 3.32MB / 3.32MB 0.1s done
+#5 sha256:46271edb89aec00565d974118707aaded82928c7ea7cb0a2bcc94b1f17e17e3d 249B / 249B 0.2s done
+#5 sha256:5f86e0092844f78afa84a3b63059ea82e82fa93a28eedde55386370d924e8cf3 13.63MB / 13.63MB 0.5s done
+#5 sha256:bc0965b23a04fe7f2d9fb20f597008fcf89891de1c705ffc1c80483a1f098e4f 28.23MB / 28.23MB 0.5s done
+#5 extracting sha256:bc0965b23a04fe7f2d9fb20f597008fcf89891de1c705ffc1c80483a1f098e4f
+#5 extracting sha256:bc0965b23a04fe7f2d9fb20f597008fcf89891de1c705ffc1c80483a1f098e4f 0.7s done
+#5 extracting sha256:5e739003c33414360cf2cec9452e1935b1bfcae79f279c33009bf4c0d5596f52
+#5 extracting sha256:5e739003c33414360cf2cec9452e1935b1bfcae79f279c33009bf4c0d5596f52 0.1s done
+#5 extracting sha256:5f86e0092844f78afa84a3b63059ea82e82fa93a28eedde55386370d924e8cf3
+#5 extracting sha256:5f86e0092844f78afa84a3b63059ea82e82fa93a28eedde55386370d924e8cf3 0.4s done
+#5 extracting sha256:46271edb89aec00565d974118707aaded82928c7ea7cb0a2bcc94b1f17e17e3d
+#5 extracting sha256:46271edb89aec00565d974118707aaded82928c7ea7cb0a2bcc94b1f17e17e3d done
+#5 DONE 2.8s
+
+#6 [2/6] WORKDIR /app
+#6 DONE 0.0s
+
+#7 [3/6] COPY kit.py policy.py ./
+#7 DONE 0.0s
+
+#8 [4/6] COPY official_policy.py ./
+#8 DONE 0.0s
+
+#9 [5/6] COPY raven ./raven
+#9 DONE 0.0s
+
+#10 [6/6] COPY LICENSE DATA_LICENSE.md ./
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.7s done
+#11 writing image sha256:f3138f1ce5b852a2936999ae91108f4e0d31c54a34a2676663aa10f5d5f98e64 done
+#11 naming to docker.io/library/sequential-policy:submission done
+#11 DONE 0.7s

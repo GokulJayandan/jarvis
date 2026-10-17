@@ -1,0 +1,17 @@
+{
+  "command": [
+    "docker",
+    "build",
+    "--no-cache",
+    "--pull",
+    "-t",
+    "sequential-policy:submission",
+    "."
+  ],
+  "cwd": "/home/runner/work/jarvis/jarvis",
+  "started_utc": "2026-10-17T16:27:33.280813+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 4.765726249000011,
+  "log_sha256": "43ea00b5b9189f0c6c08a0bc7ca5f01fdae894470551a6c37c0dd28b47430bfa"
+}

@@ -1,0 +1,383 @@
+{
+  "verified": true,
+  "run_id": 39049432462,
+  "run_url": "https://github.com/GokulJayandan/jarvis/actions/runs/39049432462",
+  "head_sha": "9480e8893c496672fee93dc5e5d69c61e54f6a32",
+  "workflow": {
+    "path": ".github/workflows/verify.yml",
+    "name": "Verify Jarvis policy and offline container",
+    "event": "push",
+    "branch": "main"
+  },
+  "github_artifact": {
+    "id": 12107201719,
+    "name": "container-verification",
+    "size_bytes": 126524,
+    "digest": "sha256:32a2a9277037d6d20489b06f66be2d26bed51d50b236d873239ae35e2230e68c",
+    "expired": false
+  },
+  "status": "completed",
+  "conclusion": "success",
+  "checked_artifact_files": 39,
+  "command_records": [
+    {
+      "name": "ci_build",
+      "exit_code": 0,
+      "seconds": 4.765726249000011,
+      "log_sha256": "43ea00b5b9189f0c6c08a0bc7ca5f01fdae894470551a6c37c0dd28b47430bfa"
+    },
+    {
+      "name": "ci_compare",
+      "exit_code": 0,
+      "seconds": 0.015648990000002527,
+      "log_sha256": "bdc44b1142693fa1721ce1db3b38aebdedb86459cc59947641dd7cfb64664730"
+    },
+    {
+      "name": "ci_container",
+      "exit_code": 0,
+      "seconds": 41.998172959,
+      "log_sha256": "5f7c5127509a53d589108caf3fae49c21c4ddb0b100f1be308e9f8e123ae9078"
+    },
+    {
+      "name": "ci_data",
+      "exit_code": 0,
+      "seconds": 0.05828375099999761,
+      "log_sha256": "48732fdb3be1af0a0d92f4f0223705e5bf4ccecad6301d4e74227f564d7c7cb7"
+    },
+    {
+      "name": "ci_hardening_compare",
+      "exit_code": 0,
+      "seconds": 0.01764458200000263,
+      "log_sha256": "c624192fa95f97c7834a48d85e4eb39244f9b0677624c09f627d640006a514cf"
+    },
+    {
+      "name": "ci_hardening_container",
+      "exit_code": 0,
+      "seconds": 263.60432261899996,
+      "log_sha256": "09b3306b0100718b3a12fe3e7d4dee1a5d50165958cfbfdf0c33abfcf29e32cb"
+    },
+    {
+      "name": "ci_hardening_local",
+      "exit_code": 0,
+      "seconds": 63.782579045000006,
+      "log_sha256": "09b3306b0100718b3a12fe3e7d4dee1a5d50165958cfbfdf0c33abfcf29e32cb"
+    },
+    {
+      "name": "ci_hardening_resources",
+      "exit_code": 0,
+      "seconds": 7.625058085999967,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "ci_local",
+      "exit_code": 0,
+      "seconds": 9.685701005000006,
+      "log_sha256": "81e9c4cc1f0e96850112be0e0968950775d3d205aef14b24fe918d684943982a"
+    },
+    {
+      "name": "ci_tests",
+      "exit_code": 0,
+      "seconds": 23.604819247000002,
+      "log_sha256": "6a8c526e5269ce6eab45fdd0051597aa9eb569ce883260078917cf1c2314b464"
+    }
+  ],
+  "tests": 93,
+  "data_checksums": 71,
+  "local_container_actions_and_outcomes_equal": true,
+  "variants": [
+    "cold_start",
+    "delayed",
+    "development",
+    "drift",
+    "shift",
+    "sparse"
+  ],
+  "episodes": 6,
+  "invalid_episodes": 0,
+  "invocations": 744,
+  "boundary_probes": 24,
+  "timeouts": 0,
+  "timing_seconds": {
+    "ask": {
+      "n": 372,
+      "median": 0.32521976550000886,
+      "p95": 0.3417401350000091,
+      "p99": 0.3478929609999568,
+      "maximum": 0.3569178529999988,
+      "method": "nearest-rank percentiles"
+    },
+    "match": {
+      "n": 372,
+      "median": 0.3729493145000049,
+      "p95": 0.3934690749999845,
+      "p99": 0.4392946080000115,
+      "maximum": 1.6646343729999842,
+      "method": "nearest-rank percentiles"
+    },
+    "all": {
+      "n": 744,
+      "median": 0.3330494434999878,
+      "p95": 0.3860242810000045,
+      "p99": 0.4017527629999904,
+      "maximum": 1.6646343729999842,
+      "method": "nearest-rank percentiles"
+    },
+    "request_bytes": 1048576,
+    "response_bytes": 27064,
+    "memory_bytes": 2,
+    "stderr_bytes": 0,
+    "sampled_peak_rss_bytes": null,
+    "timeouts": 0,
+    "empty_state_startup_seconds": {
+      "n": 4,
+      "median": 0.2896564370000192,
+      "p95": 0.3149304549999954,
+      "p99": 0.3149304549999954,
+      "maximum": 0.3149304549999954,
+      "method": "nearest-rank percentiles"
+    }
+  },
+  "linux_process_peak_rss_bytes": 69193728,
+  "linux_process_rss_scope": "Instrumented process high-water RSS via Linux getrusage. Not cgroup-wide peak. Official uninstrumented episode timings are separate.",
+  "instrumented_policy_seconds": {
+    "n": 10,
+    "median": 0.14399598700001093,
+    "p95": 1.4039248099999782,
+    "p99": 1.4039248099999782,
+    "maximum": 1.4039248099999782,
+    "method": "nearest-rank percentiles"
+  },
+  "instrumented_wall_seconds": {
+    "n": 10,
+    "median": 0.33291445200001135,
+    "p95": 1.5830558870000004,
+    "p99": 1.5830558870000004,
+    "maximum": 1.5830558870000004,
+    "method": "nearest-rank percentiles"
+  },
+  "max_request_bytes": 1048576,
+  "max_response_bytes": 27064,
+  "max_memory_bytes": 2,
+  "max_diagnostics_bytes": 0,
+  "image": {
+    "id": "sha256:f3138f1ce5b852a2936999ae91108f4e0d31c54a34a2676663aa10f5d5f98e64",
+    "size_bytes": 123653732,
+    "architecture": "amd64",
+    "os": "linux",
+    "user": "65534:65534",
+    "working_dir": "/app",
+    "entrypoint": [
+      "python",
+      "policy.py"
+    ]
+  },
+  "limits": {
+    "cpus": 2,
+    "ram_bytes": 1073741824,
+    "wall_seconds": 10,
+    "pids": 64,
+    "image_bytes": 2147483648,
+    "request_bytes": 1048576,
+    "response_bytes": 1048576,
+    "memory_bytes": 1048576,
+    "diagnostics_bytes": 1048576
+  },
+  "artifact_files": [
+    {
+      "path": "ci_smoke.json",
+      "bytes": 2512,
+      "sha256": "1fd44ee6c510573bc6c1f87231e275141ecc2718820735efae8ed6650c6e6490"
+    },
+    {
+      "path": "container_check.json",
+      "bytes": 2508,
+      "sha256": "580cd467d4c1a93c84d0f97b04866092abefd2deafcd15f6caf1cb5e5a1558d8"
+    },
+    {
+      "path": "container_image.json",
+      "bytes": 3513,
+      "sha256": "2d2248b2491b18c1efb2f31a37da3309d756a3a0302004df97baaefa6024ae02"
+    },
+    {
+      "path": "execution/ci_build.json",
+      "bytes": 390,
+      "sha256": "d9203b76994ab78aae6369abaed910e888677a4f7beca259f19ddaa22f609317"
+    },
+    {
+      "path": "execution/ci_build.log",
+      "bytes": 3122,
+      "sha256": "43ea00b5b9189f0c6c08a0bc7ca5f01fdae894470551a6c37c0dd28b47430bfa"
+    },
+    {
+      "path": "execution/ci_compare.json",
+      "bytes": 389,
+      "sha256": "46c094ad6d23910117bdbe71248e8ffc85fdcc8012cf2f415a207d9b79d9f742"
+    },
+    {
+      "path": "execution/ci_compare.log",
+      "bytes": 51,
+      "sha256": "bdc44b1142693fa1721ce1db3b38aebdedb86459cc59947641dd7cfb64664730"
+    },
+    {
+      "path": "execution/ci_container.json",
+      "bytes": 433,
+      "sha256": "89ccb1955f39d0c6ccd65d285b27b7df95645348fe13d99155b180f3338893d8"
+    },
+    {
+      "path": "execution/ci_container.log",
+      "bytes": 625,
+      "sha256": "5f7c5127509a53d589108caf3fae49c21c4ddb0b100f1be308e9f8e123ae9078"
+    },
+    {
+      "path": "execution/ci_data.json",
+      "bytes": 314,
+      "sha256": "144e22affe9eace622e8e75877c749822e3ef024a3414cebf589f46464d8d487"
+    },
+    {
+      "path": "execution/ci_data.log",
+      "bytes": 152,
+      "sha256": "48732fdb3be1af0a0d92f4f0223705e5bf4ccecad6301d4e74227f564d7c7cb7"
+    },
+    {
+      "path": "execution/ci_hardening_compare.json",
+      "bytes": 423,
+      "sha256": "a61d375f566d81c7b1b4bfc4bacf5d6e0ba6600719fe3f9d9aa98d2a5b8db3b6"
+    },
+    {
+      "path": "execution/ci_hardening_compare.log",
+      "bytes": 51,
+      "sha256": "c624192fa95f97c7834a48d85e4eb39244f9b0677624c09f627d640006a514cf"
+    },
+    {
+      "path": "execution/ci_hardening_container.json",
+      "bytes": 448,
+      "sha256": "2f1f300b82a61c4ce302e1613da0129498e3254a6b86685e44ee8ecb3826884e"
+    },
+    {
+      "path": "execution/ci_hardening_container.log",
+      "bytes": 230,
+      "sha256": "09b3306b0100718b3a12fe3e7d4dee1a5d50165958cfbfdf0c33abfcf29e32cb"
+    },
+    {
+      "path": "execution/ci_hardening_local.json",
+      "bytes": 393,
+      "sha256": "69c11a0405cf164f7a3fa9c4328056fe91ce81d2df3527f165e4e76283539c96"
+    },
+    {
+      "path": "execution/ci_hardening_local.log",
+      "bytes": 230,
+      "sha256": "09b3306b0100718b3a12fe3e7d4dee1a5d50165958cfbfdf0c33abfcf29e32cb"
+    },
+    {
+      "path": "execution/ci_hardening_resources.json",
+      "bytes": 424,
+      "sha256": "8a79846a4fb80253af0e9270266ada92afe5017a5a22a9f6f8bbd41be01c1f99"
+    },
+    {
+      "path": "execution/ci_hardening_resources.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "execution/ci_local.json",
+      "bytes": 380,
+      "sha256": "7f4c24063b91b306331bb51540aaad69bf5659cdf46bf780a81219b4af492c6d"
+    },
+    {
+      "path": "execution/ci_local.log",
+      "bytes": 625,
+      "sha256": "81e9c4cc1f0e96850112be0e0968950775d3d205aef14b24fe918d684943982a"
+    },
+    {
+      "path": "execution/ci_tests.json",
+      "bytes": 327,
+      "sha256": "a25b60047dcc9a3169b092104437354723dfccb8f3138adb75bfff4f83e561da"
+    },
+    {
+      "path": "execution/ci_tests.log",
+      "bytes": 10083,
+      "sha256": "6a8c526e5269ce6eab45fdd0051597aa9eb569ce883260078917cf1c2314b464"
+    },
+    {
+      "path": "hardening/ci_container/data.log",
+      "bytes": 152,
+      "sha256": "48732fdb3be1af0a0d92f4f0223705e5bf4ccecad6301d4e74227f564d7c7cb7"
+    },
+    {
+      "path": "hardening/ci_container/environment.json",
+      "bytes": 2051,
+      "sha256": "b46501a199ddf1cea87eae5c773e90c126b734160d0343e6ddd4873ae6599faa"
+    },
+    {
+      "path": "hardening/ci_container/episodes.json",
+      "bytes": 11491,
+      "sha256": "ba72bfc2cf3687ed0055c0729d0ff55006c2be6f70c161e2c4a22bc45d92bde1"
+    },
+    {
+      "path": "hardening/ci_container/image.json",
+      "bytes": 2945,
+      "sha256": "38c46d1bb7cdea0cb4f9aa98b0c89bedf0e7b136bb79c0bcbd0064023651e083"
+    },
+    {
+      "path": "hardening/ci_container/invocations.json",
+      "bytes": 310689,
+      "sha256": "22b2aa21b516556a97abf8bac33a1bdccebde240abb48fd3f6f6f6678346bcb9"
+    },
+    {
+      "path": "hardening/ci_container/probe_rows.json",
+      "bytes": 9956,
+      "sha256": "1830b75bbc5a9b1dc6c99f2e58144cc27e4467653c38e8e78b9655fd8a4e7dbb"
+    },
+    {
+      "path": "hardening/ci_container/pruning_replayed.json",
+      "bytes": 530946,
+      "sha256": "0808b503eaefdecbeafbd250abd21a9261fef284febf2cda0dda7a000e31863f"
+    },
+    {
+      "path": "hardening/ci_container/summary.json",
+      "bytes": 3058,
+      "sha256": "a93297195d5b41dc96f47ad534bd5d505dd944bc6abf5457b9489947af1d29d1"
+    },
+    {
+      "path": "hardening/ci_local/data.log",
+      "bytes": 152,
+      "sha256": "48732fdb3be1af0a0d92f4f0223705e5bf4ccecad6301d4e74227f564d7c7cb7"
+    },
+    {
+      "path": "hardening/ci_local/environment.json",
+      "bytes": 2025,
+      "sha256": "78355659bc375ab44d448c2b05b5797e7d6a5d520a6f06832078b66e503b0b0a"
+    },
+    {
+      "path": "hardening/ci_local/episodes.json",
+      "bytes": 11485,
+      "sha256": "7fad6487a729286b905d0f88fa618584462debbad6ab9a3b39d6fb76a32f2555"
+    },
+    {
+      "path": "hardening/ci_local/invocations.json",
+      "bytes": 366206,
+      "sha256": "cce0c02c74d701ee5bbd69286345ae513648339d32cc25a465f920a64a410f7d"
+    },
+    {
+      "path": "hardening/ci_local/probe_rows.json",
+      "bytes": 11746,
+      "sha256": "edbdac15822f97ce42473a34988e4effce1e3f0fcc5f9ec16ed3994dbac7320b"
+    },
+    {
+      "path": "hardening/ci_local/pruning_replayed.json",
+      "bytes": 530935,
+      "sha256": "98f162530be14ca55600d41c9e42cf5d59f698bdf12146c7a2baeaee3a61058f"
+    },
+    {
+      "path": "hardening/ci_local/summary.json",
+      "bytes": 3042,
+      "sha256": "4782a5d2eb3a268c81400c5be3031e608b3cc5d56e9d9d6d696ca3f3b9e48bcb"
+    },
+    {
+      "path": "hardening/container_resources.json",
+      "bytes": 2565,
+      "sha256": "4a28d84a78818ed19c9ec381b06d552eea767a43c5a188ec222a73a93d17d1c5"
+    }
+  ],
+  "scope": "Empirical public states and constructed valid observations only; finite testing does not prove validity or resource bounds for every private state."
+}

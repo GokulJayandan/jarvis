@@ -1,0 +1,8 @@
+540 pruning cases reproduced exactly (excluding timing/memory).
+Boundary probes: 24
+development 101 valid= True
+sparse 101 valid= True
+cold_start 101 valid= True
+delayed 101 valid= True
+shift 101 valid= True
+drift 101 valid= True

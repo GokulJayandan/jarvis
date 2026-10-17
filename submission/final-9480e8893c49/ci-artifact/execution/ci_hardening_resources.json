@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "scripts/hardening_container_resources.py",
+    "sequential-policy:submission",
+    "results/hardening/container_resources.json"
+  ],
+  "cwd": "/home/runner/work/jarvis/jarvis",
+  "started_utc": "2026-10-17T16:33:47.742170+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 7.625058085999967,
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

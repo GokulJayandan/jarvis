@@ -1,0 +1,92 @@
+{
+  "rows": [
+    {
+      "name": "empty",
+      "phase": "ask",
+      "wall_seconds": 0.3256764619999899,
+      "policy_seconds": 0.12508797100002766,
+      "peak_process_rss_bytes": 21286912
+    },
+    {
+      "name": "dense_200",
+      "phase": "ask",
+      "wall_seconds": 0.3267132000000288,
+      "policy_seconds": 0.14193129800003135,
+      "peak_process_rss_bytes": 25260032
+    },
+    {
+      "name": "unknown_200",
+      "phase": "ask",
+      "wall_seconds": 0.321311019999996,
+      "policy_seconds": 0.14094267600000876,
+      "peak_process_rss_bytes": 25554944
+    },
+    {
+      "name": "near_limit_dense",
+      "phase": "ask",
+      "wall_seconds": 0.3391157039999939,
+      "policy_seconds": 0.1460606759999905,
+      "peak_process_rss_bytes": 28278784
+    },
+    {
+      "name": "near_limit_unknown",
+      "phase": "ask",
+      "wall_seconds": 0.31644634000002725,
+      "policy_seconds": 0.13133811300002662,
+      "peak_process_rss_bytes": 27348992
+    },
+    {
+      "name": "empty",
+      "phase": "match",
+      "wall_seconds": 0.2931219449999958,
+      "policy_seconds": 0.11196509400002697,
+      "peak_process_rss_bytes": 21454848
+    },
+    {
+      "name": "dense_200",
+      "phase": "match",
+      "wall_seconds": 0.4013936700000045,
+      "policy_seconds": 0.23290197800002943,
+      "peak_process_rss_bytes": 28385280
+    },
+    {
+      "name": "unknown_200",
+      "phase": "match",
+      "wall_seconds": 0.39749927599996226,
+      "policy_seconds": 0.22257756699997344,
+      "peak_process_rss_bytes": 25481216
+    },
+    {
+      "name": "near_limit_dense",
+      "phase": "match",
+      "wall_seconds": 1.5830558870000004,
+      "policy_seconds": 1.4039248099999782,
+      "peak_process_rss_bytes": 69193728
+    },
+    {
+      "name": "near_limit_unknown",
+      "phase": "match",
+      "wall_seconds": 1.4284130190000042,
+      "policy_seconds": 1.2457192019999752,
+      "peak_process_rss_bytes": 27377664
+    }
+  ],
+  "peak_process_rss_bytes": 69193728,
+  "policy_seconds": {
+    "n": 10,
+    "median": 0.14399598700001093,
+    "p95": 1.4039248099999782,
+    "p99": 1.4039248099999782,
+    "maximum": 1.4039248099999782,
+    "method": "nearest-rank percentiles"
+  },
+  "wall_seconds": {
+    "n": 10,
+    "median": 0.33291445200001135,
+    "p95": 1.5830558870000004,
+    "p99": 1.5830558870000004,
+    "maximum": 1.5830558870000004,
+    "method": "nearest-rank percentiles"
+  },
+  "caveat": "Instrumented process high-water RSS via Linux getrusage. Not cgroup-wide peak. Official uninstrumented episode timings are separate."
+}

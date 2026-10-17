@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "-v"
+  ],
+  "cwd": "/home/runner/work/jarvis/jarvis",
+  "started_utc": "2026-10-17T16:26:59.817455+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 23.604819247000002,
+  "log_sha256": "6a8c526e5269ce6eab45fdd0051597aa9eb569ce883260078917cf1c2314b464"
+}

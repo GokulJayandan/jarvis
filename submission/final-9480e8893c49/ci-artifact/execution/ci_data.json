@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "verify_data.py"
+  ],
+  "cwd": "/home/runner/work/jarvis/jarvis",
+  "started_utc": "2026-10-17T16:27:23.460449+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 0.05828375099999761,
+  "log_sha256": "48732fdb3be1af0a0d92f4f0223705e5bf4ccecad6301d4e74227f564d7c7cb7"
+}

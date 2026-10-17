@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-10-17T16:35:04.380932+00:00",
+  "repository": "GokulJayandan/jarvis",
+  "commit": "9480e8893c496672fee93dc5e5d69c61e54f6a32",
+  "remote_main": "9480e8893c496672fee93dc5e5d69c61e54f6a32",
+  "ci_run": 39049432462,
+  "ci_commit": "9480e8893c496672fee93dc5e5d69c61e54f6a32",
+  "ci_url": "https://github.com/GokulJayandan/jarvis/actions/runs/39049432462",
+  "ci_artifact": {
+    "id": 12107201719,
+    "name": "container-verification",
+    "size_bytes": 126524,
+    "digest": "sha256:32a2a9277037d6d20489b06f66be2d26bed51d50b236d873239ae35e2230e68c",
+    "expired": false
+  },
+  "docker_build_context_identical": true,
+  "public_files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/GokulJayandan/jarvis/9480e8893c496672fee93dc5e5d69c61e54f6a32/README.md",
+      "sha256": "380138d8d4b62faa64c739bc8dc9a27ef1bd96fac892da4c3ff57134131d5803",
+      "public_bytes_match": true
+    },
+    {
+      "path": "report/TECHNICAL_REPORT.md",
+      "url": "https://raw.githubusercontent.com/GokulJayandan/jarvis/9480e8893c496672fee93dc5e5d69c61e54f6a32/report/TECHNICAL_REPORT.md",
+      "sha256": "ab51ab684dd30b1e288096928d216e1cc8cff5a73bfe143c033336fffaf6a649",
+      "public_bytes_match": true
+    },
+    {
+      "path": "results/recovery/final.json",
+      "url": "https://raw.githubusercontent.com/GokulJayandan/jarvis/9480e8893c496672fee93dc5e5d69c61e54f6a32/results/recovery/final.json",
+      "sha256": "5bf0bcb43f533e74eaa8dd1e4178e26899cbdb02742922f4651f304f2d25c5d8",
+      "public_bytes_match": true
+    },
+    {
+      "path": "results/recovery/greedy.json",
+      "url": "https://raw.githubusercontent.com/GokulJayandan/jarvis/9480e8893c496672fee93dc5e5d69c61e54f6a32/results/recovery/greedy.json",
+      "sha256": "912ee5489d87bbcbc55bfeae8b43e2785c11c987f8acb4cb4cda380eae1a83aa",
+      "public_bytes_match": true
+    },
+    {
+      "path": "results/recovery/no_asks.json",
+      "url": "https://raw.githubusercontent.com/GokulJayandan/jarvis/9480e8893c496672fee93dc5e5d69c61e54f6a32/results/recovery/no_asks.json",
+      "sha256": "22a426d9f9f4da7c102b807f1015400356554e6955586f0952b661c0b6543fdf",
+      "public_bytes_match": true
+    },
+    {
+      "path": "results/recovery/random.json",
+      "url": "https://raw.githubusercontent.com/GokulJayandan/jarvis/9480e8893c496672fee93dc5e5d69c61e54f6a32/results/recovery/random.json",
+      "sha256": "533aca940719d55760265b9de98add9d82ba148b8e6ca13a3dac7022d7acf108",
+      "public_bytes_match": true
+    },
+    {
+      "path": "docs/FINAL_HARDENING_AUDIT.md",
+      "url": "https://raw.githubusercontent.com/GokulJayandan/jarvis/9480e8893c496672fee93dc5e5d69c61e54f6a32/docs/FINAL_HARDENING_AUDIT.md",
+      "sha256": "f8d9c583b383eeaedfb8ec1f6274bd4eea09f613ea8da34e881cfd41413b02bc",
+      "public_bytes_match": true
+    },
+    {
+      "path": "raven/assets/final_config.json",
+      "url": "https://raw.githubusercontent.com/GokulJayandan/jarvis/9480e8893c496672fee93dc5e5d69c61e54f6a32/raven/assets/final_config.json",
+      "sha256": "bb71c24b2c553e6bfedc7bd9415c5aab94ae9c9755d7da6818dcdda607855958",
+      "public_bytes_match": true
+    },
+    {
+      "path": "raven/assets/model.json",
+      "url": "https://raw.githubusercontent.com/GokulJayandan/jarvis/9480e8893c496672fee93dc5e5d69c61e54f6a32/raven/assets/model.json",
+      "sha256": "a4450b7e015816686dd5ea3a406ba201991e4b6c2ce984e178c9a49bb7031b33",
+      "public_bytes_match": true
+    }
+  ],
+  "archive": "jarvis-9480e8893c496672fee93dc5e5d69c61e54f6a32.zip",
+  "archive_sha256": "5334af1294aa5020e4fa752c71003d8ccb3f31d7fc3b5069a1b8794535e791ee",
+  "posted": false,
+  "issue_form": "https://github.com/RomeoJulietLove/The-Sequential-Matching-Problem/issues/new?template=final_submission.yml",
+  "deadline": "2026-10-18T23:59:00+05:30"
+}

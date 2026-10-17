@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "scripts/hardening_run.py",
+    "--output",
+    "results/hardening/ci_container",
+    "--image",
+    "sequential-policy:submission",
+    "--skip-tests"
+  ],
+  "cwd": "/home/runner/work/jarvis/jarvis",
+  "started_utc": "2026-10-17T16:29:24.035919+00:00",
+  "raven_strict": "0",
+  "exit_code": 0,
+  "seconds": 263.60432261899996,
+  "log_sha256": "09b3306b0100718b3a12fe3e7d4dee1a5d50165958cfbfdf0c33abfcf29e32cb"
+}
