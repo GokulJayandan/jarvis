@@ -1,0 +1,13 @@
+{
+  "invocations": 24,
+  "seconds": {
+    "n": 24,
+    "median": 0.1480883000040194,
+    "p95": 1.7367777999897953,
+    "p99": 2.347194000001764,
+    "maximum": 2.347194000001764,
+    "method": "nearest-rank percentiles"
+  },
+  "sampled_peak_rss_bytes": 70713344,
+  "rss_scope": "sum of root and recursive descendants; shared pages may be counted twice; 5 ms sampling can miss peaks"
+}

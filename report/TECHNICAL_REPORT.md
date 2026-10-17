@@ -1,6 +1,6 @@
 # Recovery release evidence
 
-Team Jarvis — RAVEN-Match. **Docker and source-publication checks passed:** [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) successfully built and evaluated the policy container at public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. The official submission issue has not been created; it requires separate authorization. This documentation revision also awaits authorization to push. This is an executed local recovery, not a claim of private performance.
+Team Jarvis — RAVEN-Match. **Docker and source-publication checks passed:** [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) successfully built and evaluated the policy container at public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. Final hardening status, expanded contract tests, release fixes, and current Docker evidence are recorded in `docs/FINAL_HARDENING_AUDIT.md`. The official submission issue is prepared separately and has not been posted. This is an executed local recovery, not a claim of private performance.
 
 **Important negative result:** the untouched post-freeze sample favored protected RAVEN over the selected conservative policy: 16 versus 3 qualifying outcomes over 18 episodes each. The selection rule did not identify the stronger policy on this sample. The choice remains frozen to avoid selecting on the held-out results; no claim of improved generalization or statistically optimal policy selection is made.
 
@@ -200,7 +200,7 @@ Round 2, synthetic Sequential Matching Problem. Generated from stored experiment
 
 ## 1. Abstract
 
-The frozen selected configuration is **soft**. Its official public score is **0.3611 MSMI per 100 arrived members**. Official greedy scored 0.3889; the frozen policy does not demonstrate an improvement on the mandatory test sample. We investigate joint clarification, candidate pruning and persistent future information value. Hard eligibility is enforced independently of estimates. Results concern invented simulator outcomes only. Docker execution is blocked on this host; this build must not be represented as submission-ready until that gate passes.
+The frozen selected configuration is **soft**. Its official public score is **0.3611 MSMI per 100 arrived members**. Official greedy scored 0.3889; the frozen policy does not demonstrate an improvement on the mandatory test sample. We investigate joint clarification, candidate pruning and persistent future information value. Hard eligibility is enforced independently of estimates. Results concern invented simulator outcomes only. At the original study date Docker was absent on the Windows host. That historical blocker was subsequently cleared for the released V1_greedy by verified Linux CI; see the current release audit above.
 
 ## 2. Problem definition
 
@@ -425,7 +425,7 @@ See `docs/FAILURE_ANALYSIS.md`. Sparse supply, hard refusals, occupied members, 
 
 ## 23. Limitations
 
-This is synthetic evaluation, not social or clinical validation. Few independent seeds limit uncertainty estimates. Model selection reuses validation for calibration/configuration choice and compares several candidates. No held-out retuning is allowed. The future term is pooled and heuristic; the pruning oracle concerns small states and an approximate objective. Memory is intentionally empty because histories are cumulative; models do not adapt to evaluation feedback. The optional website was not started because mandatory Docker verification remains blocked.
+This is synthetic evaluation, not social or clinical validation. Few independent seeds limit uncertainty estimates. Model selection reuses validation for calibration/configuration choice and compares several candidates. No held-out retuning is allowed. The future term is pooled and heuristic; the pruning oracle concerns small states and an approximate objective. Memory is intentionally empty because histories are cumulative; models do not adapt to evaluation feedback. No website is part of this submission. Historical Docker failures are superseded by the verified Linux CI evidence in the current release audit.
 
 ## 24. Reproducibility
 

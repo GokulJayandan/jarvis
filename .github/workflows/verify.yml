@@ -1,5 +1,5 @@
 name: Verify Jarvis policy and offline container
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
@@ -17,11 +17,17 @@ jobs:
       - run: python scripts/run_logged.py ci_local python evaluate.py --seeds 101 --output results/ci_smoke.json
         env:
           RAVEN_STRICT: '1'
-      - run: python scripts/run_logged.py ci_build docker build -t sequential-policy:submission .
+      - run: python scripts/run_logged.py ci_build docker build --no-cache --pull -t sequential-policy:submission .
+        env:
+          DOCKER_CONFIG: /tmp/jarvis-empty-docker-config
       - run: python scripts/run_logged.py ci_container python evaluate.py --image sequential-policy:submission --seeds 101 --output results/container_check.json
       - run: python scripts/run_logged.py ci_compare python scripts/compare_runs.py results/ci_smoke.json results/container_check.json
       - run: docker image inspect sequential-policy:submission > results/container_image.json
       - run: python -c "import json; assert json.load(open('results/container_image.json'))[0]['Size'] <= 2 * 1024**3"
+      - run: python scripts/run_logged.py ci_hardening_local python scripts/hardening_run.py --output results/hardening/ci_local --skip-tests
+      - run: python scripts/run_logged.py ci_hardening_container python scripts/hardening_run.py --output results/hardening/ci_container --image sequential-policy:submission --skip-tests
+      - run: python scripts/run_logged.py ci_hardening_compare python scripts/compare_runs.py results/hardening/ci_local/episodes.json results/hardening/ci_container/episodes.json
+      - run: python scripts/run_logged.py ci_hardening_resources python scripts/hardening_container_resources.py sequential-policy:submission results/hardening/container_resources.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -32,3 +38,6 @@ jobs:
             results/container_image.json
             results/execution/ci_*.json
             results/execution/ci_*.log
+            results/hardening/ci_local/
+            results/hardening/ci_container/
+            results/hardening/container_resources.json

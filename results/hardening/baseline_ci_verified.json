@@ -1,0 +1,476 @@
+{
+  "run": {
+    "id": 38919907335,
+    "head_sha": "98c5440dba6a2780f2ffd766c4f576fd796c4abb",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/GokulJayandan/jarvis/actions/runs/38919907335",
+    "updated_at": "2026-10-16T14:58:29Z"
+  },
+  "jobs": [
+    {
+      "id": 117036844231,
+      "run_id": 38919907335,
+      "workflow_name": "Verify Jarvis policy and offline container",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/GokulJayandan/jarvis/actions/runs/38919907335",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVMNuLs8AAAAbP_CExw",
+      "head_sha": "98c5440dba6a2780f2ffd766c4f576fd796c4abb",
+      "url": "https://api.github.com/repos/GokulJayandan/jarvis/actions/jobs/117036844231",
+      "html_url": "https://github.com/GokulJayandan/jarvis/actions/runs/38919907335/job/117036844231",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-16T14:56:54Z",
+      "started_at": "2026-10-16T14:56:56Z",
+      "completed_at": "2026-10-16T14:58:28Z",
+      "name": "check",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-16T14:56:56Z",
+          "completed_at": "2026-10-16T14:56:57Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-16T14:56:57Z",
+          "completed_at": "2026-10-16T14:56:58Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-16T14:56:58Z",
+          "completed_at": "2026-10-16T14:56:58Z"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-16T14:56:58Z",
+          "completed_at": "2026-10-16T14:57:08Z"
+        },
+        {
+          "name": "Run python scripts/run_logged.py ci_tests python -m unittest -v",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-16T14:57:08Z",
+          "completed_at": "2026-10-16T14:57:12Z"
+        },
+        {
+          "name": "Run python scripts/run_logged.py ci_data python verify_data.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-16T14:57:12Z",
+          "completed_at": "2026-10-16T14:57:12Z"
+        },
+        {
+          "name": "Run python scripts/run_logged.py ci_local python evaluate.py --seeds 101 --output results/ci_smoke.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-16T14:57:12Z",
+          "completed_at": "2026-10-16T14:57:25Z"
+        },
+        {
+          "name": "Run python scripts/run_logged.py ci_build docker build -t sequential-policy:submission .",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-16T14:57:25Z",
+          "completed_at": "2026-10-16T14:57:30Z"
+        },
+        {
+          "name": "Run python scripts/run_logged.py ci_container python evaluate.py --image sequential-policy:submission --seeds 101 --output results/container_check.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-16T14:57:30Z",
+          "completed_at": "2026-10-16T14:58:25Z"
+        },
+        {
+          "name": "Run python scripts/run_logged.py ci_compare python scripts/compare_runs.py results/ci_smoke.json results/container_check.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-16T14:58:25Z",
+          "completed_at": "2026-10-16T14:58:25Z"
+        },
+        {
+          "name": "Run docker image inspect sequential-policy:submission > results/container_image.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-16T14:58:25Z",
+          "completed_at": "2026-10-16T14:58:25Z"
+        },
+        {
+          "name": "Run python -c \"import json; assert json.load(open('results/container_image.json'))[0]['Size'] <= 2 * 1024**3\"",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-16T14:58:25Z",
+          "completed_at": "2026-10-16T14:58:25Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-16T14:58:25Z",
+          "completed_at": "2026-10-16T14:58:26Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-16T14:58:26Z",
+          "completed_at": "2026-10-16T14:58:26Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26,
+          "started_at": "2026-10-16T14:58:26Z",
+          "completed_at": "2026-10-16T14:58:26Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-16T14:58:26Z",
+          "completed_at": "2026-10-16T14:58:26Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/GokulJayandan/jarvis/check-runs/117036844231",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000001,
+      "runner_name": "GitHub Actions 1000000001",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ],
+  "logs": [
+    {
+      "name": "ci_build.json",
+      "metadata": {
+        "command": [
+          "docker",
+          "build",
+          "-t",
+          "sequential-policy:submission",
+          "."
+        ],
+        "cwd": "/home/runner/work/jarvis/jarvis",
+        "started_utc": "2026-10-16T14:57:25.194420+00:00",
+        "raven_strict": "0",
+        "exit_code": 0,
+        "seconds": 5.2226493929999975,
+        "log_sha256": "960aa1175dc56df9ce8a019abf627f363c536021b1ae4ca42bd4e951ff7d91c6"
+      },
+      "actual_log_sha256": "960aa1175dc56df9ce8a019abf627f363c536021b1ae4ca42bd4e951ff7d91c6",
+      "hash_matches": true
+    },
+    {
+      "name": "ci_compare.json",
+      "metadata": {
+        "command": [
+          "python",
+          "scripts/compare_runs.py",
+          "results/ci_smoke.json",
+          "results/container_check.json"
+        ],
+        "cwd": "/home/runner/work/jarvis/jarvis",
+        "started_utc": "2026-10-16T14:58:25.540727+00:00",
+        "raven_strict": "0",
+        "exit_code": 0,
+        "seconds": 0.019349290000008068,
+        "log_sha256": "bdc44b1142693fa1721ce1db3b38aebdedb86459cc59947641dd7cfb64664730"
+      },
+      "actual_log_sha256": "bdc44b1142693fa1721ce1db3b38aebdedb86459cc59947641dd7cfb64664730",
+      "hash_matches": true
+    },
+    {
+      "name": "ci_container.json",
+      "metadata": {
+        "command": [
+          "python",
+          "evaluate.py",
+          "--image",
+          "sequential-policy:submission",
+          "--seeds",
+          "101",
+          "--output",
+          "results/container_check.json"
+        ],
+        "cwd": "/home/runner/work/jarvis/jarvis",
+        "started_utc": "2026-10-16T14:57:30.467951+00:00",
+        "raven_strict": "0",
+        "exit_code": 0,
+        "seconds": 55.024630189,
+        "log_sha256": "835a11018a63b616ba6f45af7f4589dfd864922f294c3d394cee9a506d521a3d"
+      },
+      "actual_log_sha256": "835a11018a63b616ba6f45af7f4589dfd864922f294c3d394cee9a506d521a3d",
+      "hash_matches": true
+    },
+    {
+      "name": "ci_data.json",
+      "metadata": {
+        "command": [
+          "python",
+          "verify_data.py"
+        ],
+        "cwd": "/home/runner/work/jarvis/jarvis",
+        "started_utc": "2026-10-16T14:57:12.493877+00:00",
+        "raven_strict": "0",
+        "exit_code": 0,
+        "seconds": 0.07445066499999342,
+        "log_sha256": "48732fdb3be1af0a0d92f4f0223705e5bf4ccecad6301d4e74227f564d7c7cb7"
+      },
+      "actual_log_sha256": "48732fdb3be1af0a0d92f4f0223705e5bf4ccecad6301d4e74227f564d7c7cb7",
+      "hash_matches": true
+    },
+    {
+      "name": "ci_local.json",
+      "metadata": {
+        "command": [
+          "python",
+          "evaluate.py",
+          "--seeds",
+          "101",
+          "--output",
+          "results/ci_smoke.json"
+        ],
+        "cwd": "/home/runner/work/jarvis/jarvis",
+        "started_utc": "2026-10-16T14:57:12.636001+00:00",
+        "raven_strict": "1",
+        "exit_code": 0,
+        "seconds": 12.507734137,
+        "log_sha256": "e2b5696acd91299a32ec8c4c4aea2d1374df9679cbac15b9a79cec31d32a941e"
+      },
+      "actual_log_sha256": "e2b5696acd91299a32ec8c4c4aea2d1374df9679cbac15b9a79cec31d32a941e",
+      "hash_matches": true
+    },
+    {
+      "name": "ci_tests.json",
+      "metadata": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "cwd": "/home/runner/work/jarvis/jarvis",
+        "started_utc": "2026-10-16T14:57:08.136239+00:00",
+        "raven_strict": "0",
+        "exit_code": 0,
+        "seconds": 4.285605328999999,
+        "log_sha256": "61033ab930c960380db8fb225c1384df036f604f46236d54c133d62cc7cd0337"
+      },
+      "actual_log_sha256": "61033ab930c960380db8fb225c1384df036f604f46236d54c133d62cc7cd0337",
+      "hash_matches": true
+    }
+  ],
+  "container": {
+    "release": "1.0.0",
+    "mode": "container",
+    "decision_days": 60,
+    "follow_up_days": 40,
+    "members_per_episode": 200,
+    "episodes": [
+      {
+        "assignments": 108,
+        "mutual_acceptances": 18,
+        "dates": 15,
+        "mutual_second_meeting_intention": 1,
+        "missing_feedback": 59,
+        "ask_cost": 198,
+        "arrived_members": 200,
+        "msmi_per_100_arrived_members": 0.5,
+        "status": "simulated_not_observed_product_performance",
+        "valid": true,
+        "served_members": 92,
+        "unserved_members": 108,
+        "coverage": 0.46,
+        "mutual_acceptances_per_100": 9.0,
+        "first_introduction_wait_days": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          7,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8,
+          9,
+          9,
+          10,
+          10,
+          10,
+          10,
+          10,
+          11,
+          12,
+          13,
+          13,
+          13,
+          14,
+          14,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          19,
+          19,
+          30,
+          32,
+          32,
+          40
+        ],
+        "inference_seconds": 53.94852112699993,
+        "action_sha256": "465bbda17b6a7ddbde9d2241dcee43887b3ee8194f93846372e228299102ff1a",
+        "seed": 101,
+        "variant": "development"
+      }
+    ],
+    "summary": {
+      "eligible": true,
+      "primary_score": 0.5,
+      "scenario_means": {
+        "development": {
+          "msmi_per_100_arrived_members": 0.5,
+          "coverage": 0.46,
+          "mutual_acceptances_per_100": 9.0,
+          "ask_cost": 198,
+          "inference_seconds": 53.94852112699993
+        }
+      },
+      "overall": {
+        "msmi_per_100_arrived_members": 0.5,
+        "coverage": 0.46,
+        "mutual_acceptances_per_100": 9.0,
+        "ask_cost": 198,
+        "inference_seconds": 53.94852112699993
+      },
+      "ranking_key_descending": [
+        0.5,
+        0.46,
+        9.0,
+        -198,
+        -53.94852112699993
+      ]
+    }
+  },
+  "image": {
+    "Id": "sha256:9ce9bdb4daf022a98f948d0dc8746499d80e33698e343981452ecdc00c1560b8",
+    "Size": 123653457,
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Config": {
+      "Hostname": "",
+      "Domainname": "",
+      "User": "65534:65534",
+      "AttachStdin": false,
+      "AttachStdout": false,
+      "AttachStderr": false,
+      "Tty": false,
+      "OpenStdin": false,
+      "StdinOnce": false,
+      "Env": [
+        "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "LANG=C.UTF-8",
+        "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+        "PYTHON_VERSION=3.12.7",
+        "PYTHON_SHA256=24887b92e2afd4a2ac602419ad4b596372f67ac9b077190f459aba390faf5550",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "PYTHONUNBUFFERED=1"
+      ],
+      "Cmd": null,
+      "Image": "",
+      "Volumes": null,
+      "WorkingDir": "/app",
+      "Entrypoint": [
+        "python",
+        "policy.py"
+      ],
+      "OnBuild": null,
+      "Labels": null
+    }
+  },
+  "action_digest_equal": true
+}

@@ -1,6 +1,6 @@
 # Recovery release evidence
 
-Team Jarvis — RAVEN-Match. **Docker and source-publication checks passed:** [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) successfully built and evaluated the policy container at public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. The official submission issue has not been created; it requires separate authorization. This documentation revision also awaits authorization to push. This is an executed local recovery, not a claim of private performance.
+Team Jarvis — RAVEN-Match. **Docker and source-publication checks passed:** [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) successfully built and evaluated the policy container at public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. Final hardening status, expanded contract tests, release fixes, and current Docker evidence are recorded in `docs/FINAL_HARDENING_AUDIT.md`. The official submission issue is prepared separately and has not been posted. This is an executed local recovery, not a claim of private performance.
 
 **Important negative result:** the untouched post-freeze sample favored protected RAVEN over the selected conservative policy: 16 versus 3 qualifying outcomes over 18 episodes each. The selection rule did not identify the stronger policy on this sample. The choice remains frozen to avoid selecting on the held-out results; no claim of improved generalization or statistically optimal policy selection is made.
 

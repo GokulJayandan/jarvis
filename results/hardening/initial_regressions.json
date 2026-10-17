@@ -1,0 +1,11 @@
+{
+  "baseline_tests": {"tests": 63, "failures": 0, "seconds": 5.787},
+  "first_new_suite": {"tests": 27, "seconds": 39.890, "failures": 3, "errors": 1},
+  "confirmed_defects": [
+    {"test": "HardeningMatching.test_reversed_duplicate_weights", "before": "6 != 10: later duplicate overwrote maximum undirected edge weight", "scope": "research matching"},
+    {"test": "HardeningPortfolio.test_shortlist_never_invents_candidates", "before": "absent question added to shortlist", "scope": "research pruning with stale candidate references"},
+    {"test": "HardeningProbabilities.test_fitting_empty_single_class_and_imbalance", "before": "IndexError in logistic_fit on zero training rows", "scope": "research training"}
+  ],
+  "test_correction": "HardeningContract guard test incorrectly expected no remaining pair after four of six members were allocated. Two unused members could still match; replaced with independent action validity check.",
+  "selected_policy_or_assets_changed": false
+}

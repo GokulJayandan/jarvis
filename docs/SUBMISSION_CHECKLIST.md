@@ -1,6 +1,6 @@
 # Recovery submission checklist
 
-**Docker and tested-source publication passed.** The documentation-only revision awaits authorized push and public-link verification; the official submission issue requires separate approval. The unchanged `results/recovery/quality_gates.json` is a historical pre-CI snapshot, superseded for release status by this checklist and [CI_VALIDATION.md](CI_VALIDATION.md).
+**Original Docker and tested-source publication passed.** Current release hardening and submission status is recorded in [FINAL_HARDENING_AUDIT.md](FINAL_HARDENING_AUDIT.md). The unchanged `results/recovery/quality_gates.json` is a historical pre-CI snapshot. The table below records the original recovery gates; final hardening adds a new image verification and immutable submission package.
 
 | Gate | Requirement | Status | Evidence |
 | --- | --- | --- | --- |
@@ -23,4 +23,4 @@
 | 17 | Licences and model provenance | PASS | docs/LICENSES.md and unchanged model bytes |
 | 18 | Local release source prepared | PASS | release_checks_complete.json; uncommitted state checked separately |
 | 19 | Immutable public commit available | PASS (tested source) | Public `98c5440dba6a2780f2ffd766c4f576fd796c4abb` and verified report/results; documentation revision publication pending |
-| 20 | Authorized official submission | BLOCKED | Requires authorized documentation push, final public-link verification and separate issue approval |
+| 20 | Official submission | NOT POSTED | Prepare the immutable issue package after final hardening and public-link verification; posting to organisers requires an explicit instruction |

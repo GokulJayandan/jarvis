@@ -15,6 +15,8 @@ class Graph:
         for e in sorted(edges,key=lambda e:(e.a,e.b)):
             if e.weight<=0: continue
             data={'weight':max(1,round(e.weight*1000000000))}
+            previous=self.adj.get(e.a,{}).get(e.b)
+            if previous is not None and previous['weight']>=data['weight']: continue
             self.adj.setdefault(e.a,{})[e.b]=data
             self.adj.setdefault(e.b,{})[e.a]=data
     def __iter__(self): return iter(self.adj)

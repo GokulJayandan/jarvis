@@ -4,7 +4,7 @@ Round 2 of [The Sequential Matching Problem](https://github.com/RomeoJulietLove/
 
 Current release configuration: **V1_greedy**. Official greedy clarification and soft-agreement greedy matching, wrapped in RAVEN independent hard-eligibility, budget, duplicate and availability validation. Learned probabilities, portfolio search and future terms are not used by the selected policy. Advanced RAVEN modules are evaluated research alternatives, not decision components of the deployed V1_greedy policy. Exact settings are in `results/recovery/release_selection.json`.
 
-**Docker and source-publication checks passed:** [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) successfully built and evaluated the policy container at public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. The official submission issue has not been created; it requires separate authorization. This documentation revision also awaits authorization to push.
+**Docker and source-publication checks passed:** [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) successfully built and evaluated the policy container at public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. Final hardening status, expanded contract tests, release fixes, and current Docker evidence are recorded in `docs/FINAL_HARDENING_AUDIT.md`. The official submission issue is prepared separately and has not been posted.
 
 The repeated official benchmark scores 0.3889 MSMI/100 (14 qualifying pairs / 3600 arrivals). Greedy scores 0.3889; this is not a claim of superiority. Selection used fresh validation; untouched post-freeze results and uncertainty are in the report.
 

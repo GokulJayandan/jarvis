@@ -1,9 +1,12 @@
 # Docker validation and publication evidence
 
+This page records the original `98c5440` CI evidence and the documentation update
+at `93a2267`. Current hardening status is in [FINAL_HARDENING_AUDIT.md](FINAL_HARDENING_AUDIT.md).
+
 Verified 16 October 2026. The actual CI-tested source commit is
 `98c5440dba6a2780f2ffd766c4f576fd796c4abb` on `GokulJayandan/jarvis`, branch `main`.
 [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335)
-completed successfully. This documentation-only revision preserves every
+completed successfully. The `93a2267` documentation-only revision preserved every
 non-documentation file from that tested commit, including the entire Docker
 build context, evaluator, inference assets and dependencies. It does not claim
 that the new documentation commit itself has already run in CI.
@@ -93,6 +96,7 @@ prose overlay:
 ```sh
 python -m experiments.recovery_report
 git apply docs/RELEASE_DOCUMENTATION.patch
+python scripts/hardening_documentation.py
 git diff --exit-code -- README.md report/TECHNICAL_REPORT.md docs/RECOVERY_RELEASE.md results/recovery/report_tables.json figures/recovery
 ```
 
@@ -109,10 +113,10 @@ documented in `SUBMISSION_CHECKLIST.md` and this document.
 ## Publication and remaining actions
 
 The tested source commit, report and results were fetched publicly at their
-SHA-pinned URLs and matched Git object bytes. The new documentation-only commit
-still requires explicit authorization to push; its new SHA-pinned report/results
-links can only be verified after publication. An official submission issue has
-not been created and requires separate explicit approval.
+SHA-pinned URLs and matched Git object bytes. At the time this baseline evidence
+was recorded, documentation commit `93a2267` had not been pushed. Current release
+and submission state is recorded in `FINAL_HARDENING_AUDIT.md`; historical pending
+publication statements are not current release gates.
 
 The untouched negative result is unchanged: selected guarded greedy produced
 3 qualifying outcomes versus protected RAVEN's 16 over 18 episodes per arm.

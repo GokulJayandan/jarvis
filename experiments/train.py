@@ -63,6 +63,9 @@ def collect(seeds, variants, gate_data=False):
 
 def logistic_fit(x,y,ridge=20):
     x=np.asarray(x,dtype=float);y=np.asarray(y,dtype=float)
+    if x.size==0 and x.ndim==1:
+        # Empty research datasets use the same feature schema and a neutral prior.
+        x=np.empty((0,len(features({'age':21},{'age':21}))))
     weights=np.zeros(x.shape[1]);prior=(y.sum()+.5)/(len(y)+1)
     weights[0]=math.log(prior/(1-prior))
     penalty=np.eye(len(weights))*ridge;penalty[0,0]=.1

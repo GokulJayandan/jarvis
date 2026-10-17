@@ -1,0 +1,83 @@
+{
+  "checked_utc": "2026-10-17T14:44:39.539901+00:00",
+  "upstream_commit": "a8e26b35118cfa8e886a02f93984923e43ab64f6",
+  "files": [
+    {
+      "path": "docs/POLICY_INTERFACE.md",
+      "sha256": "54307847643c2bf9d80f5c09a0bad8c52c79eb207811fab90b87b0640d2aad67",
+      "local_matches": true
+    },
+    {
+      "path": "docs/DATA_CONTRACT.md",
+      "sha256": "81cfbcfbe3e1f17977ec56af2f21c8427c5d47442fb4b53895b8dc848e7db4ea",
+      "local_matches": true
+    },
+    {
+      "path": "docs/SUBMISSION.md",
+      "sha256": "457c01722bc208b195f985e20ef3a57b7faea0d19549908351d18f51cb87d044",
+      "local_matches": true
+    },
+    {
+      "path": "kit.py",
+      "sha256": "0d2cb3d3b46ca2a6ee7c8b74b78c55642ef98686e59a890ec18f66f2cabc1f3e",
+      "local_matches": true
+    },
+    {
+      "path": "evaluate.py",
+      "sha256": "d09cc14bf634a741515ad9965469821cac336a0d037b4da265eb1bf5fe20e162",
+      "local_matches": true
+    },
+    {
+      "path": "organise.py",
+      "sha256": "da9d6b3a197f1ff882b68d84a7c4491d92dfbecf186f3275ff2c855ba1aa6a3e",
+      "local_matches": true
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "252d645657d8c13b78d33a09e152ef98d107ecae55208f21d050a41488e7b792",
+      "local_matches": true
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/final_submission.yml",
+      "sha256": "53391c0f2d7e5f65bd60f4978342c382c7a78feda820207c1c1122f7e29feb0b",
+      "local_matches": true
+    }
+  ],
+  "corrections": [
+    {
+      "number": 1,
+      "title": "Round 1 schedule update: Google Form, 9 October deadline, results by 11 October",
+      "body": "The organiser has updated the Round 1 research submission route and schedule. This notice supersedes the earlier 11 October research deadline and GitHub research submission instructions.\n\n| Milestone | Date and time (IST) |\n|---|---|\n| Round 1 research submissions close | 9 October 2026, 23:59 |\n| Round 1 results announced by | 11 October 2026, 22:00 |\n| Round 2 starts | 12 October 2026 |\n| Final build submissions close | 18 October 2026, 23:59 |\n\nRound 1 research submissions will be collected through a **Google Form**. The organiser will release the form link soon through the official Discord server and [the submission guide](https://github.com/RomeoJulietLove/The-Sequential-Matching-Problem/blob/main/docs/SUBMISSION.md#research-submission). The form is not yet available. GitHub Issues are not the Round 1 submission route.\n\nRound 2 final build submissions continue to use the Final submission issue form. Its deadline remains unchanged. The PS, README, submission guide and downloadable PDF are being aligned with this notice.",
+      "updated_at": "2026-10-05T15:28:47Z",
+      "html_url": "https://github.com/RomeoJulietLove/The-Sequential-Matching-Problem/issues/1",
+      "comments": []
+    }
+  ],
+  "issue_index": [
+    {
+      "number": 5,
+      "title": "Final Submission Issue (team zero)",
+      "updated_at": "2026-10-17T13:56:14Z"
+    },
+    {
+      "number": 4,
+      "title": "Final Submission Issue (team zero)",
+      "updated_at": "2026-10-17T12:35:23Z"
+    },
+    {
+      "number": 3,
+      "title": "Final submission: The Misfits (BRVM)",
+      "updated_at": "2026-10-17T11:06:55Z"
+    },
+    {
+      "number": 2,
+      "title": "n/a",
+      "updated_at": "2026-10-16T13:51:00Z"
+    },
+    {
+      "number": 1,
+      "title": "Round 1 schedule update: Google Form, 9 October deadline, results by 11 October",
+      "updated_at": "2026-10-05T15:28:47Z"
+    }
+  ]
+}

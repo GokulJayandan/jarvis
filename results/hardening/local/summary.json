@@ -1,0 +1,109 @@
+{
+  "mode": "trusted_local",
+  "telemetry": {
+    "ask": {
+      "n": 372,
+      "median": 0.14146015000005718,
+      "p95": 0.214140199997928,
+      "p99": 0.2765585999877658,
+      "maximum": 0.45459730000584386,
+      "method": "nearest-rank percentiles"
+    },
+    "match": {
+      "n": 372,
+      "median": 0.22430739999981597,
+      "p95": 0.3401616000046488,
+      "p99": 0.4789135000028182,
+      "maximum": 2.147695499996189,
+      "method": "nearest-rank percentiles"
+    },
+    "all": {
+      "n": 744,
+      "median": 0.17681459999585059,
+      "p95": 0.3139852000022074,
+      "p99": 0.3807725999940885,
+      "maximum": 2.147695499996189,
+      "method": "nearest-rank percentiles"
+    },
+    "request_bytes": 1048576,
+    "response_bytes": 27065,
+    "memory_bytes": 2,
+    "stderr_bytes": 0,
+    "sampled_peak_rss_bytes": 4706304,
+    "timeouts": 0,
+    "empty_state_startup_seconds": {
+      "n": 4,
+      "median": 0.12764039999456145,
+      "p95": 0.15589209999598097,
+      "p99": 0.15589209999598097,
+      "maximum": 0.15589209999598097,
+      "method": "nearest-rank percentiles"
+    }
+  },
+  "invalid_episodes": 0,
+  "episodes": 6,
+  "probes": 24,
+  "scope": "Empirical tested states only. No guarantee for all private observations. No policy selection.",
+  "summary": {
+    "eligible": true,
+    "primary_score": 0.5,
+    "scenario_means": {
+      "cold_start": {
+        "msmi_per_100_arrived_members": 0.5,
+        "coverage": 0.435,
+        "mutual_acceptances_per_100": 7.5,
+        "ask_cost": 246,
+        "inference_seconds": 24.378313900029752
+      },
+      "delayed": {
+        "msmi_per_100_arrived_members": 1.0,
+        "coverage": 0.455,
+        "mutual_acceptances_per_100": 9.5,
+        "ask_cost": 198,
+        "inference_seconds": 21.177002499825903
+      },
+      "development": {
+        "msmi_per_100_arrived_members": 0.5,
+        "coverage": 0.46,
+        "mutual_acceptances_per_100": 9.0,
+        "ask_cost": 198,
+        "inference_seconds": 24.162122699985048
+      },
+      "drift": {
+        "msmi_per_100_arrived_members": 0.5,
+        "coverage": 0.46,
+        "mutual_acceptances_per_100": 8.0,
+        "ask_cost": 198,
+        "inference_seconds": 21.675802199955797
+      },
+      "shift": {
+        "msmi_per_100_arrived_members": 0.5,
+        "coverage": 0.46,
+        "mutual_acceptances_per_100": 9.5,
+        "ask_cost": 198,
+        "inference_seconds": 23.218238500019652
+      },
+      "sparse": {
+        "msmi_per_100_arrived_members": 0.0,
+        "coverage": 0.175,
+        "mutual_acceptances_per_100": 2.0,
+        "ask_cost": 192,
+        "inference_seconds": 23.065471499983687
+      }
+    },
+    "overall": {
+      "msmi_per_100_arrived_members": 0.5,
+      "coverage": 0.40750000000000003,
+      "mutual_acceptances_per_100": 7.583333333333333,
+      "ask_cost": 205,
+      "inference_seconds": 22.94615854996664
+    },
+    "ranking_key_descending": [
+      0.5,
+      0.40750000000000003,
+      7.583333333333333,
+      -205,
+      -22.94615854996664
+    ]
+  }
+}

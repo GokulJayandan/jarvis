@@ -8,6 +8,8 @@ def screen(candidates, potential, limit, future=None):
     kept=[]
     # Half the slots favor the best complete requirement groups.
     for edge in sorted(potential,key=lambda e:(-e.weight,e.a,e.b)):
+        # A stale edge cannot introduce a question outside the legal candidates.
+        if not edge.requirements<=scores.keys(): continue
         additions=sorted(edge.requirements-set(kept))
         if len(kept)+len(additions)<=max(2,limit//2): kept.extend(additions)
     for q in ranked:
