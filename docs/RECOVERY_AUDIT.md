@@ -65,10 +65,11 @@ CI now builds the actual Dockerfile on Ubuntu, runs the official evaluator,
 compares action hashes and outcomes with the subprocess run, checks image size,
 and uploads command logs, exit codes and results even on failure. It has only
 `contents: read` permission and requires no secrets. The earlier local failure
-is historical: [CI run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) subsequently passed the real build,
-container evaluation, action comparison and image-size checks. The tested commit
-`98c5440dba6a2780f2ffd766c4f576fd796c4abb` is public. See `CI_VALIDATION.md`;
-this documentation revision and official issue still await their authorizations.
+is historical. Expanded [CI run 39042745485](https://github.com/GokulJayandan/jarvis/actions/runs/39042745485)
+passed the clean build, 93 tests, all six container families, action/outcome
+comparison, image-size assertion and Linux boundary/resource probes at public
+commit `66874ac68ea8ab030a92e0a5b1f3542cffc1a411`. See
+`FINAL_HARDENING_AUDIT.md`; form-complete issue preparation tooling is ready, and the immutable final-SHA package remains unposted.
 
 Public PyPI metadata was checked for every pinned development dependency:
 `results/recovery/ci_dependency_check.json` records Python 3.14 compatibility and

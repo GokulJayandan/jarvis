@@ -67,10 +67,11 @@ and verifies the report. The largest-input probe sums launcher and descendant
 RSS; historical launcher-only memory results are retained but superseded for
 current resource claims.
 
-For report-only regeneration, run `python -m experiments.recovery_report` followed
-by `git apply docs/RELEASE_DOCUMENTATION.patch`. The unmodified generator
-reconstructs measured tables/figures and the historical report; the prose-only
-patch restores the post-CI documentation. Use a disposable copy for verification
+For report-only regeneration, run `python -m experiments.recovery_report`,
+`git apply docs/RELEASE_DOCUMENTATION.patch`, then
+`python scripts/hardening_documentation.py`. The unmodified generator
+reconstructs measured tables/figures and the historical report; the two prose-only
+overlays restore the baseline and expanded post-CI documentation. Use a disposable copy for verification
 and compare generated tables/figures byte-for-byte. See `CI_VALIDATION.md`.
 The historical `scripts.verify_recovery` rewrites old gate-status files; do not
 use its pre-CI Docker/publication verdict as current evidence. Do not run historical policy-selection/training
@@ -78,11 +79,11 @@ scripts as a release step: those intentionally overwrite the old default assets.
 Original calibration/pruning figures remain valid for their historical studies.
 
 CI runs `.github/workflows/verify.yml` with read-only repository permission and
-no secrets. It builds the actual Dockerfile, evaluates both subprocess and
-container modes on seed 101, compares every action hash/outcome, checks image
-size and uploads `container-verification`. Actual CI run [38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) passed on `98c5440dba6a2780f2ffd766c4f576fd796c4abb`.
-The build, evaluator, equality comparison, image-size assertion and artifact
-upload all succeeded. Its logs and results were downloaded and verified;
-`CI_VALIDATION.md` records evidence and scope. The tested commit is public.
-This documentation-only revision requires push authorization; issue submission
-requires separate authorization. The research/evaluation results are unchanged.
+no secrets. Expanded run [39042745485](https://github.com/GokulJayandan/jarvis/actions/runs/39042745485)
+passed on public commit `66874ac68ea8ab030a92e0a5b1f3542cffc1a411`: 93 tests,
+a clean Docker build, six valid container scenarios, exact subprocess/container
+actions and outcomes, image-size enforcement and Linux boundary/resource probes.
+The earlier run 38919907335 remains baseline evidence. Downloaded logs and
+artifacts were hash-verified; see `FINAL_HARDENING_AUDIT.md` and
+`results/hardening/linux_ci_verified.json`. Form-complete issue preparation tooling is ready; the immutable final-SHA package
+is generated after publication. The research/evaluation results are unchanged.

@@ -3,6 +3,13 @@
 This page records the original `98c5440` CI evidence and the documentation update
 at `93a2267`. Current hardening status is in [FINAL_HARDENING_AUDIT.md](FINAL_HARDENING_AUDIT.md).
 
+Expanded release verification subsequently passed in [run 39042745485](https://github.com/GokulJayandan/jarvis/actions/runs/39042745485)
+at `66874ac68ea8ab030a92e0a5b1f3542cffc1a411`: 93 tests, a clean no-cache
+image build, six valid container scenarios, exact local/container actions and
+outcomes, 744 timed invocations with no timeouts, and Linux boundary/resource
+probes. Its checked artifact record is `results/hardening/linux_ci_verified.json`.
+The remainder of this page preserves the narrower original-run evidence.
+
 Verified 16 October 2026. The actual CI-tested source commit is
 `98c5440dba6a2780f2ffd766c4f576fd796c4abb` on `GokulJayandan/jarvis`, branch `main`.
 [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335)

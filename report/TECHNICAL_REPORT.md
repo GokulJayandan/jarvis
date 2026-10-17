@@ -1,6 +1,6 @@
 # Recovery release evidence
 
-Team Jarvis — RAVEN-Match. **Docker and source-publication checks passed:** [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) successfully built and evaluated the policy container at public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. Final hardening status, expanded contract tests, release fixes, and current Docker evidence are recorded in `docs/FINAL_HARDENING_AUDIT.md`. The official submission issue is prepared separately and has not been posted. This is an executed local recovery, not a claim of private performance.
+Team Jarvis — RAVEN-Match. **Final hardening and Docker checks passed:** [GitHub Actions run 39042745485](https://github.com/GokulJayandan/jarvis/actions/runs/39042745485) passed 93 tests, a clean image build, all six container scenarios, local/container action-and-outcome equality, and Linux boundary/resource probes at public commit `66874ac68ea8ab030a92e0a5b1f3542cffc1a411`. The original run 38919907335 remains baseline evidence. Full scope and limits are recorded in `docs/FINAL_HARDENING_AUDIT.md`. Form-complete issue preparation tooling is ready; the immutable final-SHA package has not been posted. This is an executed local recovery, not a claim of private performance.
 
 **Important negative result:** the untouched post-freeze sample favored protected RAVEN over the selected conservative policy: 16 versus 3 qualifying outcomes over 18 episodes each. The selection rule did not identify the stronger policy on this sample. The choice remains frozen to avoid selecting on the held-out results; no claim of improved generalization or statistically optimal policy selection is made.
 
@@ -176,7 +176,7 @@ Final unit tests and official data verification passed; see `results/execution/r
 
 There are 54 final subprocess resource probes, including six constructed cases near the 1 MiB request limit. Maximum observed invocation: 2.6728 seconds; sampled RSS: 54.629 MiB; request: 1047909 bytes; response: 25065 bytes. These Windows measurements are sampled, may miss peaks, and do not verify enforced container CPU/RAM limits. Stress episodes and adversarial dense/unresolved/declined observations use legal-action checks. Each resource invocation rejects unexpected stderr rather than allowing an exception fallback to hide a failure.
 
-The earlier local Docker attempts failed because Docker was absent; those failure records remain unchanged. They are superseded for the current policy by [successful CI run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) on public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. The actual Docker build and official container evaluator both exited 0. The development episode with seed 101 was valid (0 invalid episodes out of 1), and its actions and outcomes exactly matched subprocess evaluation. The Linux amd64 image measured 123,653,457 bytes (117.925 MiB), below the 2 GiB limit. The official evaluator applied network-disabled execution, 2 CPUs, 1 GiB RAM, a read-only filesystem and the 10-second per-invocation timeout; no resource-limit failure occurred. This is one container episode, not a six-scenario container benchmark or a private-validity guarantee. Separate peak-RAM telemetry was not collected in CI. Full commands, log hashes, image identity and evidence links are in `docs/CI_VALIDATION.md`. No website work or official issue submission was performed.
+The earlier local Docker attempts failed because Docker was absent; those failure records remain unchanged as historical evidence. The original CI run 38919907335 later cleared the build gate for one development episode. Expanded [CI run 39042745485](https://github.com/GokulJayandan/jarvis/actions/runs/39042745485) then passed all six seed-101 scenario families with zero invalid episodes and exact local/container actions and outcomes. Across 744 calls there were no timeouts; the maximum observed wall time was 2.577 seconds. Instrumented Linux boundary probes measured a 65.805 MiB process high-water RSS, and the Linux amd64 image was 117.925 MiB. These public tests do not guarantee every private state. Full commands, hashes, measurements and qualifications are in `docs/FINAL_HARDENING_AUDIT.md`. No website work or official issue submission was performed.
 
 Recovery found and corrected a memory-measurement defect: Windows virtual-environment Python uses a launcher and child interpreter, while the historical sampler measured only the launcher PID. The original RSS claims can therefore underestimate total memory. All current release resource measurements sum the launcher and recursive descendants, which may double-count shared pages. The preliminary launcher-only near-limit file is retained as `max_payload.json`; the corrected file is `max_payload_process_tree.json`. Inference code was not changed by this measurement correction.
 
@@ -421,7 +421,7 @@ Each configuration uses the same two validation seeds across all six families (1
 
 ## 22. Failure cases
 
-See `docs/FAILURE_ANALYSIS.md`. Sparse supply, hard refusals, occupied members, overlapping opportunities and late feedback can prevent qualifying outcomes. Expected-edge-weight clarification ignores joint answer dependence. Learned probabilities have selective feedback, rare-event uncertainty and shift risk. Container validation is an actual unresolved blocker. Unit-test success does not prove private validity.
+See `docs/FAILURE_ANALYSIS.md`. Sparse supply, hard refusals, occupied members, overlapping opportunities and late feedback can prevent qualifying outcomes. Expected-edge-weight clarification ignores joint answer dependence. Learned probabilities have selective feedback, rare-event uncertainty and shift risk. At the original study checkpoint, container validation was unresolved. Expanded Linux CI subsequently passed for the released policy; finite public tests still do not prove private validity.
 
 ## 23. Limitations
 
@@ -429,7 +429,7 @@ This is synthetic evaluation, not social or clinical validation. Few independent
 
 ## 24. Reproducibility
 
-See `README.md`, `docs/REPRODUCIBILITY.md`, `configs/seeds.json`, pinned experiment dependencies, source fingerprints and execution logs. Generate figures with `python -m experiments.generate_figures` and this report with `python -m experiments.generate_report`. Inference is standard-library Python with a vendored solver and read-only JSON assets. There are no runtime APIs, GPUs or persistent files. The local measured interpreter is Python 3.14.6; the Dockerfile specifies Python 3.12.7, which requires actual container verification.
+See `README.md`, `docs/REPRODUCIBILITY.md`, `configs/seeds.json`, pinned experiment dependencies, source fingerprints and execution logs. Generate figures with `python -m experiments.generate_figures` and this report with `python -m experiments.generate_report`. Inference is standard-library Python with a vendored solver and read-only JSON assets. There are no runtime APIs, GPUs or persistent files. The local measured interpreter is Python 3.14.6; the Dockerfile specifies Python 3.12.7, which expanded Linux CI verified for the released container.
 
 ## 25. Software, data, model and AI provenance
 
@@ -437,4 +437,4 @@ Official MIT source and synthetic-data conditions are preserved. Vendored Networ
 
 ## 26. Conclusion
 
-The selected public-validation configuration is soft; measured final score is 0.3611 MSMI/100. The report preserves both positive and negative evidence. Local implementation and public evaluation must be distinguished from submission completion. A working offline Docker run and authorized publication of an immutable commit remain necessary before official submission.
+The historical public-validation configuration was soft and measured 0.3611 MSMI/100. The released V1_greedy policy and its 0.3889 MSMI/100 mandatory comparison are documented in the recovery sections above, together with the negative untouched result. Offline Docker verification and immutable source publication have passed; the official issue remains unposted.

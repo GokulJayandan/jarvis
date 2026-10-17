@@ -1,6 +1,6 @@
 # Final hardening audit
 
-Audit started 17 October 2026. Local hardening PASS; expanded Linux Docker verification pending. No universal private-state validity claim.
+Audit completed 17 October 2026. Local hardening and expanded Linux Docker verification PASS for the tested scope. No universal private-state validity claim.
 
 ## Release preservation
 
@@ -14,7 +14,8 @@ Audit started 17 October 2026. Local hardening PASS; expanded Linux Docker verif
 | Existing recovery reference | `recovery/pre-competitive-recovery` -> `a918583473afbb0bc70abe76f1266c39331bf97b` |
 | New tested-source recovery tag | `recovery/pre-final-hardening-98c5440` -> `98c5440dba6a2780f2ffd766c4f576fd796c4abb` |
 | New starting-HEAD recovery tag | `recovery/pre-final-hardening-local-93a2267` -> `93a226737b2963f660653a9064ca0fb232bd4907` |
-| Relevant CI | https://github.com/GokulJayandan/jarvis/actions/runs/38919907335 |
+| Baseline CI | https://github.com/GokulJayandan/jarvis/actions/runs/38919907335 |
+| Expanded hardening CI | https://github.com/GokulJayandan/jarvis/actions/runs/39042745485 |
 
 The published baseline exists locally as a commit. The additional local commit changes documentation only (12 files); its Docker and publication statements require reconciliation with original logs. No reset, removal, overwrite of existing evidence, algorithm selection, or held-out tuning is authorized by this audit.
 
@@ -22,7 +23,7 @@ The published baseline exists locally as a commit. The additional local commit c
 
 The selected configuration remains V1_greedy. Research-only modules are assessed separately. Existing untouched-sample weakness remains disclosed. New results go to `results/hardening/`; original experiment results remain intact. Official requirements, valid synthetic contract states, malformed defensive inputs, research API tests, and empirical deployment measurements are separately labelled.
 
-The current public policy contract requires 2 CPUs, 1 GiB RAM, 10 seconds including startup, 64 PIDs, offline read-only containers, a fresh 64 MiB temporary directory, a 2 GiB image, and 1 MiB limits for request, response, memory, and diagnostics. The official submission guide currently states 18 October 2026, 23:59 IST. Current commit/corrections verification and test evidence are being collected.
+The current public policy contract requires 2 CPUs, 1 GiB RAM, 10 seconds including startup, 64 PIDs, offline read-only containers, a fresh 64 MiB temporary directory, a 2 GiB image, and 1 MiB limits for request, response, memory, and diagnostics. The official submission guide currently states 18 October 2026, 23:59 IST. Current commit, corrections, tests and container evidence were verified.
 
 ## Reconciled official sources and original evidence
 
@@ -30,10 +31,30 @@ Current official commit: `a8e26b35118cfa8e886a02f93984923e43ab64f6`, checked thr
 
 The original [CI run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) is completed/success for `98c5440`. All six downloaded execution-log hashes match their metadata and all six commands exited zero. The original container and local action digests agree. The baseline image was Linux amd64, 123,653,457 bytes, entrypoint `["python","policy.py"]`, user `65534:65534`. Its scope is one seed-101 development episode; no original per-call Linux peak-RAM telemetry exists. Evidence: `results/hardening/baseline_ci_verified.json`, `docs/CI_VALIDATION.md`.
 
+## Expanded Linux release verification
+
+[CI run 39042745485](https://github.com/GokulJayandan/jarvis/actions/runs/39042745485) completed successfully on hardening commit `66874ac68ea8ab030a92e0a5b1f3542cffc1a411`. `scripts/verify_hardening_ci.py` downloaded and checked 39 artifact files, every command exit code and log hash, all actions/outcomes, telemetry limits and image metadata. Machine-readable evidence: `results/hardening/linux_ci_verified.json`.
+
+| Measurement | Observed | Official limit / interpretation |
+| --- | ---: | --- |
+| Full tests on Linux/Python 3.14.8 | 93/93 pass | Interface and research tests |
+| Official container episodes | 6/6 valid; 0 invalid | Seed 101 in all six scenario families |
+| Timed container invocations | 744; 0 timeouts | Includes 720 episode calls and 24 valid boundary probes |
+| All-phase latency | median 0.415 s; P95 0.502 s; P99 0.509 s; max 2.577 s | 10 s per invocation including startup |
+| Ask latency | median 0.396 s; P95 0.407 s; P99 0.422 s; max 0.441 s | Empirical tested calls |
+| Match latency | median 0.495 s; P95 0.504 s; P99 0.551 s; max 2.577 s | Empirical tested calls |
+| Instrumented Linux policy time | median 0.190 s; max 2.411 s | `getrusage` wrapper; ten boundary states |
+| Instrumented Linux wall time | median 0.412 s; max 2.627 s | Same ten states under official Docker flags |
+| Linux process peak RSS | 69,001,216 bytes (65.805 MiB) | Process high-water RSS, not cgroup-wide peak; below 1 GiB |
+| Image | 123,653,732 bytes (117.925 MiB), Linux amd64 | 2 GiB limit |
+| Maximum request / response / memory / diagnostics | 1,048,576 / 27,064 / 2 / 0 bytes | Each limit 1,048,576 bytes |
+
+The local and container runs produced identical actions and outcomes for all six scenario episodes. The image has `/app` as working directory, `["python","policy.py"]` as entrypoint and `65534:65534` as user. The official runner applied network isolation, two CPUs, 1 GiB RAM/swap, 64 PIDs, read-only root, dropped capabilities, `no-new-privileges`, nonroot execution and a fresh 64 MiB `tmpfs`. The no-cache build used the digest-pinned Python 3.12.7 base and an empty Docker configuration path; inference downloaded nothing.
+
 `scripts/hardening_preflight.py` independently checks the preserved claims:
 
 - Original 63-test suite rerun successfully before edits. Final full suite: **93 tests, 0 failures, 0 skips** on Python 3.14.6 (`results/hardening/final_tests/`).
-- Historical Python 3.12 recovery log: **55 tests**, rather than the earlier 53-test record. Expanded Python 3.12.7 compatibility run: **89 run, 87 passed, 2 skipped** because NumPy training is absent. Two calibration tests and the external NetworkX comparison are explicitly excluded from that standard-library run; they pass in the full suite.
+- Historical Python 3.12 recovery log: **55 tests**, rather than the earlier 53-test record. Final expanded Python 3.12.7 compatibility run: **90 run, 88 passed, 2 skipped** because NumPy training is absent. Two calibration tests and the external NetworkX comparison are explicitly excluded from that standard-library run; they pass in the full suite.
 - **71 data checksums** pass, with original manifests and data unchanged.
 - Historical **318 validation episodes** = 11 screening configurations x 18 + 4 confirmation configurations x 30. Stored summaries recompute exactly. These are dependent comparisons over shared seeds, not 318 independent worlds.
 - Historical **54 resource probes** = 42 resource calls + 6 adversarial + 6 corrected process-tree payload calls. Earlier launcher-only measurements are not full-process RSS.
@@ -55,7 +76,7 @@ The first new suite had these three genuine defects and one incorrect test expec
 
 Source abbreviations below point to the verified official commit: [PI: policy interface](https://github.com/RomeoJulietLove/The-Sequential-Matching-Problem/blob/a8e26b35118cfa8e886a02f93984923e43ab64f6/docs/POLICY_INTERFACE.md), [DC: data contract](https://github.com/RomeoJulietLove/The-Sequential-Matching-Problem/blob/a8e26b35118cfa8e886a02f93984923e43ab64f6/docs/DATA_CONTRACT.md), [K: simulator/validator](https://github.com/RomeoJulietLove/The-Sequential-Matching-Problem/blob/a8e26b35118cfa8e886a02f93984923e43ab64f6/kit.py), [E: process/container harness](https://github.com/RomeoJulietLove/The-Sequential-Matching-Problem/blob/a8e26b35118cfa8e886a02f93984923e43ab64f6/evaluate.py).
 
-Test abbreviations: HC = `tests/test_hardening_contract.py`; HP = `tests/test_hardening_protocol.py`; HR = `tests/test_hardening_research.py`. Test execution evidence is `results/hardening/{local,python312}/tests.{json,log}`.
+Test abbreviations: HC = `tests/test_hardening_contract.py`; HP = `tests/test_hardening_protocol.py`; HR = `tests/test_hardening_research.py`. Final test execution evidence is `results/hardening/{final_tests,final_python312}/tests.{json,log}`.
 
 | ID | Official source/requirement | Implementation | Test reference | Result | Evidence |
 | --- | --- | --- | --- | --- | --- |
@@ -71,9 +92,9 @@ Test abbreviations: HC = `tests/test_hardening_contract.py`; HP = `tests/test_ha
 | J | E.validate_response, K action validation | Independent final sanitizer | HC assert_action plus official methods | PASS | IDs, budget, overlap, history independently checked |
 | K | PI exact single JSON, no NaN/Infinity | `json.dumps(allow_nan=False)` + newline | All HP byte tests | PASS | stdout only one parsed object, one trailing newline |
 | L | PI zero exit, fresh process, stderr diagnostics | `main` catches failures into legal empty action; strict debug mode available | HP injected solver/portfolio failures, process loops | PASS | RuntimeError/TimeoutError/MemoryError yield valid empty action |
-| M | PI no entrypoint arguments, assets present | Digest-pinned Dockerfile; `/app`; nonroot | Original CI plus expanded workflow | PASS (baseline) | New image verification pending |
-| N | E.docker_command: no network, read-only, tmpfs, no mount | Official evaluator unchanged; no inference downloads | Original CI; static Dockerfile/allowlist | PASS (baseline) | New image verification pending |
-| O | PI resource limits and 2 GiB image | Official Docker flags/timeout; bounded stdin/stdout/memory | Original CI; new probes/workflow | PASS (baseline only) | Exact resource enforcement for new image pending; empirical tests aren't a universal bound |
+| M | PI no entrypoint arguments, assets present | Digest-pinned Dockerfile; `/app`; nonroot | Original CI plus expanded workflow | PASS | Expanded image built cleanly; all six families completed |
+| N | E.docker_command: no network, read-only, tmpfs, no mount | Official evaluator unchanged; no inference downloads | Expanded Linux CI | PASS | 744 successful offline invocations; no host mount or runtime download |
+| O | PI resource limits and 2 GiB image | Official Docker flags/timeout; bounded stdin/stdout/memory | Expanded Linux CI and instrumented probes | PASS (tested scope) | Max 2.627 s wall, 65.805 MiB process RSS, 117.925 MiB image; empirical tests are not a universal bound |
 
 No additional schema validation is required for malformed requests by the official contract. Valid observations include all mandatory fields. Unicode is exercised in opaque zone/pool labels; official member IDs are restricted to `syn_` plus 32 hexadecimal characters. They are never synthesized by the policy. Historical asks may legally be repeated across batches or asked after being answered/declined; only duplicate member/field requests within a batch are forbidden. Availability already includes busy/pause status. Follow-up days are advanced without policy invocations by the official harness.
 
@@ -89,7 +110,7 @@ The item IDs below refer to the numbered cases in the task. PASS means the state
 | 3A.13,15-16 | HP memory_roundtrips, near_max_memory | PASS: fresh processes and carried/reset JSON |
 | 3A.17 | HC boundaries_and_unknown_soft | PASS for Unicode labels; Unicode member IDs are outside the documented schema |
 | 3A.19-26 | All HP invokes | PASS: raw UTF-8, strict parsing, exact keys, zero actions, finite/bounded output, exit 0 |
-| 3A.27-30 | HP invoke uses absolute entrypoint, fresh empty cwd, minimal environment | PASS locally; Linux assertions require expanded CI |
+| 3A.27-30 | HP invoke uses absolute entrypoint, fresh empty cwd, minimal environment; Docker allowlist and `/app` metadata | PASS locally and on Linux; no Windows paths, absent optional environment dependency or writable persistence |
 | 3B.1-14 | HC each_hard_rule, unknown_declined, boundaries; existing Constraints | PASS: both directions, all eleven hard fields, blocker priority and combinations |
 | 3B.15-20 | HC unknown_declined, guard_rejects, seeded_properties | PASS: disclose unlock/block, no unknown/incompatible/repeat/busy introduction |
 | 3C.1-7,12-17 | HC budget, guard_rejects; HR Portfolio | PASS: official budget/type checks and research portfolios |
@@ -113,8 +134,8 @@ The item IDs below refer to the numbered cases in the task. PASS means the state
 | 3G.1-17,20-23 | HR Portfolio independent_subset_oracle and complementary tests | PASS: finite utility, exact affordable subsets, deterministic ties, cap, nonnegative regret |
 | 3G.18 | HR shortlist_never_invents_candidates | PASS after stale-requirement fix |
 | 3G.19,24 | Replayed 540 rows; original experiment/report | PASS: exhaustive only on tractable candidates; explicit surrogate versus actual MSMI |
-| 3H.1-24 | Expanded workflow, hardening_run and container resource wrapper | NOT TESTED on new image yet; original image passed one official episode and size check |
-| 3H.25 | HP exact bytes; local invocation records | PASS locally; container records pending |
+| 3H.1-24 | Expanded workflow, hardening_run and Linux resource wrapper | PASS for tested scope: clean credential-free build, offline limits, all assets, six families, dense/near-limit states, determinism, image/time/process-RSS limits |
+| 3H.25 | HP exact bytes; local and container invocation records | PASS: 1 MiB request, 27,064-byte maximum response, 2-byte memory, zero diagnostics |
 
 Exact matching optimizes rounded integer edge weights (scale 1e9), and uses greedy beyond 220 nodes or 6000 edges. It does not promise exact real-valued optimality below quantization resolution or for oversized graphs. The fallback tests inject exceptions; only the external official timeout handles a genuinely hung process. Output validity after an actual 10-second process timeout is not claimed.
 
@@ -133,7 +154,7 @@ Exact matching optimizes rounded integer edge weights (scale 1e9), and uses gree
 | P9 no hidden/future inputs | PASS | Process boundary, observed fixtures, hidden-world perturbation, pre-action feature audit |
 | P10 memory bound | PASS | Always `{}`, independently measured as 2 bytes |
 | P11 deterministic | PASS | Repeated processes, controlled hash seeds, equal action hashes |
-| P12 all private valid states within resources | NOT TESTED | Universal private-state guarantee cannot be proved by finite public testing. Tested local cases pass; Docker pending. |
+| P12 all private valid states within resources | NOT TESTED | Universal private-state guarantee cannot be proved by finite public testing. All tested local and Docker states pass. |
 
 ## Reproduction
 
@@ -149,4 +170,4 @@ python scripts/hardening_container_resources.py sequential-policy:submission res
 python scripts/compare_runs.py results/hardening/replay/episodes.json results/hardening/docker_replay/episodes.json
 ```
 
-Inference has no pip dependencies, network access, GPU, external asset retrieval or build credentials. The full development requirements are for tests/research only. Docker's allowlist copies policy sources, trained assets and licences; public dataset/world files, experiments, reports and local caches are excluded. The base image is pinned by digest. New workflow builds use an empty Docker credential configuration. No forced push, repository replacement, selected-policy tuning, hidden-world access or official submission message has occurred in this audit.
+Inference has no pip dependencies, network access, GPU, external asset retrieval or build credentials. The full development requirements are for tests/research only. Docker's allowlist copies policy sources, trained assets and licences; public dataset/world files, experiments, reports and local caches are excluded. The base image is pinned by digest. The expanded workflow used an empty Docker credential configuration. No forced push, repository replacement, selected-policy tuning, hidden-world access or official submission message occurred in this audit.

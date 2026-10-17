@@ -1,0 +1,17 @@
+{
+  "tests": 90,
+  "failures": [],
+  "errors": [],
+  "skipped": [
+    [
+      "tests.test_hardening_research.HardeningProbabilities.test_directional_joint_labels_and_pre_action_features",
+      "Training-only NumPy is not an inference dependency"
+    ],
+    [
+      "tests.test_hardening_research.HardeningProbabilities.test_fitting_empty_single_class_and_imbalance",
+      "Training-only NumPy is not an inference dependency"
+    ]
+  ],
+  "successful": true,
+  "log_sha256": "619e5912ccfe5e6bf525ec3cb1bbedfb1fbb5f7c45671afc10645248cb9ebcbe"
+}

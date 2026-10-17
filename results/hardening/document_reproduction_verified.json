@@ -1,0 +1,90 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "equal": true,
+      "sha256": "8b42ee9f9c0d5dd29f6389098ea57aefcf87bd8d55ed28fd832b04bc469caadc",
+      "text_line_endings_normalized": true
+    },
+    {
+      "path": "report/TECHNICAL_REPORT.md",
+      "equal": true,
+      "sha256": "4a5b70b8f8ee2871ff5039c2c75170b0b378e73d73120d800e67a7a577954bb7",
+      "text_line_endings_normalized": true
+    },
+    {
+      "path": "docs/RECOVERY_RELEASE.md",
+      "equal": true,
+      "sha256": "78f5def10d88c533cc0c42740f0e04b39436dce2d74c55532f8cd003bd79f29c",
+      "text_line_endings_normalized": true
+    },
+    {
+      "path": "results/recovery/report_tables.json",
+      "equal": true,
+      "sha256": "cc5ea519edcdc3e1918ab5b5b832c2b25d03aa22f91224b5402563eadefaf945",
+      "text_line_endings_normalized": false
+    },
+    {
+      "path": "figures/recovery/01_baselines.png",
+      "equal": true,
+      "sha256": "f0570b2aa0a559ecf5245a5aaca6d600b6bed6fdb16dbe5f05b710eb35d797ce",
+      "text_line_endings_normalized": false
+    },
+    {
+      "path": "figures/recovery/02_scenarios.png",
+      "equal": true,
+      "sha256": "4750d7c7cd537c5daff15f67d4533579b24ee916e407674f859920d6deefb169",
+      "text_line_endings_normalized": false
+    },
+    {
+      "path": "figures/recovery/03_meetings.png",
+      "equal": true,
+      "sha256": "58cdcc1b62ea267da57108ce4aa65723d130e88e1988fd624317538d605750f2",
+      "text_line_endings_normalized": false
+    },
+    {
+      "path": "figures/recovery/04_coverage.png",
+      "equal": true,
+      "sha256": "e51a1d6ff529857f0e3171a7fe3bb3f325c20936c6e21b51f6651a6fa1f4f794",
+      "text_line_endings_normalized": false
+    },
+    {
+      "path": "figures/recovery/05_waiting.png",
+      "equal": true,
+      "sha256": "2a8826c67f8736d21879b71322aecb51cc3dc395cdd9e4ba104bf8e0c22816c3",
+      "text_line_endings_normalized": false
+    },
+    {
+      "path": "figures/recovery/06_future.png",
+      "equal": true,
+      "sha256": "8401ba446d67e38c3ea45bacbfc0018a66e124eb00a7f594f72f603643cb9b4a",
+      "text_line_endings_normalized": false
+    },
+    {
+      "path": "figures/recovery/11_clarification.png",
+      "equal": true,
+      "sha256": "ce5f46e58e5472420f0f00b8c10e4d7f3029b47e133e332d19a50b9be74d57bb",
+      "text_line_endings_normalized": false
+    },
+    {
+      "path": "figures/recovery/12_runtime.png",
+      "equal": true,
+      "sha256": "8f7f05e7bbf499e8b4b99dd4480bd94a4e87466de4f95a82898a737ab6032a53",
+      "text_line_endings_normalized": false
+    },
+    {
+      "path": "figures/recovery/catalog.json",
+      "equal": true,
+      "sha256": "ef4c1e39c129e8dc6167fbb5e47a08a63450dbe17b49f6ef743b423ab1eea994",
+      "text_line_endings_normalized": false
+    },
+    {
+      "path": "figures/recovery/README.md",
+      "equal": true,
+      "sha256": "17855996df7c238e0427a4a018d701777f5c98d7ffd94fd608da1c25f4450b48",
+      "text_line_endings_normalized": true
+    }
+  ],
+  "all_equal": true,
+  "method": "Historical generator + original CI prose patch + idempotent hardening prose overlay in new git archive copy"
+}

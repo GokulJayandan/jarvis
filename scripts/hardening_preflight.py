@@ -13,6 +13,8 @@ from evaluate import summarise
 BASE='98c5440dba6a2780f2ffd766c4f576fd796c4abb'
 def read(path):return json.loads((ROOT/path).read_text(encoding='utf-8'))
 def digest(b):return hashlib.sha256(b).hexdigest()
+def require(condition,message):
+    if not condition:raise RuntimeError(str(message))
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--output',default='results/hardening/preflight.json');args=p.parse_args()
@@ -22,42 +24,42 @@ def main():
     frozen_rows=[]
     for path in frozen:
         old=subprocess.check_output(['git','show',BASE+':'+path],cwd=ROOT)
-        same=old==(ROOT/path).read_bytes();assert same,path
+        same=old==(ROOT/path).read_bytes();require(same,path)
         frozen_rows.append(dict(path=path,sha256=digest(old),unchanged=True))
     historical=[]
     for group in ('screen','confirm'):
         for path in sorted((ROOT/'results/recovery'/group).glob('*.json')):
             obj=json.loads(path.read_text()); rows=obj['episodes']; summary=summarise(rows)
-            assert summary==obj['summary'] and summary['eligible'],str(path)
+            require(summary==obj['summary'] and summary['eligible'],path)
             historical.append(dict(path=path.relative_to(ROOT).as_posix(),episodes=len(rows),valid=sum(r['valid'] for r in rows)))
-    assert sum(x['episodes'] for x in historical)==318
+    require(sum(x['episodes'] for x in historical)==318,'Historical validation episode count is not 318')
     benchmark={}
     for name in ('greedy','no_asks','random','final'):
-        obj=read('results/recovery/'+name+'.json');assert summarise(obj['episodes'])==obj['summary']
+        obj=read('results/recovery/'+name+'.json');require(summarise(obj['episodes'])==obj['summary'],name)
         benchmark[name]=dict(episodes=len(obj['episodes']),valid=sum(r['valid'] for r in obj['episodes']),
              msmi=sum(r['mutual_second_meeting_intention'] for r in obj['episodes']),score=obj['summary']['primary_score'])
     def outcome(row):return {k:v for k,v in row.items() if k!='inference_seconds'}
-    assert [outcome(r) for r in read('results/recovery/final.json')['episodes']]==[outcome(r) for r in read('results/recovery/greedy.json')['episodes']]
+    require([outcome(r) for r in read('results/recovery/final.json')['episodes']]==[outcome(r) for r in read('results/recovery/greedy.json')['episodes']],'Final and greedy outcomes differ')
     old={ (r['variant'],r['seed']):outcome(r) for r in read('results/recovery/final.json')['episodes']}
-    for row in read('results/hardening/local/episodes.json')['episodes']:assert outcome(row)==old[row['variant'],row['seed']]
+    for row in read('results/hardening/local/episodes.json')['episodes']:require(outcome(row)==old[row['variant'],row['seed']],(row['variant'],row['seed']))
     fresh={name:sum(r['mutual_second_meeting_intention'] for r in read('results/recovery/fresh/'+name+'.json')['episodes']) for name in ('V0_frozen','V1_greedy')}
-    assert fresh=={'V0_frozen':16,'V1_greedy':3}
+    require(fresh=={'V0_frozen':16,'V1_greedy':3},fresh)
     logs=[]
     for path in sorted((ROOT/'results/execution').glob('*.json')):
         obj=json.loads(path.read_text());log=path.with_suffix('.log')
         if obj.get('log_sha256') and log.exists():
-            assert digest(log.read_bytes())==obj['log_sha256'],str(log)
+            require(digest(log.read_bytes())==obj['log_sha256'],log)
             logs.append(dict(path=log.relative_to(ROOT).as_posix(),sha256=obj['log_sha256'],exit_code=obj.get('exit_code')))
     registry=read('configs/seeds.json'); train=read('results/training/observations.json');val=read('results/training/validation_observations.json')
     train_seeds={r['seed'] for r in train['rows']}; val_seeds={r['seed'] for r in val['rows']}
     tests=set(registry['fresh_test']+registry['final_reporting']+registry['manifest_test']+[22201,22202,22203])
-    assert train_seeds<=set(registry['training']) and val_seeds<=set(registry['validation'])
-    assert not train_seeds&val_seeds and not tests&(train_seeds|val_seeds)
-    assert all(r['matured_day']==100 and 0<=r['day']<60 for r in train['rows']+val['rows'])
+    require(train_seeds<=set(registry['training']) and val_seeds<=set(registry['validation']),'Training/validation seeds are outside the registry')
+    require(not train_seeds&val_seeds and not tests&(train_seeds|val_seeds),'Training, validation and reporting seeds overlap')
+    require(all(r['matured_day']==100 and 0<=r['day']<60 for r in train['rows']+val['rows']),'Training rows include future decision information')
     resource_counts={name:len(read('results/recovery/robustness/'+name+'.json')['calls']) for name in ('resources','adversarial','max_payload_process_tree')}
-    assert sum(resource_counts.values())==54
+    require(sum(resource_counts.values())==54,'Historical resource probe count is not 54')
     py312=(ROOT/'results/execution/recovery_python312.log').read_text()
-    assert re.search(r'Ran 55 tests',py312) and '\nOK' in py312
+    require(re.search(r'Ran 55 tests',py312) and '\nOK' in py312,'Historical Python 3.12 suite did not pass 55 tests')
     # Scan staged names/content; never print suspected secret contents.
     from scripts import scan_publication
     scans=[]

@@ -17,13 +17,14 @@ def main():
     pos=0;findings=[];total=0
     for name in names:
         end=raw.index(b'\n',pos);header=raw[pos:end].split();pos=end+1
-        assert len(header)==3,'Unstaged/missing index file '+name
+        if len(header)!=3:raise RuntimeError('Unstaged/missing index file '+name)
         size=int(header[2]);blob=raw[pos:pos+size];pos+=size+1;total+=size
         if forbidden.search(name):findings.append({'path':name,'kind':'sensitive_filename'})
         if b'\0' not in blob:
             for kind,pattern in patterns.items():
                 if pattern.search(blob):findings.append({'path':name,'kind':kind})
-    assert not any(n.startswith(('.venv/','.tools/','.submission/','dist/','.aws/')) for n in names)
+    forbidden_roots=[n for n in names if n.startswith(('.venv/','.tools/','.submission/','dist/','.aws/'))]
+    if forbidden_roots:raise RuntimeError('Forbidden publication roots: '+', '.join(forbidden_roots))
     write('results/recovery/publication_scan.json',{'staged_files':len(names),'staged_bytes':total,'findings':findings,
         'limitations':'Pattern and filename screening, plus source/data provenance review; not a guarantee of detecting every possible secret. Findings omit matched values.',
         'data_scope':'Only official public synthetic data and locally generated public-seed experiment artifacts. No organizer private worlds.'})

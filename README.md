@@ -4,7 +4,7 @@ Round 2 of [The Sequential Matching Problem](https://github.com/RomeoJulietLove/
 
 Current release configuration: **V1_greedy**. Official greedy clarification and soft-agreement greedy matching, wrapped in RAVEN independent hard-eligibility, budget, duplicate and availability validation. Learned probabilities, portfolio search and future terms are not used by the selected policy. Advanced RAVEN modules are evaluated research alternatives, not decision components of the deployed V1_greedy policy. Exact settings are in `results/recovery/release_selection.json`.
 
-**Docker and source-publication checks passed:** [GitHub Actions run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) successfully built and evaluated the policy container at public commit `98c5440dba6a2780f2ffd766c4f576fd796c4abb`. Final hardening status, expanded contract tests, release fixes, and current Docker evidence are recorded in `docs/FINAL_HARDENING_AUDIT.md`. The official submission issue is prepared separately and has not been posted.
+**Final hardening and Docker checks passed:** [GitHub Actions run 39042745485](https://github.com/GokulJayandan/jarvis/actions/runs/39042745485) passed 93 tests, a clean image build, all six container scenarios, local/container action-and-outcome equality, and Linux boundary/resource probes at public commit `66874ac68ea8ab030a92e0a5b1f3542cffc1a411`. The original run 38919907335 remains baseline evidence. Full scope and limits are recorded in `docs/FINAL_HARDENING_AUDIT.md`. Form-complete issue preparation tooling is ready; the immutable final-SHA package has not been posted.
 
 The repeated official benchmark scores 0.3889 MSMI/100 (14 qualifying pairs / 3600 arrivals). Greedy scores 0.3889; this is not a claim of superiority. Selection used fresh validation; untouched post-freeze results and uncertainty are in the report.
 
@@ -32,7 +32,7 @@ Use a new output path when repeating runs. The official evaluator always passes 
 
 - [Current technical report](report/TECHNICAL_REPORT.md), [recovery results](results/recovery/), [release evidence](docs/RECOVERY_RELEASE.md).
 - [Root-cause investigation](docs/PERFORMANCE_ROOT_CAUSE.md), [recovery audit](docs/RECOVERY_AUDIT.md), [submission gates](docs/SUBMISSION_CHECKLIST.md).
-- [Recovery commands](docs/RECOVERY_REPRODUCIBILITY.md), [original environment/provenance](docs/REPRODUCIBILITY.md), [declared recovery seeds](configs/recovery.json).
+- [Recovery commands](docs/RECOVERY_REPRODUCIBILITY.md), [original environment/provenance](docs/REPRODUCIBILITY.md), [complete seed registry](configs/seeds.json), [declared recovery seeds](configs/recovery.json).
 - [Historical protected-candidate report](report/TECHNICAL_REPORT_PRE_RECOVERY.md), [original research results](results/), [model card](docs/MODEL_CARD.md).
 
 `results/final.json` and the original figures describe the protected pre-recovery soft policy. Current benchmark evidence is `results/recovery/final.json`; current figures are `figures/recovery/`. Original experiments are preserved, including negative findings. Model training and old selection scripts are historical research tools and must not be run as release-finalization steps.
@@ -41,13 +41,14 @@ Use a new output path when repeating runs. The official evaluator always passes 
 python -m pip install -r requirements-dev.txt
 python -m experiments.recovery_report
 git apply docs/RELEASE_DOCUMENTATION.patch
+python scripts/hardening_documentation.py
 ```
 
-The preserved report generator emits pre-CI release prose; the documentation-only patch above restores the verified CI/publication update without altering generated tables or figures. See [CI evidence and regeneration checks](docs/CI_VALIDATION.md). Run the historical recovery verifier only in a disposable audit copy because it rewrites pre-CI gate snapshots.
+The preserved report generator emits pre-CI release prose; the baseline patch and hardening overlay restore verified release evidence without altering generated tables or figures. See [CI evidence and regeneration checks](docs/CI_VALIDATION.md). Run the historical recovery verifier only in a disposable audit copy because it rewrites pre-CI gate snapshots.
 
-The original model uses 18 training seeds, six calibration seeds and two original policy-selection seeds. Recovery uses three new screening seeds, five new confirmation seeds and three untouched reporting seeds. Inference random seed is 17 where an experimental random policy is used. Selection and configuration details are fully recorded; no private organizer worlds were accessed.
+The original model training seeds are `20261000`–`20261005` and `11001`–`11012`; validation/calibration seeds are `20261006`, `20261007` and `12001`–`12004`. The immutable [seed registry](configs/seeds.json) also declares reporting, fresh-test, pruning and stress seeds. Recovery uses three new screening seeds, five new confirmation seeds and three untouched reporting seeds. Inference random seed is 17 where an experimental random policy is used. Selection and configuration details are fully recorded; no private organizer worlds were accessed.
 
-[Successful CI run 38919907335](https://github.com/GokulJayandan/jarvis/actions/runs/38919907335) built the actual Dockerfile, completed official container evaluation, verified exact local/container equivalence, checked image size and uploaded diagnostic artifacts. The tested scope is one development episode, seed 101. [CI_VALIDATION.md](docs/CI_VALIDATION.md) records commands, limitations and log hashes. Source publication of the tested commit is verified; this documentation-only revision and official issue submission each require authorization.
+[Expanded CI run 39042745485](https://github.com/GokulJayandan/jarvis/actions/runs/39042745485) built the actual Dockerfile, passed all six scenario families with zero invalid episodes, verified exact local/container actions and outcomes, and recorded image, latency and Linux process-memory evidence. [FINAL_HARDENING_AUDIT.md](docs/FINAL_HARDENING_AUDIT.md) records commands, measurements and limits. The tested commit is public; form-complete issue preparation tooling is ready and the immutable final-SHA package is unposted.
 
 ## Attribution and team
 

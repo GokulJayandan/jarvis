@@ -1,5 +1,9 @@
 # RAVEN-Match — Recoverability-Aware Vertex Elicitation and Sequential Allocation
 
+> Historical pre-recovery report. Its Docker-blocked statements describe the
+> original Windows-host state and are superseded by the final release audit and
+> successful Linux CI run 39042745485. It is not the submitted technical report.
+
 Team Jarvis: GokulJayandan R S, Keerthana Janakiraman, Mridula B, Boomika L.
 Round 2, synthetic Sequential Matching Problem. Generated from stored experiment files.
 
